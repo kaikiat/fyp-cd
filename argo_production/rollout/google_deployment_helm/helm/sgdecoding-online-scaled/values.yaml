@@ -4,7 +4,7 @@ models:
   
 image:
   # repository: ghcr.io/kaikiat/fyp:latest
-  repository:ghcr.io/kaikiat/fyp-ci:0.3.0
+  repository:ghcr.io/kaikiat/fyp-1:latest
   pullPolicy: Always
   pullSecrets: regcred
 
