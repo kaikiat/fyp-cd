@@ -3,8 +3,9 @@ models:
   SingaporeMandarin_0519NNET3: 0
   
 image:
-  repository: ghcr.io/kaikiat/kaikiat/fyp-ci:0.3.0
-  # repository: ghcr.io/kaikiat/kaikiat/fyp:latest
+  # getting credentials: exec: exec: "aws": executable file not found in $PATH
+  # repository: ghcr.io/kaikiat/kaikiat/fyp-ci:0.3.0  # import ws4 error in client.py
+  repository: ghcr.io/kaikiat/kaikiat/fyp:latest
   # repository: ghcr.io/kaikiat/ntu-asr-image:latest
   pullPolicy: Always
   pullSecrets: regcred
