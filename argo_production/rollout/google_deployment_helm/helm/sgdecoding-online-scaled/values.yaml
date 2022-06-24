@@ -1,6 +1,6 @@
 models:
   SingaporeCS_0519NNET3: 1
-  SingaporeMandarin_0519NNET3: 0
+  # SingaporeMandarin_0519NNET3: 0
   
 image:
   # getting credentials: exec: exec: "aws": executable file not found in $PATH
