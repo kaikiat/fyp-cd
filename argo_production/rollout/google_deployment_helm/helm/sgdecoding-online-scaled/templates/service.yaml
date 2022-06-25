@@ -32,7 +32,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-active
+  name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
   labels:
     app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
     helm.sh/chart: {{ include "ntuspeechlab.chart" $ }}
@@ -71,7 +71,6 @@ metadata:
     prometheus.io/port: '8081'
 spec:
   type: {{ $.Values.service.type }}
-
   ports:
     - protocol: TCP
       {{- if eq $.Values.service.enablehttps true}}
@@ -84,5 +83,4 @@ spec:
   selector:
     app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
     app.kubernetes.io/instance: {{ $.Release.Name }}  
-
 {{- end }}
