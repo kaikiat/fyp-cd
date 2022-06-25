@@ -79,26 +79,26 @@ spec:
       app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name  | lower | replace "_" "-"}}
       app.kubernetes.io/instance: {{ $.Release.Name }}
   # Add strategy here
-  # strategy:
-  #   canary:
-  #     steps:
-  #     - pause: {duration: 5s}
-  #     - pause: {duration: 5s}
   strategy:
-    blueGreen: 
-      # activeService specifies the service to update with the new template hash at time of promotion.
-      # This field is mandatory for the blueGreen update strategy.
-      activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-active
-      # previewService specifies the service to update with the new template hash before promotion.
-      # This allows the preview stack to be reachable without serving production traffic.
-      # This field is optional.
-      previewService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
-      # autoPromotionEnabled disables automated promotion of the new stack by pausing the rollout
-      # immediately before the promotion. If omitted, the default behavior is to promote the new
-      # stack as soon as the ReplicaSet are completely ready/available.
-      # Rollouts can be resumed using: `kubectl argo rollouts promote ROLLOUT`
-      autoPromotionEnabled: false
-      scaleDownDelaySeconds: 40
+    canary:
+      steps:
+      - pause: {duration: 5s}
+      - pause: {duration: 5s}
+  # strategy:
+  #   blueGreen: 
+  #     # activeService specifies the service to update with the new template hash at time of promotion.
+  #     # This field is mandatory for the blueGreen update strategy.
+  #     activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-active
+  #     # previewService specifies the service to update with the new template hash before promotion.
+  #     # This allows the preview stack to be reachable without serving production traffic.
+  #     # This field is optional.
+  #     previewService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
+  #     # autoPromotionEnabled disables automated promotion of the new stack by pausing the rollout
+  #     # immediately before the promotion. If omitted, the default behavior is to promote the new
+  #     # stack as soon as the ReplicaSet are completely ready/available.
+  #     # Rollouts can be resumed using: `kubectl argo rollouts promote ROLLOUT`
+  #     autoPromotionEnabled: false
+  #     scaleDownDelaySeconds: 40
   template:
     metadata:
       annotations:
