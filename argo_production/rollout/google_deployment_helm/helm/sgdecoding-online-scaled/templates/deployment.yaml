@@ -1,5 +1,5 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Rollout
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: {{ include "ntuspeechlab.master.name" . }}
   labels:
@@ -13,12 +13,6 @@ spec:
     matchLabels:
       app.kubernetes.io/name: {{ include "ntuspeechlab.master.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
-  # Add strategy here
-  strategy:
-    canary:
-      steps:
-      - pause: {duration: 5s}
-      - pause: {duration: 5s}
   template:
     metadata:
       annotations:
@@ -44,13 +38,6 @@ spec:
               protocol: TCP
             - name: prometheus
               containerPort: 8081
-#          resources:
-#            limits:
-#              cpu: 1
-#              memory: "2Gi"
-#            requests:
-#              cpu: 0.8
-#              memory: "1Gi"
           livenessProbe:
             httpGet:
               path: /
@@ -85,17 +72,33 @@ metadata:
     app.kubernetes.io/instance: {{ $.Release.Name }}
     app.kubernetes.io/managed-by: {{ $.Release.Service }}
 spec:
-  replicas: {{ $replicas }}
+  # replicas: {{ $replicas }}
+  replicas: 2
   selector:
     matchLabels:
       app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name  | lower | replace "_" "-"}}
       app.kubernetes.io/instance: {{ $.Release.Name }}
   # Add strategy here
+  # strategy:
+  #   canary:
+  #     steps:
+  #     - pause: {duration: 5s}
+  #     - pause: {duration: 5s}
   strategy:
-    canary:
-      steps:
-      - pause: {duration: 5s}
-      - pause: {duration: 5s}
+    blueGreen: 
+      # activeService specifies the service to update with the new template hash at time of promotion.
+      # This field is mandatory for the blueGreen update strategy.
+      activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-active
+      # previewService specifies the service to update with the new template hash before promotion.
+      # This allows the preview stack to be reachable without serving production traffic.
+      # This field is optional.
+      previewService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
+      # autoPromotionEnabled disables automated promotion of the new stack by pausing the rollout
+      # immediately before the promotion. If omitted, the default behavior is to promote the new
+      # stack as soon as the ReplicaSet are completely ready/available.
+      # Rollouts can be resumed using: `kubectl argo rollouts promote ROLLOUT`
+      autoPromotionEnabled: false
+      scaleDownDelaySeconds: 40
   template:
   template:
     metadata:
@@ -119,13 +122,6 @@ spec:
           ports:
             - name: prometheus
               containerPort: 8081
-#          resources:
-#            limits:
-#              cpu: 0.8
-#              memory: "4Gi"
-#            requests:
-#              cpu: 0.5
-#              memory: "3Gi"
           env:
           - name: MODEL_DIR
             value: {{ $model_name }}
