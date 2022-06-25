@@ -100,7 +100,6 @@ spec:
       autoPromotionEnabled: false
       scaleDownDelaySeconds: 40
   template:
-  template:
     metadata:
       annotations:
         prometheus.io/scrape: 'true'
