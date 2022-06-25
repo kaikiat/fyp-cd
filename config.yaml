@@ -208,8 +208,7 @@ data:
     - description: Application has degraded
       send:
       - app-health-degraded
-      # when: app.status.health.status == 'Degraded'
-      when: app.status.health == 'Degraded'
+      when: app.status.health.status == 'Degraded'
   trigger.on-sync-failed: |
     - description: Application syncing has failed
       send:
