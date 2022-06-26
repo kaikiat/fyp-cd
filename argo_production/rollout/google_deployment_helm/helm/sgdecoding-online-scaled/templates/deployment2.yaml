@@ -65,9 +65,9 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
+  name: {{ include "ntuspeechlab.worker.name" $ }}
   labels:
-    app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-" }}
+    app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
     helm.sh/chart: {{ include "ntuspeechlab.chart" $ }}
     app.kubernetes.io/instance: {{ $.Release.Name }}
     app.kubernetes.io/managed-by: {{ $.Release.Service }}
@@ -75,8 +75,14 @@ spec:
   replicas: {{ $replicas }}
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name  | lower | replace "_" "-"}}
+      app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
       app.kubernetes.io/instance: {{ $.Release.Name }}
+  # Add strategy here
+  # strategy:
+  #   canary:
+  #     steps:
+  #     - pause: {duration: 5s}
+  #     - pause: {duration: 5s}
   strategy:
     blueGreen: 
       activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}

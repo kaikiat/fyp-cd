@@ -34,35 +34,8 @@ kind: Service
 metadata:
   name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
   labels:
-    app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
-    helm.sh/chart: {{ include "ntuspeechlab.chart" $ }}
-    app.kubernetes.io/instance: {{ $.Release.Name }}
-    app.kubernetes.io/managed-by: {{ $.Release.Service }}
-  annotations:
-    prometheus.io/scrape: "true"
-    prometheus.io/port: '8081'
-spec:
-  type: {{ $.Values.service.type }}
-
-  ports:
-    - protocol: TCP
-      {{- if eq $.Values.service.enablehttps true}}
-      port: 443
-      {{- else }}
-      port: 80
-      {{- end}}
-      targetPort: {{ $.Values.service.port }}    
-      name: http
-  selector:
-    app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
-    app.kubernetes.io/instance: {{ $.Release.Name }} 
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
-  labels:
-    app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
+    # app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
+    app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
     helm.sh/chart: {{ include "ntuspeechlab.chart" $ }}
     app.kubernetes.io/instance: {{ $.Release.Name }}
     app.kubernetes.io/managed-by: {{ $.Release.Service }}
@@ -84,5 +57,34 @@ spec:
   selector:
     app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
     app.kubernetes.io/instance: {{ $.Release.Name }}  
- 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
+  labels:
+    # app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
+    app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
+    helm.sh/chart: {{ include "ntuspeechlab.chart" $ }}
+    app.kubernetes.io/instance: {{ $.Release.Name }}
+    app.kubernetes.io/managed-by: {{ $.Release.Service }}
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: '8081'
+spec:
+  type: {{ $.Values.service.type }}
+
+  ports:
+    - protocol: TCP
+      {{- if eq $.Values.service.enablehttps true}}
+      port: 443
+      {{- else }}
+      port: 80
+      {{- end}}
+      targetPort: {{ $.Values.service.port }}    
+      name: http
+  selector:
+    app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
+    app.kubernetes.io/instance: {{ $.Release.Name }}  
+
 {{- end }}
