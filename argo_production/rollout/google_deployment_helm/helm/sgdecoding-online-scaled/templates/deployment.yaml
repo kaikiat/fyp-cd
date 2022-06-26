@@ -85,7 +85,7 @@ spec:
   #     - pause: {duration: 5s}
   strategy:
     blueGreen: 
-      activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
+      activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-active
       previewService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
       autoPromotionEnabled: true
       scaleDownDelaySeconds: 40
