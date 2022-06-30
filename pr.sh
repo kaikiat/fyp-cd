@@ -29,6 +29,7 @@ cat /$HOME/.ssh/id_ed25519.pub
 # argocd repo add git@github.com:kaikiat/fyp.git --ssh-private-key-path ~/.ssh/id_rsa 
 # For ubuntu
 argocd repo add git@github.com:kaikiat/fyp.git --ssh-private-key-path ~/.ssh/id_ed25519
+argocd repo add git@github.com:kaikiat/fyp-cd.git --ssh-private-key-path ~/.ssh/id_ed25519
 
 # For macOs
 argocd repo add git@github.com:kaikiat/fyp.git --ssh-private-key-path ~/.ssh/id_ecdsa
@@ -42,7 +43,7 @@ argocd app list  # to get app
 # argocd app sync sgdecoding-staging
 
 # how to delete
-argocd app delete sgdecoding-production
+argocd app delete sgdecoding-online-scaled
 
 #################################################################
 
@@ -58,7 +59,7 @@ sudo mv ./kubectl-argo-rollouts-darwin-amd64 /usr/local/bin/kubectl-argo-rollout
 # Install controller
 kubectl create namespace argo-rollouts
 kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml
-kubectl create clusterrolebinding kaikiat-cluster-admin-binding --clusterrole=cluster-admin --user=kaikiatpoh13@gmail.com
+kubectl create clusterrolebinding kaikiat-cluster-admin-binding --clusterrole=cluster-admin --user=kaikiatpoh14@gmail.com
 
 # Refer to this for helm-argocd 
 # https://github.com/argoproj/argo-rollouts/tree/master/examples/helm-blue-green
@@ -122,8 +123,8 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argoc
 # Install Triggers and Templates from the catalog (Added data.service)
 # kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argocd-notifications/release-1.0/catalog/install.yaml
 kubectl apply -n argocd -f config.yaml
-kubectl patch app sgdecoding-staging -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-succeeded.slack":"#argocd"}}}' --type merge
-kubectl patch app sgdecoding-staging -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-failed.slack":"#argocd"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-succeeded.slack":"#argocd"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-failed.slack":"#argocd"}}}' --type merge
 
 ##### Email service #####
 # export EMAIL_USER=kaikiat@nonscriberabbit.com \
@@ -140,11 +141,11 @@ kubectl patch app sgdecoding-staging -n argocd -p '{"metadata": {"annotations": 
 # EOF
 
 # on.sync-failed.gmail not working
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"recipients.argocd-notifications.argoproj.io":"kaikiatpoh13@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-succeeded.gmail":"kaikiatpoh13@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-staging -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-succeeded.gmail":"kaikiatpoh13@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-failed.gmail":"kaikiatpoh13@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-unknown.gmail":"kaikiatpoh13@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-health-degraded.gmail":"kaikiatpoh13@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"recipients.argocd-notifications.argoproj.io":"kaikiatpoh14@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-succeeded.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-staging -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-succeeded.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-failed.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-unknown.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-health-degraded.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
 
 
