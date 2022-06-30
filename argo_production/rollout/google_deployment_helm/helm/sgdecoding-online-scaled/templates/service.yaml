@@ -35,7 +35,6 @@ metadata:
   name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
   labels:
     app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
-    # app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
     helm.sh/chart: {{ include "ntuspeechlab.chart" $ }}
     app.kubernetes.io/instance: {{ $.Release.Name }}
     app.kubernetes.io/managed-by: {{ $.Release.Service }}
@@ -64,7 +63,6 @@ metadata:
   name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
   labels:
     app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
-    # app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
     helm.sh/chart: {{ include "ntuspeechlab.chart" $ }}
     app.kubernetes.io/instance: {{ $.Release.Name }}
     app.kubernetes.io/managed-by: {{ $.Release.Service }}

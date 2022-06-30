@@ -59,30 +59,34 @@ spec:
               {{- end}}
             periodSeconds: 60
     
-
-{{- range $model_name, $replicas := .Values.models }}
+# {{- range $model_name, $replicas := .Values.models }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
+  # name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
+  name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" "SingaporeCS_0519NNET3" | lower | replace "_" "-"  }}
   labels:
     app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
     helm.sh/chart: {{ include "ntuspeechlab.chart" $ }}
     app.kubernetes.io/instance: {{ $.Release.Name }}
     app.kubernetes.io/managed-by: {{ $.Release.Service }}
 spec:
-  replicas: {{ $replicas }}
+  # replicas: {{ $replicas }}
+  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
       app.kubernetes.io/instance: {{ $.Release.Name }}
-  strategy:
-    blueGreen: 
-      activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
-      previewService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
-      autoPromotionEnabled: true
-      scaleDownDelaySeconds: 40
+  # strategy:
+  #   blueGreen: 
+  #     activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" "SingaporeCS_0519NNET3" | lower | replace "_" "-"  }}
+  #     previewService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" "SingaporeCS_0519NNET3" | lower | replace "_" "-"  }}-preview
+  #     # activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
+  #     # previewService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
+
+  #     autoPromotionEnabled: true
+  #     scaleDownDelaySeconds: 60
   template:
     metadata:
       annotations:
@@ -120,4 +124,4 @@ spec:
         - name: mypvc
           persistentVolumeClaim:
             claimName: {{ $.Values.fileshare.claimName }}
-{{- end }}
+# {{- end }}
