@@ -78,14 +78,14 @@ spec:
     matchLabels:
       app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
       app.kubernetes.io/instance: {{ $.Release.Name }}
-  strategy:
-    blueGreen: 
-      activeService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
-      previewService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3-preview
-      # activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
-      # previewService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
-      autoPromotionEnabled: true
-      scaleDownDelaySeconds: 60
+  # strategy:
+  #   blueGreen: 
+  #     activeService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
+  #     previewService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3-preview
+  #     # activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
+  #     # previewService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
+  #     autoPromotionEnabled: true
+  #     scaleDownDelaySeconds: 60
   template:
     metadata:
       annotations:
