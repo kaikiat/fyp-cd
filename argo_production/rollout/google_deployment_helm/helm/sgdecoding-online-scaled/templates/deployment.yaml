@@ -59,7 +59,7 @@ spec:
               {{- end}}
             periodSeconds: 60
     
-{{- range $model_name, $replicas := .Values.models }}
+# {{- range $model_name, $replicas := .Values.models }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
@@ -111,7 +111,7 @@ spec:
           env:
           - name: MODEL_DIR
             # value: {{ $model_name }}
-            value: {{ $model_name }}
+            value: SingaporeCS_0519NNET3
           securityContext:
             privileged: true
             capabilities:
@@ -124,4 +124,4 @@ spec:
         - name: mypvc
           persistentVolumeClaim:
             claimName: {{ $.Values.fileshare.claimName }}
-{{- end }}
+# {{- end }}
