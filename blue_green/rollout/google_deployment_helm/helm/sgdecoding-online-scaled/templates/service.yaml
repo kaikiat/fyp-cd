@@ -30,9 +30,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "ntuspeechlab.master.name" . }}
+  name: {{ include "ntuspeechlab.master.name" . }}-preview
   labels:
-    app.kubernetes.io/name: {{ include "ntuspeechlab.master.name" . }}-preview
+    app.kubernetes.io/name: {{ include "ntuspeechlab.master.name" . }}
     helm.sh/chart: {{ include "ntuspeechlab.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
