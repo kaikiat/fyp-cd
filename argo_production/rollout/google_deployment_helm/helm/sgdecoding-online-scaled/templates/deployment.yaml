@@ -58,8 +58,6 @@ spec:
               port: http
               {{- end}}
             periodSeconds: 60
-    
-
 {{- range $model_name, $replicas := .Values.models }}
 ---
 apiVersion: argoproj.io/v1alpha1
@@ -78,6 +76,14 @@ spec:
       app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name  | lower | replace "_" "-"}}
       app.kubernetes.io/instance: {{ $.Release.Name }}
   # Add strategy here
+  # strategy:
+  #   blueGreen: 
+  #     activeService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
+  #     previewService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3-preview
+  #     # activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
+  #     # previewService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
+  #     autoPromotionEnabled: true
+  #     scaleDownDelaySeconds: 60
   template:
     metadata:
       annotations:
