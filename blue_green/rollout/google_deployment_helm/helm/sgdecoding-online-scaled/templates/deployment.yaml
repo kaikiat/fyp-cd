@@ -20,8 +20,6 @@ spec:
     blueGreen: 
       activeService: {{ include "ntuspeechlab.master.name" . }}
       previewService: {{ include "ntuspeechlab.master.name" . }}-preview
-      # activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
-      # previewService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
       autoPromotionEnabled: true
       scaleDownDelaySeconds: 60
   template:
