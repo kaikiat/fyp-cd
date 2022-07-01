@@ -21,7 +21,7 @@ spec:
       activeService: {{ include "ntuspeechlab.master.name" . }}
       previewService: {{ include "ntuspeechlab.master.name" . }}-preview
       autoPromotionEnabled: true
-      scaleDownDelaySeconds: 200
+      scaleDownDelaySeconds: 150
       # autoPromotionEnabled: false
   template:
     metadata:
