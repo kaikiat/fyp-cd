@@ -1,5 +1,7 @@
-apiVersion: apps/v1
-kind: Deployment
+# apiVersion: apps/v1
+# kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
   name: {{ include "ntuspeechlab.master.name" . }}
   labels:
@@ -13,6 +15,15 @@ spec:
     matchLabels:
       app.kubernetes.io/name: {{ include "ntuspeechlab.master.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
+    # Add strategy here
+  strategy:
+    blueGreen: 
+      activeService: {{ include "ntuspeechlab.master.name" . }}
+      previewService: {{ include "ntuspeechlab.master.name" . }}-preview
+      # activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
+      # previewService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
+      autoPromotionEnabled: true
+      scaleDownDelaySeconds: 60
   template:
     metadata:
       annotations:
@@ -60,13 +71,11 @@ spec:
             periodSeconds: 60
 # {{- range $model_name, $replicas := .Values.models }}
 ---
-apiVersion: argoproj.io/v1alpha1
-kind: Rollout
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  # name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
-  name: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
+  name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
   labels:
-    # app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-" }}
     app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
     helm.sh/chart: {{ include "ntuspeechlab.chart" $ }}
     app.kubernetes.io/instance: {{ $.Release.Name }}
@@ -76,18 +85,8 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      # app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name  | lower | replace "_" "-"}}
       app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
       app.kubernetes.io/instance: {{ $.Release.Name }}
-  # Add strategy here
-  strategy:
-    blueGreen: 
-      activeService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
-      previewService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3-preview
-      # activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
-      # previewService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
-      autoPromotionEnabled: true
-      scaleDownDelaySeconds: 60
   template:
     metadata:
       annotations:
