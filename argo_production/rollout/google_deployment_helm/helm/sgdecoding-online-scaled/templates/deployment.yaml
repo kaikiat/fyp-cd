@@ -62,8 +62,8 @@ spec:
 
 {{- range $model_name, $replicas := .Values.models }}
 ---
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
   name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
   labels:
@@ -77,6 +77,7 @@ spec:
     matchLabels:
       app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name  | lower | replace "_" "-"}}
       app.kubernetes.io/instance: {{ $.Release.Name }}
+  # Add strategy here
   template:
     metadata:
       annotations:
