@@ -58,12 +58,13 @@ spec:
               port: http
               {{- end}}
             periodSeconds: 60
-{{- range $model_name, $replicas := .Values.models }}
+# {{- range $model_name, $replicas := .Values.models }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
+  # name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
+  name: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
   labels:
     # app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-" }}
     app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
@@ -71,7 +72,8 @@ metadata:
     app.kubernetes.io/instance: {{ $.Release.Name }}
     app.kubernetes.io/managed-by: {{ $.Release.Service }}
 spec:
-  replicas: {{ $replicas }}
+  # replicas: {{ $replicas }}
+  replicas: 1
   selector:
     matchLabels:
       # app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name  | lower | replace "_" "-"}}
@@ -110,7 +112,8 @@ spec:
               containerPort: 8081
           env:
           - name: MODEL_DIR
-            value: {{ $model_name }}
+            # value: {{ $model_name }}
+            value: SingaporeCS_0519NNET3
           securityContext:
             privileged: true
             capabilities:
@@ -123,4 +126,4 @@ spec:
         - name: mypvc
           persistentVolumeClaim:
             claimName: {{ $.Values.fileshare.claimName }}
-{{- end }}
+# {{- end }}

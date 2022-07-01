@@ -20,6 +20,7 @@ spec:
     targetRevision: HEAD  # For Helm, this refers to the chart version.
     # path: google_production/helm/sgdecoding-online-scaled  # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.
     path: argo_production/rollout/google_deployment_helm/helm/sgdecoding-online-scaled  # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.
+    # path: blue_green/rollout/google_deployment_helm/helm/sgdecoding-online-scaled  # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.
   # Destination cluster and namespace to deploy the application
   destination:
     server: https://kubernetes.default.svc
