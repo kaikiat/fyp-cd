@@ -17,9 +17,9 @@ spec:
   strategy:
     blueGreen: 
       activeService: {{ include "ntuspeechlab.master.name" . }}
-      previewService: {{ include "ntuspeechlab.master.name" . }}-preview
-      # autoPromotionEnabled: true
-      # scaleDownDelaySeconds: 150
+      previewService: {{ include "ntuspeechlab.master.name" . }}-preview #  to test a new version of an application.
+      # autoPromotionEnabled: true #  make the rollout automatically promote the new ReplicaSet to the active service once the new ReplicaSet is healthy
+      # scaleDownDelaySeconds: 150 # delay scaling down the old ReplicaSet after the active Service is switched
   template:
     metadata:
       annotations:
