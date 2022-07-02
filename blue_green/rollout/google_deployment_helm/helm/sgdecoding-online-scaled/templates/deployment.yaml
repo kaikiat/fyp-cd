@@ -69,7 +69,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
+  name: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
   labels:
     app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
     helm.sh/chart: {{ include "ntuspeechlab.chart" $ }}
