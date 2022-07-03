@@ -92,7 +92,7 @@ spec:
       activeService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
       # activeService: {{ include "ntuspeechlab.master.name" . }}
       # previewService: {{ include "ntuspeechlab.master.name" . }}-preview #  to test a new version of an application.
-      autoPromotionEnabled: false #  make the rollout automatically promote the new ReplicaSet to the active service once the new ReplicaSet is healthy
+      # autoPromotionEnabled: false #  make the rollout automatically promote the new ReplicaSet to the active service once the new ReplicaSet is healthy
   template:
     metadata:
       annotations:
