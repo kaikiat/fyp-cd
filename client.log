@@ -4,3 +4,45 @@
     INFO 2022-07-02 20:42:09,788 有趣 的 
     INFO 2022-07-02 20:42:10,039 usually the 
     INFO 2022-07-02 20:42:10,271 usually the whole 
+    INFO 2022-07-02 20:50:00,187 Socket opened! <__main__.MyClient object at 0x7fa6bcb5b370> 
+    INFO 2022-07-02 20:50:00,188 Start transcribing... 
+    INFO 2022-07-02 20:50:01,208 尤其 
+    INFO 2022-07-02 20:50:01,368 有趣 的 
+    INFO 2022-07-02 20:50:02,054 游戏 的 
+    INFO 2022-07-02 20:50:02,056 you see the whole 
+    INFO 2022-07-02 20:50:02,130 you see the whole of 
+    INFO 2022-07-02 20:50:02,491 you see the whole of my 
+    INFO 2022-07-02 20:50:02,741 you see the whole of my kind of 
+    INFO 2022-07-02 20:50:02,903 you see the whole of my adult life 
+    INFO 2022-07-02 20:50:03,756 you see the whole of my adult life 
+    INFO 2022-07-02 20:53:01,473 Socket opened! <__main__.MyClient object at 0x7f5480a3b340> 
+    INFO 2022-07-02 20:53:01,475 Start transcribing... 
+    INFO 2022-07-02 20:53:01,572 Received error from server (status 9) 
+    INFO 2022-07-02 20:53:01,572 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-02 20:53:01,572 
+ URL: ws://34.87.159.241/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-02 20:53:01,573 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-02 20:53:01,573  
+    INFO 2022-07-02 21:36:39,724 Socket opened! <__main__.MyClient object at 0x7fb5e223f370> 
+    INFO 2022-07-02 21:36:39,726 Start transcribing... 
+    INFO 2022-07-02 21:36:40,777 尤其 
+    INFO 2022-07-02 21:36:40,913 有趣 的 
+    INFO 2022-07-02 21:36:41,190 游戏 的 
+    INFO 2022-07-02 21:36:41,446 you see the whole 
+    INFO 2022-07-02 21:36:41,666 you see the whole of 
+    INFO 2022-07-02 21:37:10,499 Socket opened! <__main__.MyClient object at 0x7f99aa663340> 
+    INFO 2022-07-02 21:37:10,501 Start transcribing... 
+    INFO 2022-07-02 21:37:10,580 Received error from server (status 9) 
+    INFO 2022-07-02 21:37:10,581 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-02 21:37:10,581 
+ URL: ws://34.87.159.241/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-02 21:37:10,582 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-02 21:37:10,582  

@@ -95,7 +95,7 @@ class MyClient(WebSocketClient):
                     e = sys.exc_info()[0]
                     logger.info("Failed to send adaptation state: %s" % e)
 
-            logger.info("Start transcribing...")
+            logger.info("Start transcribing....")
             if self.mode == 'stream':
                 stream = self.audio.open(format=FORMAT, channels=CHANNELS,
                     rate=RATE, input=True,
