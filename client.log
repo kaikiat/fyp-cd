@@ -125,3 +125,130 @@ Final Result:
     INFO 2022-07-03 12:20:45,657 游戏 的 
     INFO 2022-07-03 12:20:45,885 usually the whole 
     INFO 2022-07-03 12:20:46,132 usually the whole of 
+    INFO 2022-07-03 12:34:45,477 Socket opened! <__main__.MyClient object at 0x7f4fcc6db340> 
+    INFO 2022-07-03 12:34:45,478 Start transcribing.... 
+    INFO 2022-07-03 12:34:45,555 Received error from server (status 9) 
+    INFO 2022-07-03 12:34:45,556 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-03 12:34:45,557 
+ URL: ws://34.87.72.254/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-03 12:34:45,558 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-03 12:34:45,558  
+    INFO 2022-07-03 12:35:00,771 Socket opened! <__main__.MyClient object at 0x7f1672df3370> 
+    INFO 2022-07-03 12:35:00,772 Start transcribing.... 
+    INFO 2022-07-03 12:35:02,596 尤其 
+    INFO 2022-07-03 12:35:02,674 有趣 的 
+    INFO 2022-07-03 12:35:02,749 游戏 的 
+    INFO 2022-07-03 12:35:02,825 you see the whole 
+    INFO 2022-07-03 12:35:02,900 you see the whole of 
+    INFO 2022-07-03 12:35:03,085 you see the whole of my 
+    INFO 2022-07-03 12:35:03,300 you see the whole of my kind of 
+    INFO 2022-07-03 12:35:03,552 you see the whole of my adult life 
+    INFO 2022-07-03 12:35:04,350 you see the whole of my adult life 
+    INFO 2022-07-03 12:35:09,840 嗯 
+    INFO 2022-07-03 12:35:10,900 being in 
+    INFO 2022-07-03 12:35:11,616 being in malaysia 
+    INFO 2022-07-03 12:35:11,922 being in malaysia and 
+    INFO 2022-07-03 12:35:12,135 being in malaysia and myanmar 
+    INFO 2022-07-03 12:35:12,435 being in malaysia and large 
+    INFO 2022-07-03 12:35:12,640 being in malaysia and larger 
+    INFO 2022-07-03 12:35:13,388 being in malaysia and larger 
+    INFO 2022-07-03 12:35:14,300 就 在 
+    INFO 2022-07-03 12:35:14,483 有些 计划 
+    INFO 2022-07-03 12:35:14,732 you'll have to you have this 
+    INFO 2022-07-03 12:35:14,991 you'll have to you have to 
+    INFO 2022-07-03 12:35:15,156 you'll have to you have these two 
+    INFO 2022-07-03 12:35:15,520 you'll have to you have these two characters 
+    INFO 2022-07-03 12:35:16,184 you'll have to you have these two characters 
+    INFO 2022-07-03 12:35:18,326 这 两位 
+    INFO 2022-07-03 12:35:19,072 这 两位 一部分 
+    INFO 2022-07-03 12:35:19,300 这 两位 一步步 
+    INFO 2022-07-03 12:35:20,505 这 两位 一步步 
+    INFO 2022-07-03 12:35:22,021 and 
+    INFO 2022-07-03 12:35:22,288 elected 
+    INFO 2022-07-03 12:35:22,749 elected by 
+    INFO 2022-07-03 12:35:23,277 elected by geography 
+    INFO 2022-07-03 12:35:24,042 elected by geography 
+    INFO 2022-07-03 12:35:26,631 economics 
+    INFO 2022-07-03 12:35:27,489 economics 
+    INFO 2022-07-03 12:35:29,633 and 
+    INFO 2022-07-03 12:35:29,901 他 
+    INFO 2022-07-03 12:35:30,234 他 爱 
+    INFO 2022-07-03 12:35:30,401 and time is of 
+    INFO 2022-07-03 12:35:31,421 and time is up 
+    INFO 2022-07-03 12:35:32,289 选 
+    INFO 2022-07-03 12:35:33,621 选 
+    INFO 2022-07-03 12:35:38,123 我 也 
+    INFO 2022-07-03 12:35:38,286 what your mind 
+    INFO 2022-07-03 12:35:38,549 what your mind every 
+    INFO 2022-07-03 12:35:38,801 well you might have a 
+    INFO 2022-07-03 12:35:39,047 well you might have a stumper 
+    INFO 2022-07-03 12:35:39,305 well you might have a stuff for a while 
+    INFO 2022-07-03 12:35:39,719 well you might have a stumper 吗 
+    INFO 2022-07-03 12:35:40,144 well you might have a stuff for a while 
+    INFO 2022-07-03 12:35:41,052 and 
+    INFO 2022-07-03 12:35:41,308 and lee 
+    INFO 2022-07-03 12:35:41,570 and lee kuan 
+    INFO 2022-07-03 12:35:41,813 and lee kuan yew 
+    INFO 2022-07-03 12:35:42,148 and lee kuan yew wet 
+    INFO 2022-07-03 12:35:42,580 and lee kuan yew wept as 
+    INFO 2022-07-03 12:35:42,826 and lee kuan yew wept as he 
+    INFO 2022-07-03 12:35:43,434 and lee kuan yew wept as he announced 
+    INFO 2022-07-03 12:35:43,596 and lee kuan yew wept as he announced the 
+    INFO 2022-07-03 12:35:44,404 and lee kuan yew wept as he announced the separation 
+    INFO 2022-07-03 12:35:44,691 and lee kuan yew wept as he announced the separation of 
+    INFO 2022-07-03 12:35:45,111 and lee kuan yew wept as he announced the separation of singapore 
+    INFO 2022-07-03 12:35:45,426 and lee kuan yew wept as he announced the separation of singapore from 
+    INFO 2022-07-03 12:35:45,884 and lee kuan yew wept as he announced the separation of singapore from malaysia 
+    INFO 2022-07-03 12:35:46,395 and lee kuan yew wept as he announced the separation of singapore from malaysia 
+    INFO 2022-07-03 12:35:47,287 ninth 
+    INFO 2022-07-03 12:35:47,437 ninth august 
+    INFO 2022-07-03 12:35:48,498 ninth august nineteen 
+    INFO 2022-07-03 12:35:48,656 ninth august nineteen sixty 
+    INFO 2022-07-03 12:35:49,162 ninth august nineteen sixty five 
+    INFO 2022-07-03 12:35:49,914 ninth august nineteen sixty five 
+    INFO 2022-07-03 12:35:51,697 but 
+    INFO 2022-07-03 12:35:52,046 but why 
+    INFO 2022-07-03 12:35:52,709 but why 
+    INFO 2022-07-03 12:35:53,577 why would a 
+    INFO 2022-07-03 12:35:53,721 why would a man 
+    INFO 2022-07-03 12:35:54,820 why would a man who marked 
+    INFO 2022-07-03 12:35:55,016 why would a man who marked his 
+    INFO 2022-07-03 12:35:55,510 why would a man who marked his descent 
+    INFO 2022-07-03 12:35:56,289 why would a man who marked his descent not 
+    INFO 2022-07-03 12:35:56,526 why would a man who marked his descent not from 
+    INFO 2022-07-03 12:35:57,019 why would a man who marked his descent not from people in 
+    INFO 2022-07-03 12:35:57,377 why would a man who marked his descent not from people 
+    INFO 2022-07-03 12:35:57,538 why would a man who marked his descent not from people indigenous 
+    INFO 2022-07-03 12:35:57,838 why would a man who marked his descent not from people indigenous to 
+    INFO 2022-07-03 12:35:58,291 why would a man who marked his descent not from people indigenous to malaya 
+    INFO 2022-07-03 12:35:58,899 why would a man who marked his descent not from people indigenous to malaya 
+    INFO 2022-07-03 12:35:59,653 <unk> from 
+    INFO 2022-07-03 12:35:59,799 <unk> from people 
+    INFO 2022-07-03 12:36:00,053 <unk> from people in 
+    INFO 2022-07-03 12:36:00,568 <unk> from people in southern china 
+    INFO 2022-07-03 12:36:01,408 <unk> from people in southern china 
+    INFO 2022-07-03 12:36:01,980 come to 
+    INFO 2022-07-03 12:36:02,088 
+ URL: ws://35.198.222.153/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-03 12:36:02,088 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-03 12:36:02,088 you see the whole of my adult life 嗯 being in malaysia and larger you'll have to you have these two characters 这 两位 一步步 elected by geography economics and time is up 选 well you might have a stuff for a while and lee kuan yew wept as he announced the separation of singapore from malaysia ninth august nineteen sixty five but why why would a man who marked his descent not from people indigenous to malaya <unk> from people in southern china come to 
+    INFO 2022-07-03 12:36:03,734 Socket opened! <__main__.MyClient object at 0x7f510e1d73d0> 
+    INFO 2022-07-03 12:36:03,735 Start transcribing.... 
+    INFO 2022-07-03 12:36:03,844 Received error from server (status 9) 
+    INFO 2022-07-03 12:36:03,845 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-03 12:36:03,846 
+ URL: ws://34.87.72.254/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-03 12:36:03,847 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-03 12:36:03,848  
