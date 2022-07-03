@@ -67,8 +67,10 @@ spec:
               {{- end}}
             periodSeconds: 60
 ---
-apiVersion: apps/v1
-kind: Deployment
+# apiVersion: apps/v1
+# kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
   name: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
   labels:
@@ -82,6 +84,12 @@ spec:
     matchLabels:
       app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
       app.kubernetes.io/instance: {{ $.Release.Name }}
+    # Add strategy here
+  strategy:
+    blueGreen: 
+      activeService: {{ include "ntuspeechlab.master.name" . }}
+      previewService: {{ include "ntuspeechlab.master.name" . }}-preview #  to test a new version of an application.
+      autoPromotionEnabled: false #  make the rollout automatically promote the new ReplicaSet to the active service once the new ReplicaSet is healthy
   template:
     metadata:
       annotations:

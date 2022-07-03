@@ -46,3 +46,35 @@ Final Result:
 Final Result: 
  
     INFO 2022-07-02 21:37:10,582  
+    INFO 2022-07-03 10:14:10,696 Socket opened! <__main__.MyClient object at 0x7f17c84cb370> 
+    INFO 2022-07-03 10:14:10,696 Start transcribing.... 
+    INFO 2022-07-03 10:14:11,732 尤其 
+    INFO 2022-07-03 10:14:12,002 有趣 的 
+    INFO 2022-07-03 10:14:12,150 游戏 的 
+    INFO 2022-07-03 10:14:12,420 you see the whole 
+    INFO 2022-07-03 10:14:12,629 you see the whole of 
+    INFO 2022-07-03 10:14:12,999 you see the whole of my 
+    INFO 2022-07-03 10:14:13,194 you see the whole of my kind of 
+    INFO 2022-07-03 10:14:13,422 you see the whole of my adult life 
+    INFO 2022-07-03 10:14:14,249 you see the whole of my adult life 
+    INFO 2022-07-03 10:14:19,735 嗯 
+    INFO 2022-07-03 10:14:20,781 being in 
+    INFO 2022-07-03 10:14:21,500 being in malaysia 
+    INFO 2022-07-03 10:14:21,866 being in malaysia and 
+    INFO 2022-07-03 10:14:22,046 being in malaysia and myanmar 
+    INFO 2022-07-03 10:14:22,293 being in malaysia and large 
+    INFO 2022-07-03 10:14:22,545 being in malaysia and larger 
+    INFO 2022-07-03 10:14:23,303 being in malaysia and larger 
+    INFO 2022-07-03 10:14:24,163 就 在 
+    INFO 2022-07-03 10:23:19,315 Socket opened! <__main__.MyClient object at 0x7f2c1a34b340> 
+    INFO 2022-07-03 10:23:19,317 Start transcribing.... 
+    INFO 2022-07-03 10:23:19,390 Received error from server (status 9) 
+    INFO 2022-07-03 10:23:19,390 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-03 10:23:19,391 
+ URL: ws://34.126.158.213/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-03 10:23:19,391 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-03 10:23:19,391  
