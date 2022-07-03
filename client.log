@@ -78,3 +78,27 @@ Final Result:
 Final Result: 
  
     INFO 2022-07-03 10:23:19,391  
+    INFO 2022-07-03 12:14:18,585 Socket opened! <__main__.MyClient object at 0x7f94d58a3340> 
+    INFO 2022-07-03 12:14:18,586 Start transcribing.... 
+    INFO 2022-07-03 12:14:18,663 Received error from server (status 9) 
+    INFO 2022-07-03 12:14:18,663 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-03 12:14:18,663 
+ URL: ws://35.198.222.153/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-03 12:14:18,664 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-03 12:14:18,664  
+    INFO 2022-07-03 12:14:34,909 Socket opened! <__main__.MyClient object at 0x7f9016ecb370> 
+    INFO 2022-07-03 12:14:34,910 Start transcribing.... 
+    INFO 2022-07-03 12:14:34,991 Received error from server (status 9) 
+    INFO 2022-07-03 12:14:34,992 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-03 12:14:34,993 
+ URL: ws://35.240.150.83/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-03 12:14:34,994 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-03 12:14:34,994  
