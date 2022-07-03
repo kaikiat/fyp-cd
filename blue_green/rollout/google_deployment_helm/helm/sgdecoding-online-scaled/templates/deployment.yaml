@@ -71,8 +71,8 @@ spec:
 ---
 # apiVersion: apps/v1
 # kind: Deployment
-# apiVersion: argoproj.io/v1alpha1
-# kind: Rollout
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
   name: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
   labels:
