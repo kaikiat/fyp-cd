@@ -259,3 +259,108 @@ Final Result:
     INFO 2022-07-03 12:55:52,899 游戏 的 
     INFO 2022-07-03 12:55:52,982 you see the whole 
     INFO 2022-07-03 12:55:53,228 you see the whole of 
+    INFO 2022-07-03 12:58:02,381 Socket opened! <__main__.MyClient object at 0x7fdd34693340> 
+    INFO 2022-07-03 12:58:02,383 Start transcribing.... 
+    INFO 2022-07-03 12:58:02,457 Received error from server (status 9) 
+    INFO 2022-07-03 12:58:02,457 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-03 12:58:02,458 
+ URL: ws://35.240.150.83/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-03 12:58:02,459 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-03 12:58:02,459  
+    INFO 2022-07-03 12:58:47,821 Socket opened! <__main__.MyClient object at 0x7f412ebef370> 
+    INFO 2022-07-03 12:58:47,822 Start transcribing.... 
+    INFO 2022-07-03 12:58:48,868 尤其 
+    INFO 2022-07-03 12:58:49,036 有趣 的 
+    INFO 2022-07-03 12:58:49,463 游戏 的 
+    INFO 2022-07-03 12:58:49,550 you see the whole 
+    INFO 2022-07-03 12:58:49,765 you see the whole of 
+    INFO 2022-07-03 12:58:50,109 you see the whole of my 
+    INFO 2022-07-03 12:58:50,334 you see the whole of my kind of 
+    INFO 2022-07-03 12:58:50,532 you see the whole of my adult life 
+    INFO 2022-07-03 12:58:51,416 you see the whole of my adult life 
+    INFO 2022-07-03 12:58:56,899 嗯 
+    INFO 2022-07-03 12:58:57,995 being in 
+    INFO 2022-07-03 12:58:58,648 being in malaysia 
+    INFO 2022-07-03 12:58:59,005 being in malaysia and 
+    INFO 2022-07-03 12:58:59,198 being in malaysia and myanmar 
+    INFO 2022-07-03 12:58:59,464 being in malaysia and large 
+    INFO 2022-07-03 12:58:59,693 being in malaysia and larger 
+    INFO 2022-07-03 12:59:00,449 being in malaysia and larger 
+    INFO 2022-07-03 12:59:01,326 就 在 
+    INFO 2022-07-03 12:59:01,506 有些 计划 
+    INFO 2022-07-03 12:59:01,778 you'll have to you have this 
+    INFO 2022-07-03 12:59:01,967 you'll have to you have to 
+    INFO 2022-07-03 12:59:02,211 you'll have to you have these two 
+    INFO 2022-07-03 12:59:02,552 you'll have to you have these two characters 
+    INFO 2022-07-03 12:59:03,372 you'll have to you have these two characters 
+    INFO 2022-07-03 12:59:05,340 这 两位 
+    INFO 2022-07-03 12:59:06,061 这 两位 一部分 
+    INFO 2022-07-03 12:59:06,284 这 两位 一步步 
+    INFO 2022-07-03 12:59:07,566 这 两位 一步步 
+    INFO 2022-07-03 12:59:09,164 and 
+    INFO 2022-07-03 12:59:09,342 elected 
+    INFO 2022-07-03 12:59:09,645 elected by 
+    INFO 2022-07-03 12:59:10,405 elected by geography 
+    INFO 2022-07-03 12:59:11,100 elected by geography 
+    INFO 2022-07-03 12:59:13,622 economics 
+    INFO 2022-07-03 12:59:14,496 economics 
+    INFO 2022-07-03 12:59:17,195 and 
+    INFO 2022-07-03 12:59:17,297 他 
+    INFO 2022-07-03 12:59:17,431 他 爱 
+    INFO 2022-07-03 12:59:17,553 and time is of 
+    INFO 2022-07-03 12:59:18,591 and time is up 
+    INFO 2022-07-03 12:59:19,396 选 
+    INFO 2022-07-03 12:59:21,567 选 
+    INFO 2022-07-03 12:59:25,154 我 也 
+    INFO 2022-07-03 12:59:25,348 what your mind 
+    INFO 2022-07-03 12:59:25,619 what your mind every 
+    INFO 2022-07-03 12:59:25,867 well you might have a 
+    INFO 2022-07-03 12:59:26,111 well you might have a stumper 
+    INFO 2022-07-03 12:59:26,363 well you might have a stuff for a while 
+    INFO 2022-07-03 12:59:26,706 well you might have a stumper 吗 
+    INFO 2022-07-03 12:59:27,204 well you might have a stuff for a while 
+    INFO 2022-07-03 12:59:28,121 and 
+    INFO 2022-07-03 12:59:28,374 and lee 
+    INFO 2022-07-03 12:59:28,611 and lee kuan 
+    INFO 2022-07-03 12:59:28,869 and lee kuan yew 
+    INFO 2022-07-03 12:59:29,232 and lee kuan yew wet 
+    INFO 2022-07-03 12:59:29,641 and lee kuan yew wept as 
+    INFO 2022-07-03 12:59:29,898 and lee kuan yew wept as he 
+    INFO 2022-07-03 12:59:30,483 and lee kuan yew wept as he announced 
+    INFO 2022-07-03 12:59:30,663 and lee kuan yew wept as he announced the 
+    INFO 2022-07-03 12:59:31,438 and lee kuan yew wept as he announced the separation 
+    INFO 2022-07-03 12:59:31,791 and lee kuan yew wept as he announced the separation of 
+    INFO 2022-07-03 12:59:32,183 and lee kuan yew wept as he announced the separation of singapore 
+    INFO 2022-07-03 12:59:32,436 and lee kuan yew wept as he announced the separation of singapore from 
+    INFO 2022-07-03 12:59:32,943 and lee kuan yew wept as he announced the separation of singapore from malaysia 
+    INFO 2022-07-03 12:59:33,506 and lee kuan yew wept as he announced the separation of singapore from malaysia 
+    INFO 2022-07-03 12:59:34,319 ninth 
+    INFO 2022-07-03 12:59:34,640 ninth august 
+    INFO 2022-07-03 13:02:59,927 Socket opened! <__main__.MyClient object at 0x7fe28a97b340> 
+    INFO 2022-07-03 13:02:59,929 Start transcribing.... 
+    INFO 2022-07-03 13:03:00,005 Received error from server (status 9) 
+    INFO 2022-07-03 13:03:00,006 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-03 13:03:00,007 
+ URL: ws://35.240.150.83/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-03 13:03:00,008 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-03 13:03:00,008  
+    INFO 2022-07-03 14:03:09,426 Socket opened! <__main__.MyClient object at 0x7fe1792bf340> 
+    INFO 2022-07-03 14:03:09,427 Start transcribing.... 
+    INFO 2022-07-03 14:03:09,508 Received error from server (status 9) 
+    INFO 2022-07-03 14:03:09,508 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-03 14:03:09,509 
+ URL: ws://35.240.150.83/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-03 14:03:09,510 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-03 14:03:09,511  
