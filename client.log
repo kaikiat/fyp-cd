@@ -376,3 +376,58 @@ Final Result:
     INFO 2022-07-03 14:52:46,174 游戏 的 
     INFO 2022-07-03 14:52:46,430 you see the whole 
     INFO 2022-07-03 14:52:46,676 you see the whole of 
+    INFO 2022-07-03 14:57:52,863 Socket opened! <__main__.MyClient object at 0x7fc198c9f340> 
+    INFO 2022-07-03 14:57:52,864 Start transcribing.... 
+    INFO 2022-07-03 14:57:52,944 Received error from server (status 9) 
+    INFO 2022-07-03 14:57:52,945 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-03 14:57:52,945 
+ URL: ws://34.87.22.11/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-03 14:57:52,945 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-03 14:57:52,945  
+    INFO 2022-07-03 15:23:17,163 Socket opened! <__main__.MyClient object at 0x7efca9e77340> 
+    INFO 2022-07-03 15:23:17,164 Start transcribing.... 
+    INFO 2022-07-03 15:23:17,259 Received error from server (status 9) 
+    INFO 2022-07-03 15:23:17,259 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-03 15:23:17,261 
+ URL: ws://34.87.22.11/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-03 15:23:17,262 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-03 15:23:17,262  
+    INFO 2022-07-03 15:27:07,514 Socket opened! <__main__.MyClient object at 0x7f43998d3370> 
+    INFO 2022-07-03 15:27:07,515 Start transcribing.... 
+    INFO 2022-07-03 15:27:08,541 尤其 
+    INFO 2022-07-03 15:27:08,704 有趣 的 
+    INFO 2022-07-03 15:27:08,949 游戏 的 
+    INFO 2022-07-03 15:27:09,207 you see the whole 
+    INFO 2022-07-03 15:27:09,433 you see the whole of 
+    INFO 2022-07-03 15:27:09,798 you see the whole of my 
+    INFO 2022-07-03 15:27:10,034 you see the whole of my kind of 
+    INFO 2022-07-03 15:28:31,671 Socket opened! <__main__.MyClient object at 0x7f7d2e7f7340> 
+    INFO 2022-07-03 15:28:31,672 Start transcribing.... 
+    INFO 2022-07-03 15:28:31,766 Received error from server (status 9) 
+    INFO 2022-07-03 15:28:31,767 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-03 15:28:31,768 
+ URL: ws://34.87.22.11/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-03 15:28:31,769 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-03 15:28:31,769  
+    INFO 2022-07-03 16:19:11,717 Socket opened! <__main__.MyClient object at 0x7fafdf62f340> 
+    INFO 2022-07-03 16:19:11,717 Start transcribing.... 
+    INFO 2022-07-03 16:19:12,734 尤其 
+    INFO 2022-07-03 16:19:12,893 有趣 的 
+    INFO 2022-07-03 16:19:13,147 游戏 的 
+    INFO 2022-07-03 16:19:13,395 you see the whole 
+    INFO 2022-07-03 16:19:13,645 you see the whole of 
+    INFO 2022-07-03 16:19:13,988 you see the whole of my 
+    INFO 2022-07-03 16:19:14,238 you see the whole of my kind of 
+    INFO 2022-07-03 16:19:14,410 you see the whole of my adult life 
