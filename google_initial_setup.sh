@@ -112,8 +112,11 @@ export NAMESPACE=ntuasr-production-google
 export MASTER_SERVICE="$KUBE_NAME-master"  
 export MASTER_SERVICE_IP=$(kubectl get svc $MASTER_SERVICE -n $NAMESPACE \
     --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
+
+# export MASTER_SERVICE_I2P=$(kubectl get svc $MASTER_SERVICE -n $NAMESPACE \
+#     --output jsonpath='{.status.loadBalancer.ingress[1].ip}')
 export MASTER_ENDPOINT=$(kubectl describe svc sgdecoding-online-scaled-master | grep 'Endpoints:')
-echo "Master Endpoint:  ${MASTER_ENDPOINT}" # 10.20.2.36:8080
+# echo "Master Endpoint:  ${MASTER_ENDPOINT}" # 10.20.2.36:8080
 echo "IP addess of master: ${MASTER_SERVICE_IP}" # 35.240.150.83
 # echo $(kubectl get pod sgdecoding-online-scaled-master-776f86b7f5-j2h4b -o jsonpath="{..image}")
 python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav

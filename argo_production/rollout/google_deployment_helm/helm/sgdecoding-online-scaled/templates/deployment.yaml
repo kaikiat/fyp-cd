@@ -1,5 +1,5 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
   name: {{ include "ntuspeechlab.master.name" . }}
   labels:
@@ -13,6 +13,23 @@ spec:
     matchLabels:
       app.kubernetes.io/name: {{ include "ntuspeechlab.master.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
+  # Add strategy here
+  # strategy:
+  #   canary:
+  #     steps:
+  #     - pause: {duration: 5s}
+  #     - pause: {duration: 5s}
+  strategy:
+    canary: #Indicates that the rollout should use the Canary strategy
+      maxSurge: "25%" # The maximum number of replicas the rollout can create 
+      maxUnavailable: 0 # The maximum number of pods that can be unavailable during the update.
+      steps:
+      - setWeight: 50
+      - pause:
+          duration: 100s # 1 hour
+      - setWeight: 20
+      - pause: 
+          duration: 100s # 1 hour
   template:
     metadata:
       annotations:
@@ -58,49 +75,55 @@ spec:
               port: http
               {{- end}}
             periodSeconds: 60
-# {{- range $model_name, $replicas := .Values.models }}
+    
+
+{{- range $model_name, $replicas := .Values.models }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  # name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
-  name: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
+  name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
   labels:
-    # app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-" }}
-    app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
+    app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-" }}
     helm.sh/chart: {{ include "ntuspeechlab.chart" $ }}
     app.kubernetes.io/instance: {{ $.Release.Name }}
     app.kubernetes.io/managed-by: {{ $.Release.Service }}
 spec:
-  # replicas: {{ $replicas }}
-  replicas: 1
+  replicas: {{ $replicas }}
   selector:
     matchLabels:
-      # app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name  | lower | replace "_" "-"}}
-      app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
+      app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name  | lower | replace "_" "-"}}
       app.kubernetes.io/instance: {{ $.Release.Name }}
   # Add strategy here
+  # strategy:
+  #   canary:
+  #     steps:
+  #     - pause: {duration: 5s}
+  #     - pause: {duration: 5s}
   strategy:
-    blueGreen: 
-      activeService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
-      previewService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3-preview
-      # activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
-      # previewService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
-      autoPromotionEnabled: true
-      scaleDownDelaySeconds: 60
+    canary: #Indicates that the rollout should use the Canary strategy
+      maxSurge: "25%" # The maximum number of replicas the rollout can create 
+      maxUnavailable: 0 # The maximum number of pods that can be unavailable during the update.
+      steps:
+      - setWeight: 50
+      - pause:
+          duration: 100s # 1 hour
+      - setWeight: 20
+      - pause: 
+          duration: 100s # 1 hour
   template:
     metadata:
       annotations:
         prometheus.io/scrape: 'true'
         prometheus.io/port: '8081'
       labels:
-        app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
+        app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-" }}
         app.kubernetes.io/instance: {{ $.Release.Name }}
     spec:
       imagePullSecrets:
         - name: {{ $.Values.image.pullSecrets }}
       containers:
-        - name: {{ include "ntuspeechlab.worker.name" $ }}
+        - name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower  | replace "_" "-"}}
           image: {{ $.Values.image.repository }}
           imagePullPolicy: {{ $.Values.image.pullPolicy }}
           command: [{{ include "ntuspeechlab.worker.command" $ }}]
@@ -112,9 +135,9 @@ spec:
               containerPort: 8081
           env:
           - name: MODEL_DIR
-            # value: {{ $model_name }}
-            value: SingaporeCS_0519NNET3
+            value: {{ $model_name }}
           securityContext:
+#            runAsUser: 0
             privileged: true
             capabilities:
               add: ["SYS_ADMIN"]
@@ -126,4 +149,4 @@ spec:
         - name: mypvc
           persistentVolumeClaim:
             claimName: {{ $.Values.fileshare.claimName }}
-# {{- end }}
+{{- end }}

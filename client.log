@@ -439,3 +439,194 @@ Final Result:
     INFO 2022-07-03 16:34:37,432 you see the whole 
     INFO 2022-07-03 16:34:37,680 you see the whole of 
     INFO 2022-07-03 16:34:38,035 you see the whole of my 
+    INFO 2022-07-03 16:37:06,691 Socket opened! <__main__.MyClient object at 0x7fc1a68ff370> 
+    INFO 2022-07-03 16:37:06,693 Start transcribing.... 
+    INFO 2022-07-03 16:37:07,718 尤其 
+    INFO 2022-07-03 16:37:07,872 有趣 的 
+    INFO 2022-07-03 16:37:08,130 游戏 的 
+    INFO 2022-07-03 16:37:08,377 you see the whole 
+    INFO 2022-07-03 16:37:53,914 Socket opened! <__main__.MyClient object at 0x7f499151b370> 
+    INFO 2022-07-03 16:37:53,914 Start transcribing.... 
+    INFO 2022-07-03 16:37:55,013 尤其 
+    INFO 2022-07-03 16:37:55,159 有趣 的 
+    INFO 2022-07-03 16:37:55,428 游戏 的 
+    INFO 2022-07-03 16:37:55,663 usually the whole 
+    INFO 2022-07-03 16:37:55,918 usually the whole of 
+    INFO 2022-07-03 16:37:56,355 usually the whole of my 
+    INFO 2022-07-03 16:37:56,563 usually the whole of my kind of 
+    INFO 2022-07-03 16:37:56,733 usually the whole of my adult life 
+    INFO 2022-07-03 16:37:57,552 usually the whole of my adult life 
+    INFO 2022-07-03 16:40:02,313 Socket opened! <__main__.MyClient object at 0x7fd440da7370> 
+    INFO 2022-07-03 16:40:02,315 Start transcribing.... 
+    INFO 2022-07-03 16:40:02,387 Received error from server (status 9) 
+    INFO 2022-07-03 16:40:02,387 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-03 16:40:02,389 
+ URL: ws://35.240.150.83/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-03 16:40:02,390 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-03 16:40:02,390  
+    INFO 2022-07-03 16:40:30,214 Socket opened! <__main__.MyClient object at 0x7f27e1f3b370> 
+    INFO 2022-07-03 16:40:30,215 Start transcribing.... 
+    INFO 2022-07-03 16:40:31,264 尤其 
+    INFO 2022-07-03 16:40:31,405 有趣 的 
+    INFO 2022-07-03 16:40:31,662 游戏 的 
+    INFO 2022-07-03 16:40:31,905 you see the whole 
+    INFO 2022-07-03 16:40:32,155 you see the whole of 
+    INFO 2022-07-03 16:40:37,543 Socket opened! <__main__.MyClient object at 0x7fcbbd0f3370> 
+    INFO 2022-07-03 16:40:37,545 Start transcribing.... 
+    INFO 2022-07-03 16:40:38,577 尤其 
+    INFO 2022-07-03 16:40:38,747 有趣 的 
+    INFO 2022-07-03 16:40:38,987 游戏 的 
+    INFO 2022-07-03 16:40:39,339 you see the whole 
+    INFO 2022-07-03 16:40:39,485 you see the whole of 
+    INFO 2022-07-03 16:40:39,849 you see the whole of my 
+    INFO 2022-07-03 16:40:43,328 Socket opened! <__main__.MyClient object at 0x7fc8a6b0f370> 
+    INFO 2022-07-03 16:40:43,329 Start transcribing.... 
+    INFO 2022-07-03 16:40:44,363 尤其 
+    INFO 2022-07-03 16:40:44,520 有趣 的 
+    INFO 2022-07-03 16:40:44,773 游戏 的 
+    INFO 2022-07-03 16:40:45,018 you see the whole 
+    INFO 2022-07-03 16:40:45,268 you see the whole of 
+    INFO 2022-07-03 16:40:45,629 you see the whole of my 
+    INFO 2022-07-03 16:40:45,874 you see the whole of my kind of 
+    INFO 2022-07-03 16:40:46,047 you see the whole of my adult life 
+    INFO 2022-07-03 16:40:46,901 you see the whole of my adult life 
+    INFO 2022-07-03 16:40:52,389 嗯 
+    INFO 2022-07-03 16:40:53,439 being in 
+    INFO 2022-07-03 16:40:54,172 being in malaysia 
+    INFO 2022-07-03 16:40:54,537 being in malaysia and 
+    INFO 2022-07-03 16:40:54,689 being in malaysia and myanmar 
+    INFO 2022-07-03 16:40:55,018 being in malaysia and large 
+    INFO 2022-07-03 16:40:55,194 being in malaysia and larger 
+    INFO 2022-07-03 16:40:55,944 being in malaysia and larger 
+    INFO 2022-07-03 16:40:56,831 就 在 
+    INFO 2022-07-03 16:40:57,046 有些 计划 
+    INFO 2022-07-03 16:40:57,305 you'll have to you have this 
+    INFO 2022-07-03 16:40:57,490 you'll have to you have these two 
+    INFO 2022-07-03 16:40:58,072 you'll have to you have these two characters 
+    INFO 2022-07-03 16:40:58,734 you'll have to you have these two characters 
+    INFO 2022-07-03 16:41:00,854 这 两位 
+    INFO 2022-07-03 16:41:01,568 这 两位 一部分 
+    INFO 2022-07-03 16:41:01,794 这 两位 一步步 
+    INFO 2022-07-03 16:41:03,163 这 两位 一步步 
+    INFO 2022-07-03 16:41:04,586 and 
+    INFO 2022-07-03 16:41:04,858 elected 
+    INFO 2022-07-03 16:41:05,179 elected by 
+    INFO 2022-07-03 16:41:05,854 elected by geography 
+    INFO 2022-07-03 16:41:06,612 elected by geography 
+    INFO 2022-07-03 16:41:09,143 economics 
+    INFO 2022-07-03 16:41:09,977 economics 
+    INFO 2022-07-03 16:41:12,184 and 
+    INFO 2022-07-03 16:41:12,454 他 
+    INFO 2022-07-03 16:41:12,761 他 爱 
+    INFO 2022-07-03 16:41:12,959 and time is of 
+    INFO 2022-07-03 16:41:13,972 and time is up 
+    INFO 2022-07-03 16:44:34,824 Socket opened! <__main__.MyClient object at 0x7f9920027370> 
+    INFO 2022-07-03 16:44:34,826 Start transcribing.... 
+    INFO 2022-07-03 16:44:35,964 尤其 
+    INFO 2022-07-03 16:44:36,109 有趣 的 
+    INFO 2022-07-03 16:44:36,337 游戏 的 
+    INFO 2022-07-03 16:44:36,528 you see the whole 
+    INFO 2022-07-03 16:44:36,777 you see the whole of 
+    INFO 2022-07-03 16:44:37,127 you see the whole of my 
+    INFO 2022-07-03 16:44:37,372 you see the whole of my kind of 
+    INFO 2022-07-03 16:44:37,558 you see the whole of my adult life 
+    INFO 2022-07-03 16:44:38,383 you see the whole of my adult life 
+    INFO 2022-07-03 16:44:43,913 嗯 
+    INFO 2022-07-03 16:44:45,011 being in 
+    INFO 2022-07-03 16:44:45,673 being in malaysia 
+    INFO 2022-07-03 16:44:46,034 being in malaysia and 
+    INFO 2022-07-03 16:44:46,218 being in malaysia and myanmar 
+    INFO 2022-07-03 16:44:46,536 being in malaysia and large 
+    INFO 2022-07-03 16:44:46,795 being in malaysia and larger 
+    INFO 2022-07-03 16:44:47,497 being in malaysia and larger 
+    INFO 2022-07-03 16:44:48,360 就 在 
+    INFO 2022-07-03 16:44:48,567 有些 计划 
+    INFO 2022-07-03 16:44:48,938 you'll have to you have this 
+    INFO 2022-07-03 16:44:54,636 you'll have to you have these two 
+    INFO 2022-07-03 16:44:54,723 you'll have to you have these two characters 
+    INFO 2022-07-03 16:44:54,968 you'll have to you have these two characters 
+    INFO 2022-07-03 16:44:56,709 这 两位 
+    INFO 2022-07-03 16:44:57,430 这 两位 一部分 
+    INFO 2022-07-03 16:44:57,616 这 两位 一步步 
+    INFO 2022-07-03 16:44:58,892 这 两位 一步步 
+    INFO 2022-07-03 16:45:00,431 and 
+    INFO 2022-07-03 16:45:00,733 elected 
+    INFO 2022-07-03 16:45:00,980 elected by 
+    INFO 2022-07-03 16:45:01,957 elected by geography 
+    INFO 2022-07-03 16:45:02,431 elected by geography 
+    INFO 2022-07-03 16:45:04,979 economics 
+    INFO 2022-07-03 16:45:06,104 economics 
+    INFO 2022-07-03 16:45:08,038 and 
+    INFO 2022-07-03 16:45:08,302 他 
+    INFO 2022-07-03 16:45:08,609 他 爱 
+    INFO 2022-07-03 16:45:08,828 and time is of 
+    INFO 2022-07-03 16:45:09,832 and time is up 
+    INFO 2022-07-03 16:45:10,691 选 
+    INFO 2022-07-03 16:45:11,974 选 
+    INFO 2022-07-03 16:45:16,529 我 也 
+    INFO 2022-07-03 16:45:16,693 我 也 买 
+    INFO 2022-07-03 16:45:16,956 well you might have a 
+    INFO 2022-07-03 16:45:17,495 well you might have a stumper 
+    INFO 2022-07-03 16:45:17,699 well you might have a stuff for a while 
+    INFO 2022-07-03 16:45:18,079 well you might have a stumper 吗 
+    INFO 2022-07-03 16:45:18,526 well you might have a stuff for a while 
+    INFO 2022-07-03 16:45:19,465 and 
+    INFO 2022-07-03 16:45:19,715 and lee 
+    INFO 2022-07-03 16:45:19,968 and lee kuan 
+    INFO 2022-07-03 16:45:20,323 and lee kuan yew 
+    INFO 2022-07-03 16:45:20,592 and lee kuan yew wet 
+    INFO 2022-07-03 16:45:20,999 and lee kuan yew wept as 
+    INFO 2022-07-03 16:45:21,241 and lee kuan yew wept as he 
+    INFO 2022-07-03 16:45:21,806 and lee kuan yew wept as he announced 
+    INFO 2022-07-03 16:45:22,022 and lee kuan yew wept as he announced the 
+    INFO 2022-07-03 16:45:22,797 and lee kuan yew wept as he announced the separation 
+    INFO 2022-07-03 16:45:23,143 and lee kuan yew wept as he announced the separation of 
+    INFO 2022-07-03 16:45:23,542 and lee kuan yew wept as he announced the separation of singapore 
+    INFO 2022-07-03 16:45:23,792 and lee kuan yew wept as he announced the separation of singapore from 
+    INFO 2022-07-03 16:45:24,309 and lee kuan yew wept as he announced the separation of singapore from malaysia 
+    INFO 2022-07-03 16:45:24,834 and lee kuan yew wept as he announced the separation of singapore from malaysia 
+    INFO 2022-07-03 16:45:25,672 ninth 
+    INFO 2022-07-03 16:45:25,918 ninth august 
+    INFO 2022-07-03 16:45:26,945 ninth august nineteen 
+    INFO 2022-07-03 16:45:27,100 ninth august nineteen sixty 
+    INFO 2022-07-03 16:45:27,632 ninth august nineteen sixty five 
+    INFO 2022-07-03 16:45:28,364 ninth august nineteen sixty five 
+    INFO 2022-07-03 16:45:30,150 but 
+    INFO 2022-07-03 16:45:30,460 but why 
+    INFO 2022-07-03 16:45:31,182 but why 
+    INFO 2022-07-03 16:45:32,076 why would a 
+    INFO 2022-07-03 16:45:32,181 why would a man 
+    INFO 2022-07-03 16:45:33,280 why would a man who marked 
+    INFO 2022-07-03 16:45:33,469 why would a man who marked his 
+    INFO 2022-07-03 16:45:33,962 why would a man who marked his descent 
+    INFO 2022-07-03 16:45:34,747 why would a man who marked his descent not 
+    INFO 2022-07-03 16:45:34,966 why would a man who marked his descent not from 
+    INFO 2022-07-03 16:45:35,485 why would a man who marked his descent not from people in 
+    INFO 2022-07-03 16:45:35,853 why would a man who marked his descent not from people 
+    INFO 2022-07-03 16:45:36,011 why would a man who marked his descent not from people indigenous 
+    INFO 2022-07-03 16:45:36,246 why would a man who marked his descent not from people indigenous to 
+    INFO 2022-07-03 16:45:37,055 why would a man who marked his descent not from people indigenous to malaya 
+    INFO 2022-07-03 16:45:37,370 why would a man who marked his descent not from people indigenous to malaya 
+    INFO 2022-07-03 16:45:38,119 <unk> from 
+    INFO 2022-07-03 16:45:38,280 <unk> from people 
+    INFO 2022-07-03 16:45:38,544 <unk> from people in 
+    INFO 2022-07-03 16:45:39,063 <unk> from people in southern china 
+    INFO 2022-07-03 16:45:39,826 <unk> from people in southern china 
+    INFO 2022-07-03 16:45:40,464 come to 
+    INFO 2022-07-03 16:45:40,811 
+ URL: ws://35.240.150.83/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-03 16:45:40,812 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-03 16:45:40,813 you see the whole of my adult life 嗯 being in malaysia and larger you'll have to you have these two characters 这 两位 一步步 elected by geography economics and time is up 选 well you might have a stuff for a while and lee kuan yew wept as he announced the separation of singapore from malaysia ninth august nineteen sixty five but why why would a man who marked his descent not from people indigenous to malaya <unk> from people in southern china come to 
+    INFO 2022-07-03 17:55:39,255 Socket opened! <__main__.MyClient object at 0x7fd35af07370> 
+    INFO 2022-07-03 17:55:39,257 Start transcribing.... 
+    INFO 2022-07-03 17:55:40,314 尤其 
+    INFO 2022-07-03 17:55:40,452 有趣 的 
+    INFO 2022-07-03 17:55:40,701 usually the 
