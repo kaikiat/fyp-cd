@@ -2,6 +2,8 @@ kubectl config set-context --current --namespace prometheus
 kubectl create namespace prometheus
 helm install prometheus prometheus-community/kube-prometheus-stack --namespace prometheus
 kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090
+kubectl port-forward deployment/prometheus-grafana 3000
+
 
 ## prom.yaml which endpont to scrap
 ## oper.yaml automate the configuration and management of the Prometheus
