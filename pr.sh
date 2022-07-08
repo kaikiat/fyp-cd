@@ -12,6 +12,8 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 argocd login localhost:8080 --username admin --password $(kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d)
 argocd repo list
 
+
+
 ########################## For demo-app ##########################
 # Only argo apply (Argo's configuration)
 kubectl apply -f argo_configuration/ntuasr/application.yaml
@@ -70,7 +72,6 @@ kubectl delete -f argo_production/ntuasr/application.yaml
 kubectl get rollouts 
 
 # Deploying the initial verion (use helm install ?)
-kubectl config set-context --current --namespace ntuasr-production-google
 kubectl argo rollouts abort sgdecoding-online-scaled-master
 
 # Watch
