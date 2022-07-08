@@ -36,7 +36,6 @@ metadata:
     helm.sh/chart: {{ include "ntuspeechlab.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
-
   annotations:
     prometheus.io/scrape: "true"
     prometheus.io/port: '8081'
@@ -61,7 +60,7 @@ apiVersion: v1
 kind: Service
 metadata:
   # name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
-  name:  {{ include "ntuspeechlab.master.name" . }}
+  name: sgdecoding-online-scaled-master
   labels:
     app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
     helm.sh/chart: {{ include "ntuspeechlab.chart" $ }}
@@ -89,7 +88,7 @@ apiVersion: v1
 kind: Service
 metadata:
   # name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
-  name:  {{ include "ntuspeechlab.master.name" . }}-preview
+  name: sgdecoding-online-scaled-master-preview
   labels:
     app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
     helm.sh/chart: {{ include "ntuspeechlab.chart" $ }}
