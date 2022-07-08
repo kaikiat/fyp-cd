@@ -1,7 +1,7 @@
-# apiVersion: apps/v1
-# kind: Deployment
-apiVersion: argoproj.io/v1alpha1
-kind: Rollout
+apiVersion: apps/v1
+kind: Deployment
+# apiVersion: argoproj.io/v1alpha1
+# kind: Rollout
 metadata:
   name: {{ include "ntuspeechlab.master.name" . }}
   labels:
@@ -16,11 +16,11 @@ spec:
       app.kubernetes.io/name: {{ include "ntuspeechlab.master.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   # Add strategy here
-  strategy:
-    blueGreen: 
-      activeService: {{ include "ntuspeechlab.master.name" . }}
-      previewService: {{ include "ntuspeechlab.master.name" . }}-preview #  to test a new version of an application.
-      autoPromotionEnabled: false #  make the rollout automatically promote the new ReplicaSet to the active service once the new ReplicaSet is healthy
+  # strategy:
+  #   blueGreen: 
+  #     activeService: {{ include "ntuspeechlab.master.name" . }}
+  #     previewService: {{ include "ntuspeechlab.master.name" . }}-preview #  to test a new version of an application.
+  #     autoPromotionEnabled: false #  make the rollout automatically promote the new ReplicaSet to the active service once the new ReplicaSet is healthy
       # autoPromotionEnabled: true #  make the rollout automatically promote the new ReplicaSet to the active service once the new ReplicaSet is healthy
       # scaleDownDelaySeconds: 150 # delay scaling down the old ReplicaSet after the active Service is switched
   template:
@@ -90,8 +90,8 @@ spec:
   strategy:
     blueGreen: 
       # activeService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
-      activeService:  {{ include "ntuspeechlab.master.name" . }}
-      previewService:  {{ include "ntuspeechlab.master.name" . }}-preview
+      activeService:  sgdecoding-online-scaled-worker-singaporecs-0519nnet3
+      previewService:  sgdecoding-online-scaled-worker-singaporecs-0519nnet3-preview
       autoPromotionEnabled: false
       # activeService: {{ include "ntuspeechlab.master.name" . }}
       # previewService: {{ include "ntuspeechlab.master.name" . }}-preview #  to test a new version of an application.
