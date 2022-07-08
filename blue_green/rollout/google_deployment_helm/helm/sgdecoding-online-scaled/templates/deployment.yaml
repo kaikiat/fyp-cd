@@ -86,13 +86,9 @@ spec:
       app.kubernetes.io/instance: {{ $.Release.Name }}
   # Add strategy here
   # strategy:
-  #     # activeService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
-  #     activeService:  sgdecoding-online-scaled-worker-singaporecs-0519nnet3
-  #     previewService:  sgdecoding-online-scaled-worker-singaporecs-0519nnet3-preview
-  #     autoPromotionEnabled: false
-      # activeService: {{ include "ntuspeechlab.master.name" . }}
-      # previewService: {{ include "ntuspeechlab.master.name" . }}-preview #  to test a new version of an application.
-      # autoPromotionEnabled: false #  make the rollout automatically promote the new ReplicaSet to the active service once the new ReplicaSet is healthy
+    # activeService: {{ include "ntuspeechlab.master.name" . }}
+    # previewService: {{ include "ntuspeechlab.master.name" . }}-preview #  to test a new version of an application.
+    # autoPromotionEnabled: false #  make the rollout automatically promote the new ReplicaSet to the active service once the new ReplicaSet is healthy
   template:
     metadata:
       annotations:
