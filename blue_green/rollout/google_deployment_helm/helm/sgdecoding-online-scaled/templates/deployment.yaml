@@ -90,8 +90,8 @@ spec:
   strategy:
     blueGreen: 
       # activeService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
-      activeService: {{ include "ntuspeechlab.master.name" . }}
-      previewService: {{ include "ntuspeechlab.master.name" . }}-preview
+      activeService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
+      previewService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3-preview
       autoPromotionEnabled: false
       # activeService: {{ include "ntuspeechlab.master.name" . }}
       # previewService: {{ include "ntuspeechlab.master.name" . }}-preview #  to test a new version of an application.
