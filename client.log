@@ -65,3 +65,303 @@
     INFO 2022-07-08 10:27:17,052 usually the 
     INFO 2022-07-08 10:27:17,317 usually the whole 
     INFO 2022-07-08 10:27:17,541 usually the whole of 
+    INFO 2022-07-08 14:51:14,972 Socket opened! <__main__.MyClient object at 0x7f04f3217400> 
+    INFO 2022-07-08 14:51:14,973 Start transcribing.... 
+    INFO 2022-07-08 14:51:16,088 尤其 
+    INFO 2022-07-08 14:51:16,222 有趣 的 
+    INFO 2022-07-08 14:51:16,472 游戏 的 
+    INFO 2022-07-08 14:51:16,782 you see the whole 
+    INFO 2022-07-08 14:55:32,620 Socket opened! <__main__.MyClient object at 0x7f99d96b7400> 
+    INFO 2022-07-08 14:55:32,622 Start transcribing.... 
+    INFO 2022-07-08 14:55:33,650 尤其 
+    INFO 2022-07-08 14:55:33,807 有趣 的 
+    INFO 2022-07-08 14:55:34,070 游戏 的 
+    INFO 2022-07-08 14:55:34,310 usually the whole 
+    INFO 2022-07-08 14:55:34,554 usually the whole of 
+    INFO 2022-07-08 14:56:07,957 Socket opened! <__main__.MyClient object at 0x7fcca01b73d0> 
+    INFO 2022-07-08 14:56:07,957 Start transcribing.... 
+    INFO 2022-07-08 14:56:08,046 Received error from server (status 9) 
+    INFO 2022-07-08 14:56:08,046 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-08 14:56:08,047 
+ URL: ws://34.87.22.11/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-08 14:56:08,047 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-08 14:56:08,047  
+    INFO 2022-07-08 14:56:37,474 Socket opened! <__main__.MyClient object at 0x7f4f164733d0> 
+    INFO 2022-07-08 14:56:37,475 Start transcribing.... 
+    INFO 2022-07-08 14:56:37,773 Received error from server (status 9) 
+    INFO 2022-07-08 14:56:37,773 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-08 14:56:37,775 
+ URL: ws://34.87.22.11/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-08 14:56:37,776 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-08 14:56:37,776  
+    INFO 2022-07-08 14:57:27,474 Socket opened! <__main__.MyClient object at 0x7f69e05df3d0> 
+    INFO 2022-07-08 14:57:27,474 Start transcribing.... 
+    INFO 2022-07-08 14:57:27,551 Received error from server (status 9) 
+    INFO 2022-07-08 14:57:27,551 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-08 14:57:27,551 
+ URL: ws://34.87.22.11/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-08 14:57:27,551 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-08 14:57:27,552  
+    INFO 2022-07-08 15:01:54,699 Socket opened! <__main__.MyClient object at 0x7f4f34faf3d0> 
+    INFO 2022-07-08 15:01:54,700 Start transcribing.... 
+    INFO 2022-07-08 15:01:54,776 Received error from server (status 9) 
+    INFO 2022-07-08 15:01:54,776 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-08 15:01:54,778 
+ URL: ws://34.87.22.11/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-08 15:01:54,779 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-08 15:01:54,779  
+    INFO 2022-07-08 15:03:47,569 Socket opened! <__main__.MyClient object at 0x7fcbc418f3d0> 
+    INFO 2022-07-08 15:03:47,569 Start transcribing.... 
+    INFO 2022-07-08 15:03:47,662 Received error from server (status 9) 
+    INFO 2022-07-08 15:03:47,662 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-07-08 15:03:47,662 
+ URL: ws://34.87.22.11/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-08 15:03:47,663 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-08 15:03:47,663  
+    INFO 2022-07-08 15:04:08,333 Socket opened! <__main__.MyClient object at 0x7fb99d3b33d0> 
+    INFO 2022-07-08 15:04:08,334 Start transcribing.... 
+    INFO 2022-07-08 15:04:09,376 尤其 
+    INFO 2022-07-08 15:04:09,544 有趣 的 
+    INFO 2022-07-08 15:04:09,790 游戏 的 
+    INFO 2022-07-08 15:04:10,103 usually the whole 
+    INFO 2022-07-08 15:04:10,300 usually the whole of 
+    INFO 2022-07-08 15:04:10,630 usually the whole of my 
+    INFO 2022-07-08 15:04:11,395 usually the whole of my kind of 
+    INFO 2022-07-08 15:04:11,490 usually the whole of my adult life 
+    INFO 2022-07-08 15:06:17,777 Socket opened! <__main__.MyClient object at 0x7ffbf672f400> 
+    INFO 2022-07-08 15:06:17,778 Start transcribing.... 
+    INFO 2022-07-08 15:06:18,802 尤其 
+    INFO 2022-07-08 15:06:18,955 有趣 的 
+    INFO 2022-07-08 15:06:19,208 游戏 的 
+    INFO 2022-07-08 15:06:19,597 you see the whole 
+    INFO 2022-07-08 15:06:19,849 you see the whole of 
+    INFO 2022-07-08 15:06:20,077 you see the whole of my iphone 
+    INFO 2022-07-08 15:06:20,323 you see the whole of my kind of 
+    INFO 2022-07-08 15:06:20,766 you see the whole of my adult life 
+    INFO 2022-07-08 15:06:21,345 you see the whole of my adult life 
+    INFO 2022-07-08 15:06:26,807 嗯 
+    INFO 2022-07-08 15:06:27,827 being in 
+    INFO 2022-07-08 15:06:28,611 being in malaysia 
+    INFO 2022-07-08 15:06:28,886 being in malaysia and 
+    INFO 2022-07-08 15:06:29,151 being in malaysia and myanmar 
+    INFO 2022-07-08 15:06:29,344 being in malaysia and large 
+    INFO 2022-07-08 15:06:29,585 being in malaysia and larger 
+    INFO 2022-07-08 15:06:30,379 being in malaysia and larger 
+    INFO 2022-07-08 15:06:31,496 就 在 
+    INFO 2022-07-08 15:06:31,680 you'll have to you have 
+    INFO 2022-07-08 15:06:31,992 you'll have to you have this 
+    INFO 2022-07-08 15:06:32,104 you'll have to you have these two 
+    INFO 2022-07-08 15:06:32,451 you'll have to you have these two characters 
+    INFO 2022-07-08 15:06:33,126 you'll have to you have these two characters 
+    INFO 2022-07-08 15:06:35,259 这 两位 
+    INFO 2022-07-08 15:06:36,071 这 两位 一部分 
+    INFO 2022-07-08 15:06:36,192 这 两位 一步步 
+    INFO 2022-07-08 15:06:37,514 这 两位 一步步 
+    INFO 2022-07-08 15:06:38,948 and 
+    INFO 2022-07-08 15:06:39,362 elected 
+    INFO 2022-07-08 15:06:39,549 elected by 
+    INFO 2022-07-08 15:06:40,209 elected by geography 
+    INFO 2022-07-08 15:06:40,977 elected by geography 
+    INFO 2022-07-08 15:06:43,519 economics 
+    INFO 2022-07-08 15:06:44,385 economics 
+    INFO 2022-07-08 15:06:46,605 and 
+    INFO 2022-07-08 15:06:46,873 他 
+    INFO 2022-07-08 15:06:47,210 他 爱 
+    INFO 2022-07-08 15:06:47,370 and time is of 
+    INFO 2022-07-08 15:06:48,637 and time is up 
+    INFO 2022-07-08 15:06:49,269 选 
+    INFO 2022-07-08 15:06:50,547 选 
+    INFO 2022-07-08 15:06:55,013 我 也 
+    INFO 2022-07-08 15:06:55,218 will your mind 
+    INFO 2022-07-08 15:06:55,483 will your mind every 
+    INFO 2022-07-08 15:06:55,995 well you might have a stumper 
+    INFO 2022-07-08 15:06:56,353 will your mind every stuff for a while 
+    INFO 2022-07-08 15:06:57,014 will your mind every stuff for a while 
+    INFO 2022-07-08 15:06:58,014 and 
+    INFO 2022-07-08 15:06:58,241 and lee 
+    INFO 2022-07-08 15:06:58,496 and lee kuan 
+    INFO 2022-07-08 15:06:58,740 and lee kuan yew 
+    INFO 2022-07-08 15:06:59,076 and lee kuan yew wet 
+    INFO 2022-07-08 15:06:59,505 and lee kuan yew wept as 
+    INFO 2022-07-08 15:06:59,771 and lee kuan yew wept as he 
+    INFO 2022-07-08 15:07:00,316 and lee kuan yew wept as he announced 
+    INFO 2022-07-08 15:07:00,516 and lee kuan yew wept as he announced the 
+    INFO 2022-07-08 15:07:01,297 and lee kuan yew wept as he announced the separation 
+    INFO 2022-07-08 15:07:01,582 and lee kuan yew wept as he announced the separation of 
+    INFO 2022-07-08 15:07:02,046 and lee kuan yew wept as he announced the separation of singapore 
+    INFO 2022-07-08 15:07:02,285 and lee kuan yew wept as he announced the separation of singapore from 
+    INFO 2022-07-08 15:07:03,323 and lee kuan yew wept as he announced the separation of singapore from malaysia 
+    INFO 2022-07-08 15:07:03,529 and lee kuan yew wept as he announced the separation of singapore from malaysia 
+    INFO 2022-07-08 15:07:04,144 ninth 
+    INFO 2022-07-08 15:07:04,318 ninth august 
+    INFO 2022-07-08 15:07:05,383 ninth august nineteen 
+    INFO 2022-07-08 15:07:05,572 ninth august nineteen sixty 
+    INFO 2022-07-08 15:07:06,098 ninth august nineteen sixty five 
+    INFO 2022-07-08 15:07:06,874 ninth august nineteen sixty five 
+    INFO 2022-07-08 15:07:08,824 but 
+    INFO 2022-07-08 15:07:08,951 but why 
+    INFO 2022-07-08 15:07:09,704 but why 
+    INFO 2022-07-08 15:07:10,489 why would a 
+    INFO 2022-07-08 15:07:10,649 why would a man 
+    INFO 2022-07-08 15:07:11,733 why would a man who marked 
+    INFO 2022-07-08 15:07:11,925 why would a man who marked his 
+    INFO 2022-07-08 15:07:12,462 why would a man who marked his descent 
+    INFO 2022-07-08 15:07:13,271 why would a man who marked his descent not 
+    INFO 2022-07-08 15:07:13,462 why would a man who marked his descent not from 
+    INFO 2022-07-08 15:07:14,061 why would a man who marked his descent not from people in 
+    INFO 2022-07-08 15:07:14,302 why would a man who marked his descent not from people 
+    INFO 2022-07-08 15:07:14,638 why would a man who marked his descent not from people indigenous 
+    INFO 2022-07-08 15:07:14,755 why would a man who marked his descent not from people indigenous to 
+    INFO 2022-07-08 15:07:15,316 why would a man who marked his descent not from people indigenous to malaya 
+    INFO 2022-07-08 15:07:15,862 why would a man who marked his descent not from people indigenous to malaya 
+    INFO 2022-07-08 15:07:16,621 from 
+    INFO 2022-07-08 15:07:16,768 from people 
+    INFO 2022-07-08 15:07:17,025 from people in 
+    INFO 2022-07-08 15:07:17,527 from people in southern china 
+    INFO 2022-07-08 15:07:18,341 from people in southern china 
+    INFO 2022-07-08 15:07:18,955 come to 
+    INFO 2022-07-08 15:07:19,079 
+ URL: ws://34.126.158.213/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-08 15:07:19,080 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-08 15:07:19,080 you see the whole of my adult life 嗯 being in malaysia and larger you'll have to you have these two characters 这 两位 一步步 elected by geography economics and time is up 选 will your mind every stuff for a while and lee kuan yew wept as he announced the separation of singapore from malaysia ninth august nineteen sixty five but why why would a man who marked his descent not from people indigenous to malaya from people in southern china come to 
+    INFO 2022-07-08 15:10:45,535 Socket opened! <__main__.MyClient object at 0x7f3e8ea4b400> 
+    INFO 2022-07-08 15:10:45,536 Start transcribing.... 
+    INFO 2022-07-08 15:10:47,126 尤其 
+    INFO 2022-07-08 15:10:47,206 有趣 的 
+    INFO 2022-07-08 15:10:47,326 游戏 的 
+    INFO 2022-07-08 15:10:47,409 you see the whole 
+    INFO 2022-07-08 15:10:47,485 you see the whole of 
+    INFO 2022-07-08 15:10:47,819 you see the whole of my 
+    INFO 2022-07-08 15:10:48,033 you see the whole of my kind of 
+    INFO 2022-07-08 15:10:48,258 you see the whole of my adult life 
+    INFO 2022-07-08 15:10:49,235 you see the whole of my adult life 
+    INFO 2022-07-08 15:10:54,654 嗯 
+    INFO 2022-07-08 15:10:55,656 being in 
+    INFO 2022-07-08 15:10:56,560 being in malaysia 
+    INFO 2022-07-08 15:10:56,732 being in malaysia and 
+    INFO 2022-07-08 15:10:56,903 being in malaysia and myanmar 
+    INFO 2022-07-08 15:10:57,208 being in malaysia and large 
+    INFO 2022-07-08 15:10:57,510 being in malaysia and larger 
+    INFO 2022-07-08 15:10:58,212 being in malaysia and larger 
+    INFO 2022-07-08 15:10:59,115 就 在 
+    INFO 2022-07-08 15:10:59,273 有些 计划 
+    INFO 2022-07-08 15:10:59,532 you'll have to you have this 
+    INFO 2022-07-08 15:10:59,698 you'll have to you have to 
+    INFO 2022-07-08 15:10:59,935 you'll have to you have these two 
+    INFO 2022-07-08 15:11:00,292 you'll have to you have these two characters 
+    INFO 2022-07-08 15:11:00,973 you'll have to you have these two characters 
+    INFO 2022-07-08 15:11:03,078 这 两位 
+    INFO 2022-07-08 15:11:03,824 这 两位 一部分 
+    INFO 2022-07-08 15:11:04,016 这 两位 一步步 
+    INFO 2022-07-08 15:11:05,296 这 两位 一步步 
+    INFO 2022-07-08 15:11:06,969 and 
+    INFO 2022-07-08 15:11:07,173 elected 
+    INFO 2022-07-08 15:11:07,423 elected by 
+    INFO 2022-07-08 15:11:08,092 elected by geography 
+    INFO 2022-07-08 15:11:08,864 elected by geography 
+    INFO 2022-07-08 15:11:11,422 economics 
+    INFO 2022-07-08 15:11:12,227 economics 
+    INFO 2022-07-08 15:11:14,584 and 
+    INFO 2022-07-08 15:11:14,728 他 
+    INFO 2022-07-08 15:11:15,018 他 爱 
+    INFO 2022-07-08 15:11:15,317 and time is of 
+    INFO 2022-07-08 15:11:16,401 and time is up 
+    INFO 2022-07-08 15:11:17,111 选 
+    INFO 2022-07-08 15:11:19,237 选 
+    INFO 2022-07-08 15:11:23,040 我 也 
+    INFO 2022-07-08 15:11:23,163 what your mind 
+    INFO 2022-07-08 15:11:23,439 what your mind every 
+    INFO 2022-07-08 15:11:23,633 well you might have a 
+    INFO 2022-07-08 15:11:23,945 well you might have a stumper 
+    INFO 2022-07-08 15:11:24,148 well you might have a stuff for a while 
+    INFO 2022-07-08 15:11:24,504 well you might have a stumper 吗 
+    INFO 2022-07-08 15:11:25,050 well you might have a stuff for a while 
+    INFO 2022-07-08 15:11:25,914 and 
+    INFO 2022-07-08 15:11:26,683 and lee 
+    INFO 2022-07-08 15:11:26,836 and lee kuan 
+    INFO 2022-07-08 15:11:26,919 and lee kuan yew 
+    INFO 2022-07-08 15:11:27,030 and lee kuan yew wet 
+    INFO 2022-07-08 15:11:27,428 and lee kuan yew wept as 
+    INFO 2022-07-08 15:11:27,676 and lee kuan yew wept as he 
+    INFO 2022-07-08 15:11:28,272 and lee kuan yew wept as he announced 
+    INFO 2022-07-08 15:11:28,458 and lee kuan yew wept as he announced the 
+    INFO 2022-07-08 15:11:29,224 and lee kuan yew wept as he announced the separation 
+    INFO 2022-07-08 15:11:29,574 and lee kuan yew wept as he announced the separation of 
+    INFO 2022-07-08 15:11:29,998 and lee kuan yew wept as he announced the separation of singapore 
+    INFO 2022-07-08 15:11:30,283 and lee kuan yew wept as he announced the separation of singapore from 
+    INFO 2022-07-08 15:11:30,745 and lee kuan yew wept as he announced the separation of singapore from malaysia 
+    INFO 2022-07-08 15:11:31,298 and lee kuan yew wept as he announced the separation of singapore from malaysia 
+    INFO 2022-07-08 15:11:32,154 ninth 
+    INFO 2022-07-08 15:11:32,830 ninth august 
+    INFO 2022-07-08 15:11:33,533 ninth august nineteen 
+    INFO 2022-07-08 15:11:33,657 ninth august nineteen sixty 
+    INFO 2022-07-08 15:11:34,215 ninth august nineteen sixty five 
+    INFO 2022-07-08 15:11:34,799 ninth august nineteen sixty five 
+    INFO 2022-07-08 15:11:36,583 but 
+    INFO 2022-07-08 15:11:36,905 but why 
+    INFO 2022-07-08 15:11:37,676 but why 
+    INFO 2022-07-08 15:11:38,831 why would a 
+    INFO 2022-07-08 15:11:38,906 why would a man 
+    INFO 2022-07-08 15:11:39,742 why would a man who marked 
+    INFO 2022-07-08 15:11:39,900 why would a man who marked his 
+    INFO 2022-07-08 15:11:40,489 why would a man who marked his descent 
+    INFO 2022-07-08 15:11:41,200 why would a man who marked his descent not 
+    INFO 2022-07-08 15:11:41,422 why would a man who marked his descent not from 
+    INFO 2022-07-08 15:11:41,965 why would a man who marked his descent not from people in 
+    INFO 2022-07-08 15:11:42,301 why would a man who marked his descent not from people 
+    INFO 2022-07-08 15:11:42,496 why would a man who marked his descent not from people indigenous 
+    INFO 2022-07-08 15:11:42,836 why would a man who marked his descent not from people indigenous to 
+    INFO 2022-07-08 15:11:43,221 why would a man who marked his descent not from people indigenous to malaya 
+    INFO 2022-07-08 15:11:43,828 why would a man who marked his descent not from people indigenous to malaya 
+    INFO 2022-07-08 15:11:45,090 <unk> from 
+    INFO 2022-07-08 15:11:45,255 <unk> from people 
+    INFO 2022-07-08 15:11:45,365 <unk> from people in 
+    INFO 2022-07-08 15:11:45,538 <unk> from people in southern china 
+    INFO 2022-07-08 15:11:46,294 <unk> from people in southern china 
+    INFO 2022-07-08 15:11:47,196 come to 
+    INFO 2022-07-08 15:11:47,339 
+ URL: ws://34.126.158.213/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-07-08 15:11:47,340 
+------------------------
+Final Result: 
+ 
+    INFO 2022-07-08 15:11:47,341 you see the whole of my adult life 嗯 being in malaysia and larger you'll have to you have these two characters 这 两位 一步步 elected by geography economics and time is up 选 well you might have a stuff for a while and lee kuan yew wept as he announced the separation of singapore from malaysia ninth august nineteen sixty five but why why would a man who marked his descent not from people indigenous to malaya <unk> from people in southern china come to 
+    INFO 2022-07-08 15:16:59,484 Socket opened! <__main__.MyClient object at 0x7f984f2cb400> 
+    INFO 2022-07-08 15:16:59,485 Start transcribing.... 
+    INFO 2022-07-08 15:17:00,697 尤其 
+    INFO 2022-07-08 15:17:00,775 有趣 的 
+    INFO 2022-07-08 15:17:00,931 游戏 的 
+    INFO 2022-07-08 15:17:01,170 you see the whole 
+    INFO 2022-07-08 15:17:01,413 you see the whole of 
+    INFO 2022-07-08 15:17:30,676 Socket opened! <__main__.MyClient object at 0x7f5960c8f3d0> 
+    INFO 2022-07-08 15:17:30,677 Start transcribing.... 
+    INFO 2022-07-08 15:17:31,779 尤其 
+    INFO 2022-07-08 15:17:31,867 有趣 的 
+    INFO 2022-07-08 15:17:32,188 游戏 的 
+    INFO 2022-07-08 15:17:32,440 usually the whole 
+    INFO 2022-07-08 15:17:32,769 usually the whole of 
