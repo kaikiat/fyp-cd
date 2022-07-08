@@ -109,22 +109,22 @@ export NAMESPACE=ntuasr-production-google
 export KUBE_NAME=sgdecoding-online-scaled
 export NAMESPACE=ntuasr-production-google
 
-# export MASTER_SERVICE="$KUBE_NAME-master"  
-# export MASTER_SERVICE_IP=$(kubectl get svc $MASTER_SERVICE -n $NAMESPACE \
-#     --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
-# export MASTER_ENDPOINT=$(kubectl describe svc sgdecoding-online-scaled-master | grep 'Endpoints:')
-# echo "Master Endpoint:  ${MASTER_ENDPOINT}" # 10.20.7.23:8080
-# echo "IP addess of master: ${MASTER_SERVICE_IP}" # /34.126.158.213
-# python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav
-
-
-export PREVIEW_SERVICE="$KUBE_NAME-master-preview"  
-export PREVIEW_SERVICE_IP=$(kubectl get svc $PREVIEW_SERVICE -n $NAMESPACE \
+export MASTER_SERVICE="$KUBE_NAME-master"  
+export MASTER_SERVICE_IP=$(kubectl get svc $MASTER_SERVICE -n $NAMESPACE \
     --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
-export PREVIEW_ENDPOINT=$(kubectl describe svc sgdecoding-online-scaled-master-preview | grep 'Endpoints:')
-echo "Preview Endpoint:  ${PREVIEW_ENDPOINT}"  #  10.20.7.23:8080
-echo "IP addess of preview: ${PREVIEW_SERVICE_IP}" # 34.87.159.241
-python3 client/client_3_ssl.py -u ws://$PREVIEW_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav
+export MASTER_ENDPOINT=$(kubectl describe svc sgdecoding-online-scaled-master | grep 'Endpoints:')
+echo "Master Endpoint:  ${MASTER_ENDPOINT}" #  10.20.7.26:8080
+echo "IP addess of master: ${MASTER_SERVICE_IP}" # 34.126.158.213
+python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav
+
+
+# export PREVIEW_SERVICE="$KUBE_NAME-master-preview"  
+# export PREVIEW_SERVICE_IP=$(kubectl get svc $PREVIEW_SERVICE -n $NAMESPACE \
+#     --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
+# export PREVIEW_ENDPOINT=$(kubectl describe svc sgdecoding-online-scaled-master-preview | grep 'Endpoints:')
+# echo "Preview Endpoint:  ${PREVIEW_ENDPOINT}"  #  10.20.7.23:8080
+# echo "IP addess of preview: ${PREVIEW_SERVICE_IP}" # 34.87.159.241
+# python3 client/client_3_ssl.py -u ws://$PREVIEW_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav
 
 
 # kubectl-argo-rollouts promote sgdecoding-online-scaled-master

@@ -365,3 +365,15 @@ Final Result:
     INFO 2022-07-08 15:17:32,188 游戏 的 
     INFO 2022-07-08 15:17:32,440 usually the whole 
     INFO 2022-07-08 15:17:32,769 usually the whole of 
+    INFO 2022-07-08 16:08:21,777 Socket opened! <__main__.MyClient object at 0x7fea9b4bf400> 
+    INFO 2022-07-08 16:08:21,779 Start transcribing.... 
+    INFO 2022-07-08 16:08:22,973 尤其 
+    INFO 2022-07-08 16:08:23,156 有趣 的 
+    INFO 2022-07-08 16:08:23,448 游戏 的 
+    INFO 2022-07-08 16:08:23,544 you see the whole 
+    INFO 2022-07-08 16:11:25,884 Socket opened! <__main__.MyClient object at 0x7f5f821e7400> 
+    INFO 2022-07-08 16:11:25,886 Start transcribing.... 
+    INFO 2022-07-08 16:11:26,985 尤其 
+    INFO 2022-07-08 16:11:27,072 有趣 的 
+    INFO 2022-07-08 16:11:27,346 usually the 
+    INFO 2022-07-08 16:11:27,588 usually the whole 
