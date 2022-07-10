@@ -88,12 +88,6 @@ spec:
     matchLabels:
       app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name  | lower | replace "_" "-"}}
       app.kubernetes.io/instance: {{ $.Release.Name }}
-  # Add strategy here
-  # strategy:
-  #   canary:
-  #     steps:
-  #     - pause: {duration: 5s}
-  #     - pause: {duration: 5s}
   strategy:
     canary: #Indicates that the rollout should use the Canary strategy
       maxSurge: "25%" # The maximum number of replicas the rollout can create 
