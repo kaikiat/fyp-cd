@@ -28,7 +28,3 @@ helm uninstall argocd-release -n argocd
 # Add argocd service monitor
 
 kubectl apply -f prometheus_configuration/service-monitor.yaml
-
-
-
-
