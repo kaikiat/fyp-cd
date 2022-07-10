@@ -23,8 +23,9 @@ spec:
     path: canary/rollout/google_deployment_helm/helm/sgdecoding-online-scaled  # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.
 
     chart: argo/argo-cd
-    valuesFiles:
-      - values.yaml
+    helm:
+      valuesFiles:
+        - values.yaml
 
   # Destination cluster and namespace to deploy the application
   destination:
