@@ -30,7 +30,6 @@ cat /$HOME/.ssh/id_ed25519.pub
 # From docs
 # argocd repo add git@github.com:kaikiat/fyp.git --ssh-private-key-path ~/.ssh/id_rsa 
 # For ubuntu
-argocd repo add git@github.com:kaikiat/fyp.git --ssh-private-key-path ~/.ssh/id_ed25519
 argocd repo add git@github.com:kaikiat/fyp-cd.git --ssh-private-key-path ~/.ssh/id_ed25519
 
 # For macOs
@@ -47,6 +46,7 @@ argocd app list  # to get app
 # how to delete
 argocd app delete sgdecoding-online-scaled
 kubectl get namespace argocd -o json >tmp.json
+kubectl proxy
 curl -k -H "Content-Type: application/json" -X PUT -d @tmp.json http://127.0.0.1:8001/api/v1/namespaces/argocd/finalize
 
 # https://www.reddit.com/r/kubernetes/comments/jc207l/argocd_and_broken_namespaces/

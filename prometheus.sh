@@ -14,18 +14,19 @@ helm show values prometheus-community/prometheus-mongodb-exporter
 helm install mongodb-exporter prometheus-community/prometheus-mongodb-exporter -f prometheus_configuration/values.yaml
 kubectl port-forward service/mongodb-exporter-prometheus-mongodb-exporter 9216
 
-
-
 # ArgoCD Helm
 # https://github.com/argoproj/argo-cd/discussions/8968
 # https://github.com/argoproj/argo-helm/tree/main/charts/argo-cd
 
 helm repo add argo https://argoproj.github.io/argo-helm
 # Why cannot use argocd ? But argocd-release works
-helm install argocd-release argo/argo-cd -f prometheus_configuration/values.yaml -n argocd
-helm install argocd argo/argo-cd -f prometheus_configuration/values.yaml -n argocd
-helm uninstall argocd -n argocd
+# helm install argocd-release argo/argo-cd -f prometheus_configuration/values.yaml -n argocd
+# helm install argocd argo/argo-cd -f prometheus_configuration/values.yaml -n argocd
+helm install argocd-release argo/argo-cd --namespace argocd
+helm upgrade argocd-release argo/argo-cd -f prometheus_configuration/values.yaml -n argocd
+helm uninstall argocd-release -n argocd
 # Add argocd service monitor
+
 kubectl apply -f prometheus_configuration/service-monitor.yaml
 
 

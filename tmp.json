@@ -2,20 +2,57 @@
     "apiVersion": "v1",
     "kind": "Namespace",
     "metadata": {
-        "creationTimestamp": "2022-07-10T06:56:47Z",
+        "creationTimestamp": "2022-07-10T07:07:54Z",
+        "deletionTimestamp": "2022-07-10T08:48:15Z",
         "labels": {
             "kubernetes.io/metadata.name": "argocd"
         },
         "name": "argocd",
-        "resourceVersion": "5594254",
-        "uid": "128bde9f-9f93-4b8f-9f27-4cc8402a12d8"
+        "resourceVersion": "5637239",
+        "uid": "ca66de9d-3f69-4b9f-8e72-02d408fc973d"
     },
     "spec": {
         "finalizers": [
-            "kubernetes"
         ]
     },
     "status": {
-        "phase": "Active"
+        "conditions": [
+            {
+                "lastTransitionTime": "2022-07-10T08:48:24Z",
+                "message": "All resources successfully discovered",
+                "reason": "ResourcesDiscovered",
+                "status": "False",
+                "type": "NamespaceDeletionDiscoveryFailure"
+            },
+            {
+                "lastTransitionTime": "2022-07-10T08:48:24Z",
+                "message": "All legacy kube types successfully parsed",
+                "reason": "ParsedGroupVersions",
+                "status": "False",
+                "type": "NamespaceDeletionGroupVersionParsingFailure"
+            },
+            {
+                "lastTransitionTime": "2022-07-10T08:48:24Z",
+                "message": "All content successfully deleted, may be waiting on finalization",
+                "reason": "ContentDeleted",
+                "status": "False",
+                "type": "NamespaceDeletionContentFailure"
+            },
+            {
+                "lastTransitionTime": "2022-07-10T08:48:24Z",
+                "message": "Some resources are remaining: applications.argoproj.io has 1 resource instances",
+                "reason": "SomeResourcesRemain",
+                "status": "True",
+                "type": "NamespaceContentRemaining"
+            },
+            {
+                "lastTransitionTime": "2022-07-10T08:48:24Z",
+                "message": "Some content in the namespace has finalizers remaining: resources-finalizer.argocd.argoproj.io in 1 resource instances",
+                "reason": "SomeFinalizersRemain",
+                "status": "True",
+                "type": "NamespaceFinalizersRemaining"
+            }
+        ],
+        "phase": "Terminating"
     }
 }
