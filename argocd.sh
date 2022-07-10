@@ -46,12 +46,18 @@ argocd app list  # to get app
 
 # how to delete
 argocd app delete sgdecoding-online-scaled
+kubectl get namespace argocd -o json >tmp.json
+curl -k -H "Content-Type: application/json" -X PUT -d @tmp.json http://127.0.0.1:8001/api/v1/namespaces/argocd/finalize
+
+# https://www.reddit.com/r/kubernetes/comments/jc207l/argocd_and_broken_namespaces/
 
 #################################################################
 
 
 ########################## argo rollout ##########################
 # kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml
+# Installing and configuring prometheus
+kubectl apply -n argo-rollouts -f rollout.yaml
 
 # Argo rollout plugin installation
 curl -LO https://github.com/argoproj/argo-rollouts/releases/latest/download/kubectl-argo-rollouts-darwin-amd64
