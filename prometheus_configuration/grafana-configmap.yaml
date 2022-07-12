@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: GrafanaConfigMap
+  name: grafana-config-map
 data:
   service.grafana: |
-    apiUrl: https://grafana.example.com/api
-    apiKey: eyJrIjoiNXVaTFRVNW5DU3YxM1BjOEYzd0NTOVJWMXZPU2dtdHYiLCJuIjoiR1JBRkFOQV9LRVkiLCJpZCI6MX0=
+    apiUrl: http://localhost:3000/alerts
+    apiKey: eyJrIjoiRUNKMG1HdnpDMVdTUTQ3REZ6SUtqc05qTWxIaVIzaXIiLCJuIjoiR1JBRkFOQV9LRVkiLCJpZCI6MX0=

@@ -12,8 +12,6 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 argocd login localhost:8080 --username admin --password $(kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d)
 argocd repo list
 
-
-
 ########################## For demo-app ##########################
 # Only argo apply (Argo's configuration)
 kubectl apply -f argo_configuration/ntuasr/application.yaml
@@ -57,7 +55,7 @@ curl -k -H "Content-Type: application/json" -X PUT -d @tmp.json http://127.0.0.1
 ########################## argo rollout ##########################
 # kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml
 # Installing and configuring prometheus
-kubectl apply -n argo-rollouts -f rollout.yaml
+# kubectl apply -n argo-rollouts -f rollout.yaml
 
 # Argo rollout plugin installation
 curl -LO https://github.com/argoproj/argo-rollouts/releases/latest/download/kubectl-argo-rollouts-darwin-amd64
@@ -66,7 +64,10 @@ sudo mv ./kubectl-argo-rollouts-darwin-amd64 /usr/local/bin/kubectl-argo-rollout
 
 # Install controller
 kubectl create namespace argo-rollouts
-kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml
+# If using helm
+helm install argo-rollouts argo-rollouts --namespace argo-rollouts
+# kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml
+# Do I need this if using helm
 kubectl create clusterrolebinding kaikiat-cluster-admin-binding --clusterrole=cluster-admin --user=kaikiatpoh14@gmail.com
 
 # Refer to this for helm-argocd 
