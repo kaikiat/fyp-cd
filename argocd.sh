@@ -14,8 +14,8 @@ argocd repo list
 
 ########################## For demo-app ##########################
 # Only argo apply (Argo's configuration)
-kubectl apply -f argo_configuration/ntuasr/application.yaml
 kubectl apply -f argo_production/ntuasr/application.yaml
+# Install grafana and prometheus now
 
 
 # Argocd documetation states id_rsa but github does not accept id_rsa
@@ -64,8 +64,8 @@ sudo mv ./kubectl-argo-rollouts-darwin-amd64 /usr/local/bin/kubectl-argo-rollout
 
 # Install controller
 kubectl create namespace argo-rollouts
-# If using helm
-helm install argo-rollouts argo-rollouts --namespace argo-rollouts
+# If using helm (https://argoproj.github.io/argo-rollouts/features/controller-metrics/)
+helm install argo-rollouts argo_rollouts --namespace argo-rollouts
 # kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml
 # Do I need this if using helm
 kubectl create clusterrolebinding kaikiat-cluster-admin-binding --clusterrole=cluster-admin --user=kaikiatpoh14@gmail.com
@@ -132,6 +132,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argoc
 # kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argocd-notifications/release-1.0/catalog/install.yaml
 kubectl apply -n argocd -f config.yaml
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-succeeded.slack":"#argocd"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-unknown.slack":"#argocd"}}}' --type merge
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-failed.slack":"#argocd"}}}' --type merge
 
 ##### Email service #####
@@ -151,7 +152,6 @@ kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotati
 # on.sync-failed.gmail not working
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"recipients.argocd-notifications.argoproj.io":"kaikiatpoh14@gmail.com"}}}' --type merge
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-succeeded.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-staging -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-succeeded.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-failed.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-unknown.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-health-degraded.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge

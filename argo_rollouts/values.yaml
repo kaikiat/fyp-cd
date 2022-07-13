@@ -69,14 +69,20 @@ controller:
 
   metrics:
     # -- Deploy metrics service
-    enabled: false
+    # enabled: false
+    enabled: true
     serviceMonitor:
       # -- Enable a prometheus ServiceMonitor
-      enabled: false
+      # enabled: false
+      enabled: true
       # -- Labels to be added to the ServiceMonitor
       additionalLabels: {}
       # -- Annotations to be added to the ServiceMonitor
       additionalAnnotations: {}
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: /metrics
+        prometheus.io/port: "8090"
 
   # -- Configure liveness [probe] for the controller
   # @default -- See [values.yaml]
