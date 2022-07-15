@@ -42,7 +42,6 @@ kind: ServiceMonitor
 metadata:
   name: argocd-applicationset-controller-metrics
   labels:
-    # release: prometheus-operator
     release: prometheus
 spec:
   selector:

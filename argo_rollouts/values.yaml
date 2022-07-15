@@ -82,7 +82,7 @@ controller:
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/path: /metrics
-        prometheus.io/port: "8090"
+        prometheus.io/port: "9090"
 
   # -- Configure liveness [probe] for the controller
   # @default -- See [values.yaml]

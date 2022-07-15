@@ -377,3 +377,8 @@ Final Result:
     INFO 2022-07-08 16:11:27,072 有趣 的 
     INFO 2022-07-08 16:11:27,346 usually the 
     INFO 2022-07-08 16:11:27,588 usually the whole 
+    INFO 2022-07-15 11:31:48,722 Socket opened! <__main__.MyClient object at 0x7fa8ec1e7190> 
+    INFO 2022-07-15 11:31:48,799 Start transcribing.... 
+    INFO 2022-07-15 11:31:49,922 尤其 
+    INFO 2022-07-15 11:31:50,315 有趣 的 
+    INFO 2022-07-15 11:31:50,916 游戏 的 
