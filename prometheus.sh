@@ -1,6 +1,8 @@
 kubectl create namespace prometheus
 kubectl config set-context --current --namespace prometheus
 helm install prometheus prometheus-community/kube-prometheus-stack --namespace prometheus
+helm uninstall prometheus --namespace prometheus
+# Check targets to see if argocd exists?
 kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090 -n prometheus
 kubectl port-forward deployment/prometheus-grafana 3000 -n prometheus
 
@@ -15,8 +17,9 @@ helm repo add argo https://argoproj.github.io/argo-helm
 # helm upgrade argocd-release argo/argo-cd -f prometheus_configuration/values.yaml -n argocd
 # helm uninstall argocd-release -n argocd
 
-kubectl apply -f prometheus_configuration/service-monitor.yaml -n prometheus
-kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n prometheus
+kubectl apply -f prometheus_configuration/service-monitor.yaml -n argocd
+
+kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n argo-rollouts
 # Not working
 kubectl apply -f prometheus_configuration/prometheus-rule.yaml -n prometheus
 

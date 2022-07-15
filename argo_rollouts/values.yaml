@@ -133,7 +133,7 @@ crdAnnotations: {}
 podAnnotations:
   prometheus.io/scrape: "true"
   prometheus.io/path: /metrics
-  prometheus.io/port: "9090"
+  prometheus.io/port: "8090"
 
 # -- Security Context to set on pod level
 podSecurityContext:
@@ -152,7 +152,7 @@ containerSecurityContext: {}
 serviceAnnotations: 
   prometheus.io/scrape: "true"
   prometheus.io/path: /metrics
-  prometheus.io/port: "9090"
+  prometheus.io/port: "8090"
 
 # -- Labels to be added to the Rollout pods
 podLabels: {}
