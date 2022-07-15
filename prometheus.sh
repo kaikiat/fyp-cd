@@ -16,6 +16,7 @@ helm repo add argo https://argoproj.github.io/argo-helm
 # helm uninstall argocd-release -n argocd
 
 kubectl apply -f prometheus_configuration/service-monitor.yaml -n prometheus
+kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n prometheus
 # Not working
 kubectl apply -f prometheus_configuration/prometheus-rule.yaml -n prometheus
 

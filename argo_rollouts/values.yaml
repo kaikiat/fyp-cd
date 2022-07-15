@@ -79,10 +79,6 @@ controller:
       additionalLabels: {}
       # -- Annotations to be added to the ServiceMonitor
       additionalAnnotations: {}
-      annotations:
-        prometheus.io/scrape: "true"
-        prometheus.io/path: /metrics
-        prometheus.io/port: "9090"
 
   # -- Configure liveness [probe] for the controller
   # @default -- See [values.yaml]
@@ -134,7 +130,10 @@ serviceAccount:
 crdAnnotations: {}
 
 # -- Annotations to be added to the Rollout pods
-podAnnotations: {}
+podAnnotations:
+  prometheus.io/scrape: "true"
+  prometheus.io/path: /metrics
+  prometheus.io/port: "9090"
 
 # -- Security Context to set on pod level
 podSecurityContext:
@@ -150,7 +149,10 @@ containerSecurityContext: {}
   # runAsUser: 1000
 
 # -- Annotations to be added to the Rollout service
-serviceAnnotations: {}
+serviceAnnotations: 
+  prometheus.io/scrape: "true"
+  prometheus.io/path: /metrics
+  prometheus.io/port: "9090"
 
 # -- Labels to be added to the Rollout pods
 podLabels: {}
