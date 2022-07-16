@@ -527,3 +527,14 @@ Final Result:
     INFO 2022-07-15 18:19:15,382 usually the whole of my kind of 
     INFO 2022-07-15 18:19:15,522 usually the whole of my adult life 
     INFO 2022-07-15 18:19:16,330 usually the whole of my adult life 
+    INFO 2022-07-16 10:07:01,274 Socket opened! <__main__.MyClient object at 0x7f98fc9e7190> 
+    INFO 2022-07-16 10:07:01,345 Start transcribing.... 
+    INFO 2022-07-16 10:07:02,475 尤其 
+    INFO 2022-07-16 10:07:02,584 有趣 的 
+    INFO 2022-07-16 10:07:02,826 游戏 的 
+    INFO 2022-07-16 10:07:03,525 you see the whole 
+    INFO 2022-07-16 10:07:03,527 you see the whole of 
+    INFO 2022-07-16 10:07:03,689 you see the whole of my 
+    INFO 2022-07-16 10:07:03,923 you see the whole of my kind of 
+    INFO 2022-07-16 10:07:04,089 you see the whole of my adult life 
+    INFO 2022-07-16 10:07:04,912 you see the whole of my adult life 

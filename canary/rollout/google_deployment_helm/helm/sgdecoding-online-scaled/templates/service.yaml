@@ -7,10 +7,11 @@ metadata:
     helm.sh/chart: {{ include "ntuspeechlab.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
-
+    release: prometheus
   annotations:
-    prometheus.io/scrape: "true"
-    prometheus.io/port: '8081'
+    prometheus.io/scrape: 'true'
+    prometheus.io/path: /metrics
+    prometheus.io/port: '9090'
 spec:
   loadBalancerIP: {{ .Values.service.loadBalancerIP }} 
   type: {{ .Values.service.type }}
@@ -38,9 +39,11 @@ metadata:
     helm.sh/chart: {{ include "ntuspeechlab.chart" $ }}
     app.kubernetes.io/instance: {{ $.Release.Name }}
     app.kubernetes.io/managed-by: {{ $.Release.Service }}
+    release: prometheus
   annotations:
-    prometheus.io/scrape: "true"
-    prometheus.io/port: '8081'
+    prometheus.io/scrape: 'true'
+    prometheus.io/path: /metrics
+    prometheus.io/port: '9090'
 spec:
   type: {{ $.Values.service.type }}
 
