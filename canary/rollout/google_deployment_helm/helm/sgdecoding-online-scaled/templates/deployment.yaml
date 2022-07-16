@@ -29,6 +29,7 @@ spec:
     metadata:
       annotations:
         prometheus.io/scrape: 'true'
+        prometheus.io/path: /metrics
         prometheus.io/port: '8081'
       labels:
         app.kubernetes.io/name: {{ include "ntuspeechlab.master.name" . }}
@@ -48,7 +49,7 @@ spec:
             - name: http
               containerPort: 8080
               protocol: TCP
-            - containerPort: 8090
+            - containerPort: 8081
               name: metrics
               protocol: TCP          
           livenessProbe:
