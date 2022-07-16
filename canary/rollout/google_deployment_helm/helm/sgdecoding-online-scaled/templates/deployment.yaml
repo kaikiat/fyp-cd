@@ -47,8 +47,10 @@ spec:
             - name: http
               containerPort: 8080
               protocol: TCP
-            - name: prometheus
-              containerPort: 8081
+            - containerPort: 8090
+              name: metrics
+            # - name: prometheus
+            #   containerPort: 8081
           livenessProbe:
             httpGet:
               path: /
@@ -119,13 +121,14 @@ spec:
           - secretRef:
               name: environment-variables-workers-secret
           ports:
-            - name: prometheus
-              containerPort: 8081
+            # - name: prometheus
+            #   containerPort: 8081
+            - containerPort: 8090
+              name: metrics
           env:
           - name: MODEL_DIR
             value: {{ $model_name }}
           securityContext:
-#            runAsUser: 0
             privileged: true
             capabilities:
               add: ["SYS_ADMIN"]

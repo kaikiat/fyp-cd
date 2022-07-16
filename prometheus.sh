@@ -20,6 +20,7 @@ helm repo add argo https://argoproj.github.io/argo-helm
 kubectl apply -f prometheus_configuration/service-monitor.yaml -n argocd
 
 kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n argo-rollouts
+kubectl apply -f prometheus_configuration/service-monitor-ntuasr.yaml -n ntuasr-production-google
 # Not working
 kubectl apply -f prometheus_configuration/prometheus-rule.yaml -n prometheus
 
