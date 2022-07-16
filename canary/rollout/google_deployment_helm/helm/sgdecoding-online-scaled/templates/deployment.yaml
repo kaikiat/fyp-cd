@@ -20,10 +20,10 @@ spec:
       steps:
       - setWeight: 20
       - pause:
-          duration: 150s # 1 hour
+          duration: 10s # 1 hour
       - setWeight: 50
       - pause: 
-          duration: 150s # 1 hour
+          duration: 10s # 1 hour
   template:
     metadata:
       annotations:
@@ -47,8 +47,8 @@ spec:
             - name: http
               containerPort: 8080
               protocol: TCP
-            - containerPort: 8090
-              name: metrics
+            # - containerPort: 8090
+            #   name: metrics
             # - name: prometheus
             #   containerPort: 8081
           livenessProbe:
@@ -97,10 +97,10 @@ spec:
       steps:
       - setWeight: 20
       - pause:
-          duration: 150s # 1 hour
+          duration: 10s # 1 hour
       - setWeight: 50
       - pause: 
-          duration: 150s # 1 hour
+          duration: 10s # 1 hour
   template:
     metadata:
       annotations:
@@ -123,8 +123,8 @@ spec:
           ports:
             # - name: prometheus
             #   containerPort: 8081
-            - containerPort: 8090
-              name: metrics
+            # - containerPort: 8090
+            #   name: metrics
           env:
           - name: MODEL_DIR
             value: {{ $model_name }}
