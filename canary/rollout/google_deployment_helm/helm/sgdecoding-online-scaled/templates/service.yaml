@@ -27,7 +27,7 @@ spec:
     - name: metrics
       protocol: TCP
       port: 8090
-      targetPort: 8090
+      targetPort: metrics
   selector:
     app.kubernetes.io/name: {{ include "ntuspeechlab.master.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}  
