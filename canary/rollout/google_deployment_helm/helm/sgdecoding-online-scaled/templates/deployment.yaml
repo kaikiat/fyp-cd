@@ -49,8 +49,8 @@ spec:
               protocol: TCP
             # - containerPort: 8090
             #   name: metrics
-            # - name: prometheus
-            #   containerPort: 8081
+            - name: prometheus
+              containerPort: 8081
           livenessProbe:
             httpGet:
               path: /
