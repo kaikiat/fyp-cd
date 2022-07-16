@@ -120,7 +120,7 @@ spec:
           envFrom:
           - secretRef:
               name: environment-variables-workers-secret
-          ports:
+          # ports:
             # - name: prometheus
             #   containerPort: 8081
             # - containerPort: 8090
