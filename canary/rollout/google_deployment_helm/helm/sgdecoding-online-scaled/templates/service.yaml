@@ -27,7 +27,7 @@ spec:
     - name: metrics
       protocol: TCP
       port: 8090
-      targetPort: 8090
+      targetPort: metrics
   selector:
     app.kubernetes.io/name: {{ include "ntuspeechlab.master.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}  
@@ -42,14 +42,8 @@ metadata:
     helm.sh/chart: {{ include "ntuspeechlab.chart" $ }}
     app.kubernetes.io/instance: {{ $.Release.Name }}
     app.kubernetes.io/managed-by: {{ $.Release.Service }}
-  #   release: prometheus
-  # annotations:
-  #   prometheus.io/scrape: 'true'
-  #   prometheus.io/path: /metrics
-  #   prometheus.io/port: '9090'
 spec:
   type: {{ $.Values.service.type }}
-
   ports:
     - protocol: TCP
       {{- if eq $.Values.service.enablehttps true}}
@@ -59,11 +53,6 @@ spec:
       {{- end}}
       targetPort: {{ $.Values.service.port }}    
       name: http
-    - name: metrics
-      protocol: TCP
-      port: 8090
-      targetPort: 8090
-
   selector:
     app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
     app.kubernetes.io/instance: {{ $.Release.Name }}  

@@ -47,10 +47,8 @@ spec:
             - name: http
               containerPort: 8080
               protocol: TCP
-            # - containerPort: 8090
-            #   name: metrics
-            - name: prometheus
-              containerPort: 8081
+            - containerPort: 8090
+              name: metrics          
           livenessProbe:
             httpGet:
               path: /
@@ -71,8 +69,6 @@ spec:
               port: http
               {{- end}}
             periodSeconds: 60
-    
-
 {{- range $model_name, $replicas := .Values.models }}
 ---
 apiVersion: argoproj.io/v1alpha1
@@ -135,7 +131,6 @@ spec:
           volumeMounts:
           - name: mypvc
             mountPath: /home/appuser/opt/models
-
       volumes:
         - name: mypvc
           persistentVolumeClaim:
