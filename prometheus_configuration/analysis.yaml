@@ -17,12 +17,7 @@ spec:
       prometheus:
         address: localhost:9090
         query: |
-          sum(irate(
-            istio_requests_total{reporter="source",destination_service=~"{{args.service-name}}",response_code!~"5.*"}[5m]
-          )) /
-          sum(irate(
-            istio_requests_total{reporter="source",destination_service=~"{{args.service-name}}"}[5m]
-          ))
+          number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-master"}
         # query: |
         #   sum(irate(
         #     istio_requests_total{reporter="source",destination_service=~"{{args.service-name}}",response_code!~"5.*"}[5m]
@@ -30,4 +25,8 @@ spec:
         #   sum(irate(
         #     istio_requests_total{reporter="source",destination_service=~"{{args.service-name}}"}[5m]
         #   ))
+        # number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-master"}
+
+
+
 
