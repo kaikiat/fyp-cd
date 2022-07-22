@@ -17,18 +17,17 @@ spec:
       prometheus:
         address: localhost:9090
         query: |
-          # number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-master"}
-          # number_of_request_receive_by_master_total{pod="sgdecoding-online-scaled-master-7858cccfdb-5svgs"}
+          sum(irate(
+            istio_requests_total{reporter="source",destination_service=~"{{args.service-name}}",response_code!~"5.*"}[5m]
+          )) /
+          sum(irate(
+            istio_requests_total{reporter="source",destination_service=~"{{args.service-name}}"}[5m]
+          ))
 
-        # query: |
-        #   sum(irate(
-        #     istio_requests_total{reporter="source",destination_service=~"{{args.service-name}}",response_code!~"5.*"}[5m]
-        #   )) /
-        #   sum(irate(
-        #     istio_requests_total{reporter="source",destination_service=~"{{args.service-name}}"}[5m]
-        #   ))
+
         # number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-master"}
-
+        # number_of_request_receive_by_master_total{pod="sgdecoding-online-scaled-master-7858cccfdb-5svgs"}
+        # number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-master"}
 
 
 
