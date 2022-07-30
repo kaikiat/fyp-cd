@@ -3,7 +3,6 @@ kind: Application
 metadata:
   # name: sgdecoding-production # refers to KUBENAME
   name: sgdecoding-online-scaled # refers to KUBENAME (must use sgdecoding-online-scaled )
-  # name: ntu-asr-argocd
   # You'll usually want to add your resources to the argocd namespace.
   namespace: argocd
   # Add this finalizer ONLY if you want these to cascade delete. (Do I need this )
@@ -15,7 +14,6 @@ spec:
 
   # Source of the application manifests
   source:
-    # repoURL: git@github.com:kaikiat/fyp.git  # Can point to either a Helm chart repo or a git repo.
     repoURL: git@github.com:kaikiat/fyp-cd.git  # Can point to either a Helm chart repo or a git repo.
     targetRevision: HEAD  # For Helm, this refers to the chart version.
     # path: argo_production/rollout/google_deployment_helm/helm/sgdecoding-online-scaled  # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.

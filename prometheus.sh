@@ -1,5 +1,6 @@
 kubectl create namespace prometheus
 kubectl config set-context --current --namespace prometheus
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm install prometheus prometheus-community/kube-prometheus-stack --namespace prometheus
 helm uninstall prometheus --namespace prometheus
 # Check targets to see if argocd exists?
@@ -18,11 +19,11 @@ helm repo add argo https://argoproj.github.io/argo-helm
 # helm uninstall argocd-release -n argocd
 
 kubectl apply -f prometheus_configuration/service-monitor.yaml -n argocd
-
+# After argo-rollouts is created
 kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n argo-rollouts
 kubectl apply -f prometheus_configuration/service-monitor-ntuasr.yaml -n ntuasr-production-google
 # Not working
-kubectl apply -f prometheus_configuration/prometheus-rule.yaml -n prometheus
+# kubectl apply -f prometheus_configuration/prometheus-rule.yaml -n prometheus
 
 ##### Grafana API key #####
 # https://argo-cd.readthedocs.io/en/stable/operator-manual/notifications/services/grafana/

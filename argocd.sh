@@ -28,11 +28,12 @@ cat /$HOME/.ssh/id_ed25519.pub
 
 # From docs
 # argocd repo add git@github.com:kaikiat/fyp.git --ssh-private-key-path ~/.ssh/id_rsa 
+# argocd repo add git@github.com:kaikiat/fyp-cd.git --ssh-private-key-path ~/.ssh/id_rsa 
 # For ubuntu
 argocd repo add git@github.com:kaikiat/fyp-cd.git --ssh-private-key-path ~/.ssh/id_ed25519
 
 # For macOs
-argocd repo add git@github.com:kaikiat/fyp.git --ssh-private-key-path ~/.ssh/id_ecdsa
+argocd repo add git@github.com:kaikiat/fyp-cd.git --ssh-private-key-path ~/.ssh/id_ecdsa
 argocd repo list
 argocd app list  # to get app
 
@@ -66,12 +67,13 @@ sudo mv ./kubectl-argo-rollouts-darwin-amd64 /usr/local/bin/kubectl-argo-rollout
 # Install controller
 kubectl create namespace argo-rollouts
 # If using helm (https://argoproj.github.io/argo-rollouts/features/controller-metrics/)
+# Must install prometheus first
 helm install argo-rollouts argo_rollouts --namespace argo-rollouts
 helm upgrade argo-rollouts argo_rollouts --namespace argo-rollouts
 helm uninstall argo-rollouts --namespace argo-rollouts
 # kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml
 # Do I need this if using helm
-kubectl create clusterrolebinding kaikiat-cluster-admin-binding --clusterrole=cluster-admin --user=kaikiatpoh14@gmail.com
+# kubectl create clusterrolebinding kaikiat-cluster-admin-binding --clusterrole=cluster-admin --user=kaikiatpoh14@gmail.com
 
 # Refer to this for helm-argocd 
 # https://github.com/argoproj/argo-rollouts/tree/master/examples/helm-blue-green
@@ -136,7 +138,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argoc
 kubectl apply -n argocd -f config.yaml
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-succeeded.slack":"#argocd"}}}' --type merge
 # Are you sure it is on-sync-unknown
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-unknown.slack":"#argocd"}}}' --type merge
+# kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-unknown.slack":"#argocd"}}}' --type merge
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-status-unknown.slack":"#argocd"}}}' --type merge
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-failed.slack":"#argocd"}}}' --type merge
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-health-degraded.slack":"#argocd"}}}' --type merge
