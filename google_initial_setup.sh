@@ -109,7 +109,8 @@ export GITLAB_EMAIL=benjaminc8121@gmail.com
 export KUBE_NAME=sgdecoding-online-scaled
 export NAMESPACE=ntuasr-production-google
 
-export MASTER_SERVICE="$KUBE_NAME-master"  
+# export MASTER_SERVICE="$KUBE_NAME-master"  
+export MASTER_SERVICE="$KUBE_NAME-master-canary"  
 export MASTER_SERVICE_IP=$(kubectl get svc $MASTER_SERVICE -n $NAMESPACE \
     --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
 export MASTER_ENDPOINT=$(kubectl describe svc sgdecoding-online-scaled-master | grep 'Endpoints:')
