@@ -2302,3 +2302,27 @@ Final Result:
     INFO 2022-07-30 14:23:37,529 游戏 的 
     INFO 2022-07-30 14:23:37,770 you see the whole 
     INFO 2022-07-30 14:23:38,029 you see the whole of 
+    INFO 2022-08-06 23:20:31,348 Socket opened! <__main__.MyClient object at 0x104dfa3d0> 
+    INFO 2022-08-06 23:20:31,348 Start transcribing.... 
+    INFO 2022-08-06 23:20:31,357 Received error from server (status 9) 
+    INFO 2022-08-06 23:20:31,357 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-06 23:20:31,362 
+ URL: ws://35.240.250.54/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-06 23:20:31,363 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-06 23:20:31,363  
+    INFO 2022-08-06 23:21:12,124 Socket opened! <__main__.MyClient object at 0x105b1aeb0> 
+    INFO 2022-08-06 23:21:12,124 Start transcribing.... 
+    INFO 2022-08-06 23:21:12,129 Received error from server (status 9) 
+    INFO 2022-08-06 23:21:12,129 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-06 23:21:12,135 
+ URL: ws://35.240.250.54/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-06 23:21:12,136 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-06 23:21:12,136  

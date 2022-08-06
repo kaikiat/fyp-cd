@@ -5,3 +5,4 @@ metadata:
 spec:
   resolver: endpoint
   prefix: /sgdecoding-online-scaled-master
+  service: sgdecoding-online-scaled-master-mapping

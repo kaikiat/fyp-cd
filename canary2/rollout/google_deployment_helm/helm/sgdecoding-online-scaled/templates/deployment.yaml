@@ -75,8 +75,10 @@ spec:
             periodSeconds: 60
 {{- range $model_name, $replicas := .Values.models }}
 ---
-apiVersion: argoproj.io/v1alpha1
-kind: Rollout
+# apiVersion: argoproj.io/v1alpha1
+# kind: Rollout
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
   labels:
@@ -90,17 +92,6 @@ spec:
     matchLabels:
       app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name  | lower | replace "_" "-"}}
       app.kubernetes.io/instance: {{ $.Release.Name }}
-  # strategy:
-  #   canary: #Indicates that the rollout should use the Canary strategy
-  #     maxSurge: "25%" # The maximum number of replicas the rollout can create 
-  #     maxUnavailable: 0 # The maximum number of pods that can be unavailable during the update.
-  #     steps:
-  #     - setWeight: 20
-  #     - pause:
-  #         duration: 200s # 1 hour
-  #     - setWeight: 50
-  #     - pause: 
-  #         duration: 200s # 1 hour
   template:
     metadata:
       annotations:
@@ -120,11 +111,6 @@ spec:
           envFrom:
           - secretRef:
               name: environment-variables-workers-secret
-          # ports:
-            # - name: prometheus
-            #   containerPort: 8081
-            # - containerPort: 8090
-            #   name: metrics
           env:
           - name: MODEL_DIR
             value: {{ $model_name }}
