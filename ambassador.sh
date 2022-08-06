@@ -15,4 +15,14 @@
 # kubectl apply -f ambassador/quote.yaml
 # export LB_ENDPOINT=$(kubectl -n ambassador get svc  edge-stack \
 #   -o "go-template={{range .status.loadBalancer.ingress}}{{or .ip .hostname}}{{end}}")
-curl -Lki https://$LB_ENDPOINT/backend/
+# curl -Lki https://$LB_ENDPOINT/backend/
+
+
+###################
+
+# Refer to https://www.getambassador.io/docs/argo/latest/howtos/configure-argo-rollouts/
+kubectl apply -f https://app.getambassador.io/yaml/edge-stack/3.1.0/aes-crds.yaml && \
+kubectl wait --timeout=90s --for=condition=available deployment emissary-apiext -n emissary-system
+kubectl apply -f https://app.getambassador.io/yaml/edge-stack/3.1.0/aes.yaml && \
+kubectl -n ambassador wait --for condition=available --timeout=90s deploy -lproduct=aes
+
