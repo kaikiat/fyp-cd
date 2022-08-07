@@ -19,7 +19,7 @@ spec:
       canaryService: sgdecoding-online-scaled-master-canary
       stableService: sgdecoding-online-scaled-master
       steps:
-      - setWeight: 10
+      - setWeight: 50
       - pause:
           duration: 10m
       trafficRouting:

@@ -114,8 +114,8 @@ export MASTER_SERVICE="$KUBE_NAME-master-canary"
 export MASTER_SERVICE_IP=$(kubectl get svc $MASTER_SERVICE -n $NAMESPACE \
     --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
 export MASTER_ENDPOINT=$(kubectl describe svc sgdecoding-online-scaled-master | grep 'Endpoints:')
-echo "Master Endpoint:  ${MASTER_ENDPOINT}" #  10.20.7.26:8080
-echo "IP addess of master: ${MASTER_SERVICE_IP}" # 34.126.158.213
+echo "Master Endpoint:  ${MASTER_ENDPOINT}" 
+echo "IP addess of master: ${MASTER_SERVICE_IP}"
 python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav
 
 
