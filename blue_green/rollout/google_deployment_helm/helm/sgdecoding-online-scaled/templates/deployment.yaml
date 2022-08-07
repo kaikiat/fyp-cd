@@ -85,8 +85,8 @@ spec:
   # Add strategy here
   strategy:
     blueGreen: 
-      activeService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}
-      previewService: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name | lower | replace "_" "-"  }}-preview
+      activeService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3
+      previewService: sgdecoding-online-scaled-worker-singaporecs-0519nnet3-preview
       autoPromotionEnabled: false
   template:
     metadata:
