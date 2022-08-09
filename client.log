@@ -2396,3 +2396,567 @@ Final Result:
     INFO 2022-08-07 11:43:42,415 尤其 
     INFO 2022-08-07 11:43:42,505 有趣 的 
     INFO 2022-08-07 11:43:42,750 游戏 的 
+    INFO 2022-08-07 14:38:12,152 Socket opened! <__main__.MyClient object at 0x105416bb0> 
+    INFO 2022-08-07 14:38:12,153 Start transcribing.... 
+    INFO 2022-08-07 14:38:13,316 尤其 
+    INFO 2022-08-07 14:38:13,433 有趣 的 
+    INFO 2022-08-07 14:38:13,685 游戏 的 
+    INFO 2022-08-07 14:38:13,940 you see the whole 
+    INFO 2022-08-07 14:38:14,185 you see the whole of 
+    INFO 2022-08-07 14:38:14,546 you see the whole of my 
+    INFO 2022-08-07 14:38:14,765 you see the whole of my kind of 
+    INFO 2022-08-07 14:38:20,770 Socket opened! <__main__.MyClient object at 0x10526abb0> 
+    INFO 2022-08-07 14:38:20,770 Start transcribing.... 
+    INFO 2022-08-07 14:38:21,898 尤其 
+    INFO 2022-08-07 14:38:22,055 有趣 的 
+    INFO 2022-08-07 14:38:22,312 游戏 的 
+    INFO 2022-08-07 14:38:22,562 you see the whole 
+    INFO 2022-08-07 14:38:22,816 you see the whole of 
+    INFO 2022-08-07 14:38:23,172 you see the whole of my 
+    INFO 2022-08-07 14:38:23,383 you see the whole of my kind of 
+    INFO 2022-08-07 14:38:23,598 you see the whole of my adult life 
+    INFO 2022-08-07 14:38:24,434 you see the whole of my adult life 
+    INFO 2022-08-07 14:39:55,749 Socket opened! <__main__.MyClient object at 0x101755bb0> 
+    INFO 2022-08-07 14:39:55,749 Start transcribing.... 
+    INFO 2022-08-07 14:39:56,866 尤其 
+    INFO 2022-08-07 14:39:57,022 有趣 的 
+    INFO 2022-08-07 14:39:57,288 游戏 的 
+    INFO 2022-08-07 14:39:57,529 usually the whole 
+    INFO 2022-08-07 14:40:04,235 Socket opened! <__main__.MyClient object at 0x10571abb0> 
+    INFO 2022-08-07 14:40:04,236 Start transcribing.... 
+    INFO 2022-08-07 14:40:04,242 Received error from server (status 9) 
+    INFO 2022-08-07 14:40:04,242 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 14:40:04,242 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 14:40:04,242 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 14:40:04,242  
+    INFO 2022-08-07 14:40:05,701 Socket opened! <__main__.MyClient object at 0x1009babb0> 
+    INFO 2022-08-07 14:40:05,701 Start transcribing.... 
+    INFO 2022-08-07 14:40:05,707 Received error from server (status 9) 
+    INFO 2022-08-07 14:40:05,707 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 14:40:05,713 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 14:40:05,713 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 14:40:05,713  
+    INFO 2022-08-07 14:40:06,744 Socket opened! <__main__.MyClient object at 0x10153dbb0> 
+    INFO 2022-08-07 14:40:06,745 Start transcribing.... 
+    INFO 2022-08-07 14:40:06,751 Received error from server (status 9) 
+    INFO 2022-08-07 14:40:06,751 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 14:40:06,751 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 14:40:06,751 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 14:40:06,751  
+    INFO 2022-08-07 14:40:07,709 Socket opened! <__main__.MyClient object at 0x105186bb0> 
+    INFO 2022-08-07 14:40:07,709 Start transcribing.... 
+    INFO 2022-08-07 14:40:07,716 Received error from server (status 9) 
+    INFO 2022-08-07 14:40:07,716 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 14:40:07,722 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 14:40:07,722 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 14:40:07,722  
+    INFO 2022-08-07 14:40:08,762 Socket opened! <__main__.MyClient object at 0x104ccdbb0> 
+    INFO 2022-08-07 14:40:08,762 Start transcribing.... 
+    INFO 2022-08-07 14:40:08,769 Received error from server (status 9) 
+    INFO 2022-08-07 14:40:08,769 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 14:40:08,769 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 14:40:08,769 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 14:40:08,769  
+    INFO 2022-08-07 14:40:10,037 Socket opened! <__main__.MyClient object at 0x1014c9bb0> 
+    INFO 2022-08-07 14:40:10,037 Start transcribing.... 
+    INFO 2022-08-07 14:40:10,043 Received error from server (status 9) 
+    INFO 2022-08-07 14:40:10,043 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 14:40:10,050 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 14:40:10,050 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 14:40:10,050  
+    INFO 2022-08-07 14:40:11,105 Socket opened! <__main__.MyClient object at 0x105679bb0> 
+    INFO 2022-08-07 14:40:11,105 Start transcribing.... 
+    INFO 2022-08-07 14:40:11,111 Received error from server (status 9) 
+    INFO 2022-08-07 14:40:11,111 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 14:40:11,117 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 14:40:11,117 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 14:40:11,117  
+    INFO 2022-08-07 14:40:12,305 Socket opened! <__main__.MyClient object at 0x102ce5bb0> 
+    INFO 2022-08-07 14:40:12,306 Start transcribing.... 
+    INFO 2022-08-07 14:40:12,311 Received error from server (status 9) 
+    INFO 2022-08-07 14:40:12,312 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 14:40:12,317 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 14:40:12,317 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 14:40:12,317  
+    INFO 2022-08-07 14:40:13,633 Socket opened! <__main__.MyClient object at 0x101199bb0> 
+    INFO 2022-08-07 14:40:13,633 Start transcribing.... 
+    INFO 2022-08-07 14:40:13,640 Received error from server (status 9) 
+    INFO 2022-08-07 14:40:13,640 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 14:40:13,640 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 14:40:13,640 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 14:40:13,640  
+    INFO 2022-08-07 14:40:41,725 Socket opened! <__main__.MyClient object at 0x101459bb0> 
+    INFO 2022-08-07 14:40:41,726 Start transcribing.... 
+    INFO 2022-08-07 14:40:41,733 Received error from server (status 9) 
+    INFO 2022-08-07 14:40:41,733 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 14:40:41,739 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 14:40:41,739 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 14:40:41,739  
+    INFO 2022-08-07 14:45:32,232 Socket opened! <__main__.MyClient object at 0x103481bb0> 
+    INFO 2022-08-07 14:45:32,232 Start transcribing.... 
+    INFO 2022-08-07 14:45:32,237 Received error from server (status 9) 
+    INFO 2022-08-07 14:45:32,238 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 14:45:32,238 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 14:45:32,238 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 14:45:32,238  
+    INFO 2022-08-07 14:53:17,362 Socket opened! <__main__.MyClient object at 0x1028f1bb0> 
+    INFO 2022-08-07 14:53:17,362 Start transcribing.... 
+    INFO 2022-08-07 14:53:17,393 Received error from server (status 9) 
+    INFO 2022-08-07 14:53:17,393 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 14:53:17,399 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 14:53:17,399 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 14:53:17,399  
+    INFO 2022-08-07 14:56:59,704 Socket opened! <__main__.MyClient object at 0x1015eebb0> 
+    INFO 2022-08-07 14:56:59,705 Start transcribing.... 
+    INFO 2022-08-07 14:57:00,791 尤其 
+    INFO 2022-08-07 14:57:00,958 有趣 的 
+    INFO 2022-08-07 14:57:01,207 游戏 的 
+    INFO 2022-08-07 14:57:01,456 you see the whole 
+    INFO 2022-08-07 14:57:01,719 you see the whole of 
+    INFO 2022-08-07 14:57:02,079 you see the whole of my 
+    INFO 2022-08-07 15:47:23,979 Socket opened! <__main__.MyClient object at 0x101635fd0> 
+    INFO 2022-08-07 15:47:23,979 Start transcribing.... 
+    INFO 2022-08-07 15:47:26,297 尤其 
+    INFO 2022-08-07 15:47:26,370 有趣 的 
+    INFO 2022-08-07 15:47:26,453 游戏 的 
+    INFO 2022-08-07 15:47:26,519 you see the whole 
+    INFO 2022-08-07 15:47:26,585 you see the whole of 
+    INFO 2022-08-07 15:47:26,753 you see the whole of my 
+    INFO 2022-08-07 15:47:52,924 Socket opened! <__main__.MyClient object at 0x102b41fd0> 
+    INFO 2022-08-07 15:47:52,925 Start transcribing.... 
+    INFO 2022-08-07 15:47:54,040 尤其 
+    INFO 2022-08-07 15:47:54,193 有趣 的 
+    INFO 2022-08-07 15:47:54,456 游戏 的 
+    INFO 2022-08-07 15:47:54,716 you see the whole 
+    INFO 2022-08-07 15:47:54,963 you see the whole of 
+    INFO 2022-08-07 15:47:55,312 you see the whole of my 
+    INFO 2022-08-07 15:47:55,526 you see the whole of my kind of 
+    INFO 2022-08-07 15:47:55,750 you see the whole of my adult life 
+    INFO 2022-08-07 15:47:56,574 you see the whole of my adult life 
+    INFO 2022-08-07 15:48:00,595 Socket opened! <__main__.MyClient object at 0x1052c5fd0> 
+    INFO 2022-08-07 15:48:00,595 Start transcribing.... 
+    INFO 2022-08-07 15:48:01,712 尤其 
+    INFO 2022-08-07 15:48:01,867 有趣 的 
+    INFO 2022-08-07 15:48:02,126 游戏 的 
+    INFO 2022-08-07 15:48:02,373 you see the whole 
+    INFO 2022-08-07 15:48:02,620 you see the whole of 
+    INFO 2022-08-07 15:48:02,986 you see the whole of my 
+    INFO 2022-08-07 15:48:04,309 Socket opened! <__main__.MyClient object at 0x103856fd0> 
+    INFO 2022-08-07 15:48:04,309 Start transcribing.... 
+    INFO 2022-08-07 15:48:05,427 尤其 
+    INFO 2022-08-07 15:48:05,593 有趣 的 
+    INFO 2022-08-07 15:48:05,861 游戏 的 
+    INFO 2022-08-07 15:48:06,100 you see the whole 
+    INFO 2022-08-07 15:48:06,353 you see the whole of 
+    INFO 2022-08-07 15:48:12,789 Socket opened! <__main__.MyClient object at 0x1037defd0> 
+    INFO 2022-08-07 15:48:12,789 Start transcribing.... 
+    INFO 2022-08-07 15:48:13,893 尤其 
+    INFO 2022-08-07 15:48:14,053 有趣 的 
+    INFO 2022-08-07 15:48:14,312 游戏 的 
+    INFO 2022-08-07 15:48:14,560 you see the whole 
+    INFO 2022-08-07 15:48:14,814 you see the whole of 
+    INFO 2022-08-07 15:48:15,178 you see the whole of my 
+    INFO 2022-08-07 15:48:15,384 you see the whole of my kind of 
+    INFO 2022-08-07 15:48:15,600 you see the whole of my adult life 
+    INFO 2022-08-07 15:48:16,435 you see the whole of my adult life 
+    INFO 2022-08-07 15:48:20,369 Socket opened! <__main__.MyClient object at 0x102e36fd0> 
+    INFO 2022-08-07 15:48:20,370 Start transcribing.... 
+    INFO 2022-08-07 15:48:21,512 尤其 
+    INFO 2022-08-07 15:48:21,666 有趣 的 
+    INFO 2022-08-07 15:48:21,920 游戏 的 
+    INFO 2022-08-07 15:48:22,159 usually the whole 
+    INFO 2022-08-07 15:48:22,411 usually the whole of 
+    INFO 2022-08-07 15:48:22,768 usually the whole of my 
+    INFO 2022-08-07 15:48:22,979 usually the whole of my kind of 
+    INFO 2022-08-07 16:08:45,960 Socket opened! <__main__.MyClient object at 0x1010b2fd0> 
+    INFO 2022-08-07 16:08:45,960 Start transcribing.... 
+    INFO 2022-08-07 16:08:47,060 尤其 
+    INFO 2022-08-07 16:08:47,218 有趣 的 
+    INFO 2022-08-07 16:08:47,478 游戏 的 
+    INFO 2022-08-07 16:08:47,720 you see the whole 
+    INFO 2022-08-07 16:08:47,975 you see the whole of 
+    INFO 2022-08-07 16:08:48,323 you see the whole of my 
+    INFO 2022-08-07 16:08:48,528 you see the whole of my kind of 
+    INFO 2022-08-07 16:08:48,754 you see the whole of my adult life 
+    INFO 2022-08-07 16:10:02,518 Socket opened! <__main__.MyClient object at 0x1032bdfd0> 
+    INFO 2022-08-07 16:10:02,519 Start transcribing.... 
+    INFO 2022-08-07 16:10:02,524 Received error from server (status 9) 
+    INFO 2022-08-07 16:10:02,525 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 16:10:02,530 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 16:10:02,530 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 16:10:02,530  
+    INFO 2022-08-07 16:10:13,678 Socket opened! <__main__.MyClient object at 0x100dadfd0> 
+    INFO 2022-08-07 16:10:13,678 Start transcribing.... 
+    INFO 2022-08-07 16:10:13,684 Received error from server (status 9) 
+    INFO 2022-08-07 16:10:13,684 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 16:10:13,684 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 16:10:13,684 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 16:10:13,684  
+    INFO 2022-08-07 16:10:27,548 Socket opened! <__main__.MyClient object at 0x100ea9fd0> 
+    INFO 2022-08-07 16:10:27,548 Start transcribing.... 
+    INFO 2022-08-07 16:10:27,553 Received error from server (status 9) 
+    INFO 2022-08-07 16:10:27,553 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 16:10:27,553 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 16:10:27,554 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 16:10:27,554  
+    INFO 2022-08-07 16:11:38,441 Socket opened! <__main__.MyClient object at 0x10096dfd0> 
+    INFO 2022-08-07 16:11:38,441 Start transcribing.... 
+    INFO 2022-08-07 16:11:38,449 Received error from server (status 9) 
+    INFO 2022-08-07 16:11:38,449 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 16:11:38,454 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 16:11:38,454 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 16:11:38,454  
+    INFO 2022-08-07 16:14:43,272 Socket opened! <__main__.MyClient object at 0x102a5aeb0> 
+    INFO 2022-08-07 16:14:43,272 Start transcribing.... 
+    INFO 2022-08-07 16:14:43,278 Received error from server (status 9) 
+    INFO 2022-08-07 16:14:43,279 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 16:14:43,284 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 16:14:43,284 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 16:14:43,284  
+    INFO 2022-08-07 16:14:57,721 Socket opened! <__main__.MyClient object at 0x1052d2eb0> 
+    INFO 2022-08-07 16:14:57,722 Start transcribing.... 
+    INFO 2022-08-07 16:14:58,826 尤其 
+    INFO 2022-08-07 16:14:58,992 有趣 的 
+    INFO 2022-08-07 16:14:59,257 游戏 的 
+    INFO 2022-08-07 16:14:59,525 usually the whole 
+    INFO 2022-08-07 16:15:05,186 Socket opened! <__main__.MyClient object at 0x10339aeb0> 
+    INFO 2022-08-07 16:15:05,187 Start transcribing.... 
+    INFO 2022-08-07 16:15:05,195 Received error from server (status 9) 
+    INFO 2022-08-07 16:15:05,195 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 16:15:05,200 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 16:15:05,200 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 16:15:05,200  
+    INFO 2022-08-07 16:15:53,582 Socket opened! <__main__.MyClient object at 0x104a9eeb0> 
+    INFO 2022-08-07 16:15:53,582 Start transcribing.... 
+    INFO 2022-08-07 16:15:53,588 Received error from server (status 9) 
+    INFO 2022-08-07 16:15:53,588 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 16:15:53,593 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 16:15:53,593 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 16:15:53,593  
+    INFO 2022-08-07 16:18:59,474 Socket opened! <__main__.MyClient object at 0x100b1eeb0> 
+    INFO 2022-08-07 16:18:59,475 Start transcribing.... 
+    INFO 2022-08-07 16:18:59,482 Received error from server (status 9) 
+    INFO 2022-08-07 16:18:59,482 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 16:18:59,487 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 16:18:59,487 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 16:18:59,487  
+    INFO 2022-08-07 16:19:01,767 Socket opened! <__main__.MyClient object at 0x103012eb0> 
+    INFO 2022-08-07 16:19:01,767 Start transcribing.... 
+    INFO 2022-08-07 16:19:01,773 Received error from server (status 9) 
+    INFO 2022-08-07 16:19:01,773 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 16:19:01,778 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 16:19:01,778 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 16:19:01,778  
+    INFO 2022-08-07 16:19:10,310 Socket opened! <__main__.MyClient object at 0x102e6aeb0> 
+    INFO 2022-08-07 16:19:10,310 Start transcribing.... 
+    INFO 2022-08-07 16:19:11,456 尤其 
+    INFO 2022-08-07 16:19:11,608 有趣 的 
+    INFO 2022-08-07 16:19:11,866 游戏 的 
+    INFO 2022-08-07 16:19:12,118 you see the whole 
+    INFO 2022-08-07 16:19:19,239 Socket opened! <__main__.MyClient object at 0x100e3eeb0> 
+    INFO 2022-08-07 16:19:19,239 Start transcribing.... 
+    INFO 2022-08-07 16:19:19,244 Received error from server (status 9) 
+    INFO 2022-08-07 16:19:19,244 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 16:19:19,245 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 16:19:19,245 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 16:19:19,245  
+    INFO 2022-08-07 16:19:21,365 Socket opened! <__main__.MyClient object at 0x10136aeb0> 
+    INFO 2022-08-07 16:19:21,365 Start transcribing.... 
+    INFO 2022-08-07 16:19:21,375 Received error from server (status 9) 
+    INFO 2022-08-07 16:19:21,375 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 16:19:21,380 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 16:19:21,381 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 16:19:21,381  
+    INFO 2022-08-07 16:21:41,854 Socket opened! <__main__.MyClient object at 0x105481eb0> 
+    INFO 2022-08-07 16:21:41,854 Start transcribing.... 
+    INFO 2022-08-07 16:21:42,984 尤其 
+    INFO 2022-08-07 16:21:43,159 有趣 的 
+    INFO 2022-08-07 16:21:43,403 游戏 的 
+    INFO 2022-08-07 16:21:43,652 usually the whole 
+    INFO 2022-08-07 16:21:43,923 usually the whole of 
+    INFO 2022-08-07 16:21:44,272 usually the whole of my 
+    INFO 2022-08-07 16:21:44,473 usually the whole of my kind of 
+    INFO 2022-08-07 16:21:44,690 usually the whole of my adult life 
+    INFO 2022-08-07 16:21:45,526 usually the whole of my adult life 
+    INFO 2022-08-07 16:21:55,211 Socket opened! <__main__.MyClient object at 0x102ebdeb0> 
+    INFO 2022-08-07 16:21:55,211 Start transcribing.... 
+    INFO 2022-08-07 16:21:55,218 Received error from server (status 9) 
+    INFO 2022-08-07 16:21:55,218 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 16:21:55,224 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 16:21:55,224 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 16:21:55,224  
+    INFO 2022-08-07 16:24:01,883 Socket opened! <__main__.MyClient object at 0x1009d6eb0> 
+    INFO 2022-08-07 16:24:01,883 Start transcribing.... 
+    INFO 2022-08-07 16:24:01,891 Received error from server (status 9) 
+    INFO 2022-08-07 16:24:01,892 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 16:24:01,898 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 16:24:01,898 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 16:24:01,898  
+    INFO 2022-08-07 16:24:19,519 Socket opened! <__main__.MyClient object at 0x105805eb0> 
+    INFO 2022-08-07 16:24:19,519 Start transcribing.... 
+    INFO 2022-08-07 16:24:20,643 尤其 
+    INFO 2022-08-07 16:24:20,799 有趣 的 
+    INFO 2022-08-07 16:24:21,056 游戏 的 
+    INFO 2022-08-07 16:24:50,730 Socket opened! <__main__.MyClient object at 0x104f8efd0> 
+    INFO 2022-08-07 16:24:50,730 Start transcribing.... 
+    INFO 2022-08-07 16:24:51,832 尤其 
+    INFO 2022-08-07 16:24:51,994 有趣 的 
+    INFO 2022-08-07 16:24:52,246 游戏 的 
+    INFO 2022-08-07 16:24:52,499 you see the whole 
+    INFO 2022-08-07 16:26:15,681 Socket opened! <__main__.MyClient object at 0x10525aeb0> 
+    INFO 2022-08-07 16:26:15,682 Start transcribing.... 
+    INFO 2022-08-07 16:26:16,791 尤其 
+    INFO 2022-08-07 16:26:16,947 有趣 的 
+    INFO 2022-08-07 16:26:17,211 游戏 的 
+    INFO 2022-08-07 16:26:17,467 you see the whole 
+    INFO 2022-08-07 16:26:17,713 you see the whole of 
+    INFO 2022-08-07 16:26:18,071 you see the whole of my 
+    INFO 2022-08-07 16:26:18,279 you see the whole of my kind of 
+    INFO 2022-08-07 16:26:18,502 you see the whole of my adult life 
+    INFO 2022-08-07 16:32:03,311 Socket opened! <__main__.MyClient object at 0x1010d9eb0> 
+    INFO 2022-08-07 16:32:03,311 Start transcribing.... 
+    INFO 2022-08-07 16:32:04,430 尤其 
+    INFO 2022-08-07 16:32:04,590 有趣 的 
+    INFO 2022-08-07 16:32:04,845 游戏 的 
+    INFO 2022-08-07 16:32:05,099 usually the whole 
+    INFO 2022-08-07 16:32:05,358 usually the whole of 
+    INFO 2022-08-07 16:32:05,702 usually the whole of my 
+    INFO 2022-08-07 16:32:05,928 usually the whole of my kind of 
+    INFO 2022-08-07 16:32:06,139 usually the whole of my adult life 
+    INFO 2022-08-07 16:32:06,979 usually the whole of my adult life 
+    INFO 2022-08-07 18:16:40,814 Socket opened! <__main__.MyClient object at 0x100d52eb0> 
+    INFO 2022-08-07 18:16:40,815 Start transcribing.... 
+    INFO 2022-08-07 18:16:40,828 Received error from server (status 9) 
+    INFO 2022-08-07 18:16:40,828 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 18:16:40,834 
+ URL: ws://34.143.225.253/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 18:16:40,834 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 18:16:40,834  
+    INFO 2022-08-07 18:26:08,891 Socket opened! <__main__.MyClient object at 0x101856eb0> 
+    INFO 2022-08-07 18:26:08,892 Start transcribing.... 
+    INFO 2022-08-07 18:26:08,900 Received error from server (status 9) 
+    INFO 2022-08-07 18:26:08,900 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 18:26:08,906 
+ URL: ws://34.143.225.253/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 18:26:08,906 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 18:26:08,906  
+    INFO 2022-08-07 18:26:17,066 Socket opened! <__main__.MyClient object at 0x105346eb0> 
+    INFO 2022-08-07 18:26:17,067 Start transcribing.... 
+    INFO 2022-08-07 18:26:18,202 尤其 
+    INFO 2022-08-07 18:26:18,348 有趣 的 
+    INFO 2022-08-07 18:26:18,610 游戏 的 
+    INFO 2022-08-07 18:26:18,857 you see the whole 
+    INFO 2022-08-07 18:26:19,113 you see the whole of 
+    INFO 2022-08-07 18:26:19,462 you see the whole of my 
+    INFO 2022-08-07 18:26:19,689 you see the whole of my kind of 
+    INFO 2022-08-07 18:30:14,653 Socket opened! <__main__.MyClient object at 0x101719eb0> 
+    INFO 2022-08-07 18:30:14,653 Start transcribing.... 
+    INFO 2022-08-07 18:30:15,784 尤其 
+    INFO 2022-08-07 18:30:15,943 有趣 的 
+    INFO 2022-08-07 18:30:16,213 游戏 的 
+    INFO 2022-08-07 18:30:16,456 you see the whole 
+    INFO 2022-08-07 18:30:16,710 you see the whole of 
+    INFO 2022-08-07 18:30:17,081 you see the whole of my 
+    INFO 2022-08-07 18:30:17,360 you see the whole of my kind of 
+    INFO 2022-08-07 18:30:17,549 you see the whole of my adult life 
+    INFO 2022-08-07 18:30:18,326 you see the whole of my adult life 
+    INFO 2022-08-07 18:30:23,914 嗯 
+    INFO 2022-08-07 18:30:24,968 being in 
+    INFO 2022-08-07 18:30:25,710 being in malaysia 
+    INFO 2022-08-07 18:30:26,033 being in malaysia and 
+    INFO 2022-08-07 18:30:26,241 being in malaysia and myanmar 
+    INFO 2022-08-07 18:30:26,505 being in malaysia and large 
+    INFO 2022-08-07 18:44:18,526 Socket opened! <__main__.MyClient object at 0x101835fd0> 
+    INFO 2022-08-07 18:44:18,526 Start transcribing.... 
+    INFO 2022-08-07 18:44:19,656 尤其 
+    INFO 2022-08-07 18:44:19,792 有趣 的 
+    INFO 2022-08-07 18:44:20,059 游戏 的 
+    INFO 2022-08-07 18:44:20,310 you see the whole 
+    INFO 2022-08-07 18:44:20,563 you see the whole of 
+    INFO 2022-08-07 18:44:20,921 you see the whole of my 
+    INFO 2022-08-07 18:44:21,138 you see the whole of my kind of 
+    INFO 2022-08-07 18:44:21,342 you see the whole of my adult life 
+    INFO 2022-08-07 18:53:25,189 Socket opened! <__main__.MyClient object at 0x102f35fd0> 
+    INFO 2022-08-07 18:53:25,189 Start transcribing.... 
+    INFO 2022-08-07 18:53:26,310 尤其 
+    INFO 2022-08-07 18:53:26,448 有趣 的 
+    INFO 2022-08-07 18:53:26,717 游戏 的 
+    INFO 2022-08-07 18:58:07,038 Socket opened! <__main__.MyClient object at 0x1049edfd0> 
+    INFO 2022-08-07 18:58:07,039 Start transcribing.... 
+    INFO 2022-08-07 18:58:08,143 尤其 
+    INFO 2022-08-07 18:58:08,295 有趣 的 
+    INFO 2022-08-07 18:58:08,556 游戏 的 
+    INFO 2022-08-07 18:58:08,812 you see the whole 
+    INFO 2022-08-07 18:58:09,059 you see the whole of 
+    INFO 2022-08-07 18:58:09,424 you see the whole of my 
+    INFO 2022-08-07 18:58:09,640 you see the whole of my kind of 
+    INFO 2022-08-07 18:58:09,841 you see the whole of my adult life 
+    INFO 2022-08-07 18:58:23,958 Socket opened! <__main__.MyClient object at 0x105791fd0> 
+    INFO 2022-08-07 18:58:23,958 Start transcribing.... 
+    INFO 2022-08-07 18:58:23,963 Received error from server (status 9) 
+    INFO 2022-08-07 18:58:23,963 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-07 18:58:23,964 
+ URL: ws://34.143.225.253/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-07 18:58:23,964 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-07 18:58:23,964  
+    INFO 2022-08-09 10:59:09,730 Socket opened! <__main__.MyClient object at 0x1045474f0> 
+    INFO 2022-08-09 10:59:09,731 Start transcribing.... 
+    INFO 2022-08-09 10:59:12,977 尤其 
+    INFO 2022-08-09 10:59:13,072 有趣 的 
+    INFO 2022-08-09 10:59:13,165 游戏 的 
+    INFO 2022-08-09 10:59:13,244 you see the whole 
+    INFO 2022-08-09 10:59:13,322 you see the whole of 
+    INFO 2022-08-09 10:59:13,568 you see the whole of my 
+    INFO 2022-08-09 10:59:13,795 you see the whole of my kind of 
+    INFO 2022-08-09 10:59:13,898 you see the whole of my adult life 
+    INFO 2022-08-09 10:59:14,231 you see the whole of my adult life 
+    INFO 2022-08-09 10:59:18,906 嗯 
+    INFO 2022-08-09 10:59:26,167 Socket opened! <__main__.MyClient object at 0x1024ef4f0> 
+    INFO 2022-08-09 10:59:26,167 Start transcribing.... 
+    INFO 2022-08-09 10:59:26,178 Received error from server (status 9) 
+    INFO 2022-08-09 10:59:26,179 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-09 10:59:26,183 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-09 10:59:26,184 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-09 10:59:26,184  
