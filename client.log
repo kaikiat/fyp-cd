@@ -2960,3 +2960,38 @@ Final Result:
 Final Result: 
  
     INFO 2022-08-09 10:59:26,184  
+    INFO 2022-08-09 11:22:45,435 Socket opened! <__main__.MyClient object at 0x10426a2b0> 
+    INFO 2022-08-09 11:22:45,435 Start transcribing.... 
+    INFO 2022-08-09 11:22:48,757 尤其 
+    INFO 2022-08-09 11:22:48,827 有趣 的 
+    INFO 2022-08-09 11:22:48,902 游戏 的 
+    INFO 2022-08-09 11:22:48,969 you see the whole 
+    INFO 2022-08-09 11:22:49,034 you see the whole of 
+    INFO 2022-08-09 11:22:49,194 you see the whole of my 
+    INFO 2022-08-09 11:22:49,317 you see the whole of my kind of 
+    INFO 2022-08-09 11:22:49,396 you see the whole of my adult life 
+    INFO 2022-08-09 11:22:49,711 you see the whole of my adult life 
+    INFO 2022-08-09 11:37:02,355 Socket opened! <__main__.MyClient object at 0x103ffb310> 
+    INFO 2022-08-09 11:37:02,356 Start transcribing.... 
+    INFO 2022-08-09 11:40:45,495 Socket opened! <__main__.MyClient object at 0x105b2a310> 
+    INFO 2022-08-09 11:40:45,495 Start transcribing.... 
+    INFO 2022-08-09 11:40:45,504 Received error from server (status 9) 
+    INFO 2022-08-09 11:40:45,504 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-09 11:40:45,509 
+ URL: ws://35.240.206.249/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-09 11:40:45,509 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-09 11:40:45,509  
+    INFO 2022-08-09 11:54:45,453 Socket opened! <__main__.MyClient object at 0x10733b310> 
+    INFO 2022-08-09 11:54:45,454 Start transcribing.... 
+    INFO 2022-08-09 11:54:46,477 尤其 
+    INFO 2022-08-09 11:54:46,612 有趣 的 
+    INFO 2022-08-09 11:54:46,884 usually the 
+    INFO 2022-08-09 11:54:47,132 usually the whole 
+    INFO 2022-08-09 11:54:47,389 usually the whole of 
+    INFO 2022-08-09 11:54:47,746 usually the whole of my 
+    INFO 2022-08-09 11:54:47,963 usually the whole of my kind of 
+    INFO 2022-08-09 11:54:48,174 usually the whole of my adult life 
