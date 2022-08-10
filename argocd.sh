@@ -15,7 +15,7 @@ argocd repo list
 
 ########################## For demo-app ##########################
 # Only argo apply (Argo's configuration)
-kubectl apply -f argo_production/ntuasr/application.yaml
+kubectl apply -f application.yaml
 # Install grafana and prometheus now
 
 

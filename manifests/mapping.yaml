@@ -1,8 +1,0 @@
-apiVersion: getambassador.io/v2
-kind:  Mapping
-metadata:
-  name:  sgdecoding-online-scaled-master-mapping
-spec:
-  resolver: endpoint
-  prefix: /sgdecoding-online-scaled-master
-  service: sgdecoding-online-scaled-master-mapping
