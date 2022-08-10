@@ -1,3 +1,4 @@
+#!/bin/bash
 # Create project in gcp + enable billing + link a billing account
 # Delete .terraform + create gcs bucket
 # gcloud auth login
