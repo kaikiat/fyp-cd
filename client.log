@@ -2995,3 +2995,15 @@ Final Result:
     INFO 2022-08-09 11:54:47,746 usually the whole of my 
     INFO 2022-08-09 11:54:47,963 usually the whole of my kind of 
     INFO 2022-08-09 11:54:48,174 usually the whole of my adult life 
+    INFO 2022-08-11 12:00:33,989 Socket opened! <__main__.MyClient object at 0x103612280> 
+    INFO 2022-08-11 12:00:33,989 Start transcribing.... 
+    INFO 2022-08-11 12:00:33,996 Received error from server (status 9) 
+    INFO 2022-08-11 12:00:33,996 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-11 12:00:33,996 
+ URL: ws://34.124.229.233/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-11 12:00:33,996 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-11 12:00:33,996  
