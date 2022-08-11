@@ -145,22 +145,32 @@ helm install prometheus prometheus-community/kube-prometheus-stack --namespace p
 kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090 -n prometheus
 kubectl port-forward deployment/prometheus-grafana 3000 -n prometheus
 ```
-3. Install the service monitors
-```
-# kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n argo-rollouts
-kubectl apply -f prometheus_configuration/service-monitor-ntuasr.yaml -n ntuasr-production-google
-```
+3. Install the service monitor for ntuasr application
+`kubectl apply -f prometheus_configuration/service-monitor-ntuasr.yaml -n ntuasr-production-google`
 4. Only after completing step 1-3, then you can install argo rollouts.
 
 ## Argo Rollouts Installation
 1. Install argo rollouts with helm `helm install argo-rollouts argo_rollouts --namespace argo-rollouts`
-2. 
-```
-kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n argo-rollouts
-
-```
+2. Install service monitor for argo rollouts `kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n argo-rollouts`
 3. Alternative verify the app using `python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav`
 
 ## Canary Rollouts
+1. Refer to manifest file in  `canary/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
+2. Change the image in the values.yaml and commit to the main branch
+3. 
+```
+NAMESPACE=argocd && \
+WORKER=$(kubectl get pods --sort-by=.metadata.creationTimestamp -o jsonpath="{.items[0].metadata.name}" -n $NAMESPACE) && \
+kubectl logs $WORKER -f -n $NAMESPACE
+
+NAMESPACE=argocd && \
+WORKER=$(kubectl get pods --sort-by=.metadata.creationTimestamp -o jsonpath="{.items[6].metadata.name}" -n $NAMESPACE) && \
+kubectl logs $WORKER -f -n $NAMESPACE
+```
 
 ## BlueGreen Rollouts
+1. Refer to manifest file in  `blue_green/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
+2. Change the image in the values.yaml and commit to the main branch
+
+
+## Promethues and Grafana in-depth

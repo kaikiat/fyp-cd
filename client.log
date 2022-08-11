@@ -3067,3 +3067,13 @@ Final Result:
 Final Result: 
  
     INFO 2022-08-11 14:40:13,469  
+    INFO 2022-08-11 14:49:18,030 Socket opened! <__main__.MyClient object at 0x102822280> 
+    INFO 2022-08-11 14:49:18,031 Start transcribing.... 
+    INFO 2022-08-11 14:49:20,143 尤其 
+    INFO 2022-08-11 14:49:20,213 有趣 的 
+    INFO 2022-08-11 14:49:20,291 游戏 的 
+    INFO 2022-08-11 14:49:20,361 you see the whole 
+    INFO 2022-08-11 14:49:20,429 you see the whole of 
+    INFO 2022-08-11 14:49:20,600 you see the whole of my 
+    INFO 2022-08-11 14:49:20,737 you see the whole of my kind of 
+    INFO 2022-08-11 14:49:20,818 you see the whole of my adult life 
