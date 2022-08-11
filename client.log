@@ -3019,3 +3019,51 @@ Final Result:
 Final Result: 
  
     INFO 2022-08-11 13:22:18,783  
+    INFO 2022-08-11 13:28:22,885 Socket opened! <__main__.MyClient object at 0x10254a280> 
+    INFO 2022-08-11 13:28:22,886 Start transcribing.... 
+    INFO 2022-08-11 13:28:22,893 Received error from server (status 9) 
+    INFO 2022-08-11 13:28:22,893 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-11 13:28:22,898 
+ URL: ws://34.143.225.253/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-11 13:28:22,898 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-11 13:28:22,898  
+    INFO 2022-08-11 13:29:14,400 Socket opened! <__main__.MyClient object at 0x1040e3280> 
+    INFO 2022-08-11 13:29:14,401 Start transcribing.... 
+    INFO 2022-08-11 13:29:14,407 Received error from server (status 9) 
+    INFO 2022-08-11 13:29:14,407 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-11 13:29:14,412 
+ URL: ws://34.143.225.253/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-11 13:29:14,412 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-11 13:29:14,412  
+    INFO 2022-08-11 14:38:53,045 Socket opened! <__main__.MyClient object at 0x101a1f280> 
+    INFO 2022-08-11 14:38:53,046 Start transcribing.... 
+    INFO 2022-08-11 14:38:53,052 Received error from server (status 9) 
+    INFO 2022-08-11 14:38:53,052 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-11 14:38:53,057 
+ URL: ws://34.124.229.233/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-11 14:38:53,057 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-11 14:38:53,057  
+    INFO 2022-08-11 14:40:13,458 Socket opened! <__main__.MyClient object at 0x10213b280> 
+    INFO 2022-08-11 14:40:13,459 Start transcribing.... 
+    INFO 2022-08-11 14:40:13,463 Received error from server (status 9) 
+    INFO 2022-08-11 14:40:13,463 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-11 14:40:13,469 
+ URL: ws://34.124.229.233/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-11 14:40:13,469 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-11 14:40:13,469  

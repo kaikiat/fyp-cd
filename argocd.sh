@@ -34,6 +34,7 @@ argocd repo add git@github.com:kaikiat/fyp-cd.git --ssh-private-key-path ~/.ssh/
 
 # For macOs
 argocd repo add git@github.com:kaikiat/fyp-cd.git --ssh-private-key-path ~/.ssh/id_ecdsa
+argocd repo add git@github.com:kaikiat/fyp-cd.git --ssh-private-key-path ~/.ssh/id_rsa
 argocd repo list
 argocd app list  # to get app
 

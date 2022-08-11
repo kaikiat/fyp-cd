@@ -94,16 +94,16 @@ kubectl create secret docker-registry regcred2 --docker-server=registry.gitlab.c
 1. Install argocd `brew install argocd`
 2. Create argocd namespace `kubectl create namespace argocd`
 3. Apply manifests files `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml`
-4. Port-forward argocd-server using `kubectl port-forward svc/argocd-server -n argocd 8080:443`
+4. Port-forward argocd-server using `kubectl port-forward svc/argocd-server -n argocd 8080:443` in another terminal tab.
 5. Login through the UI. Password can be obtained from `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo`, the username is `admin`.
 6. Login via cli using `argocd login localhost:8080 --username admin --password $(kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d)`
-7. Add github ssh key. Refer to github docs if ssh key has not be generated, otherwise following `argocd repo add git@github.com:kaikiat/fyp-cd.git --ssh-private-key-path ~/.ssh/id_ecdsa`. This can be intepreted as `argocd repo add GITHUB_SSH_URL  --ssh-private-key-path /path/to/ssh/key`
+7. Add github ssh key. Refer to github docs if ssh key has not be generated, otherwise run `argocd repo add git@github.com:kaikiat/fyp-cd.git --ssh-private-key-path ~/.ssh/id_rsa`. This can be intepreted as `argocd repo add GITHUB_SSH_URL  --ssh-private-key-path /path/to/ssh/key`, this command with add a github repository to argocd.
 8. Verify using `argocd repo list`
-9. Apply the manifests file using `kubectl apply -f argo_production/ntuasr/application.yaml`
+9. Apply the manifests file using `kubectl apply -f application.yaml`
 
 ## Argo Notifications Set Up
 1. Install argo cd notifications `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argocd-notifications/release-1.0/manifests/install.yaml`
-2. Setup SMTP server + Slack app beforehand
+2. Setup SMTP server + Slack app beforehand.
 3. Add config.yaml which contains the credentials for SMTP server as well as Slack app. `kubectl apply -n argocd -f config.yaml`
 4. Patch the app using
 ```
@@ -122,6 +122,7 @@ kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotati
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-deployed.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-running.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
 ``` 
+5. By this time, you should also have received an notification from the SMTP server that the application has successfully sync.
 
 ## Argo Rollouts Setup
 1. Install rollouts plugin using 
@@ -146,11 +147,20 @@ kubectl port-forward deployment/prometheus-grafana 3000 -n prometheus
 ```
 3. Install the service monitors
 ```
-kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n argo-rollouts
+# kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n argo-rollouts
 kubectl apply -f prometheus_configuration/service-monitor-ntuasr.yaml -n ntuasr-production-google
 ```
 4. Only after completing step 1-3, then you can install argo rollouts.
 
 ## Argo Rollouts Installation
 1. Install argo rollouts with helm `helm install argo-rollouts argo_rollouts --namespace argo-rollouts`
-2. Wait for awhile, verify the app using `python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav`
+2. 
+```
+kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n argo-rollouts
+
+```
+3. Alternative verify the app using `python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav`
+
+## Canary Rollouts
+
+## BlueGreen Rollouts
