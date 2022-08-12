@@ -5610,3 +5610,10 @@ Final Result:
 Final Result: 
  
     INFO 2022-08-12 21:45:12,758  
+    INFO 2022-08-12 21:48:46,443 Socket opened! <__main__.MyClient object at 0x103fd3280> 
+    INFO 2022-08-12 21:48:46,443 Start transcribing.... 
+    INFO 2022-08-12 21:48:47,506 尤其 
+    INFO 2022-08-12 21:48:47,666 有趣 的 
+    INFO 2022-08-12 21:48:47,933 游戏 的 
+    INFO 2022-08-12 21:48:48,177 you see the whole 
+    INFO 2022-08-12 21:48:48,430 you see the whole of 
