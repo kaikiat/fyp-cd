@@ -182,4 +182,4 @@ kubectl logs $WORKER -f -n $NAMESPACE
 ## Promethues and Grafana in-depth
 1. Go to `Explore` in the Grafana UI.
 2. Input the following parameters as seen in the figure below
-![Grafana UI Query](images/grafana-ui-query.png.png)
+![Grafana UI Query](./images/grafana-ui-query.png.png)
