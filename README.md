@@ -149,7 +149,7 @@ kubectl port-forward deployment/prometheus-grafana 3000 -n prometheus
 4. Install service monitor for ntuasr application `kubectl apply -f prometheus_configuration/service-monitor-ntuasr.yaml -n ntuasr-production-google`
 5. Only after completing step 1-3, then you can install argo rollouts.
 
-__NOTE: Run `kubectl port-forward svc/sgdecoding-online-scaled-master 9090`, then go to localhost:8081__
+__NOTE: To view metrics exported, run `kubectl port-forward svc/sgdecoding-online-scaled-master 9090`, then go to localhost:8081/metrics__
 
 ## Argo Rollouts Installation
 1. Install argo rollouts with helm `helm install argo-rollouts argo_rollouts --namespace argo-rollouts`
@@ -166,12 +166,10 @@ __NOTE: Run `kubectl port-forward svc/sgdecoding-online-scaled-master 9090`, the
 2. Change the image in the values.yaml and commit to the main branch
 3. Run the folllowing commands to view the logs
 ```
-# Original Master Pod
+# Original Master Pod (Ensure that there are no erroneous pods)
 NAMESPACE=ntuasr-production-google && \
 WORKER=$(kubectl get pods --sort-by=.metadata.creationTimestamp -o jsonpath="{.items[0].metadata.name}" -n $NAMESPACE) && \
 kubectl logs $WORKER -f -n $NAMESPACE
-
-# must delete error
 
 # Preview Master Pod
 NAMESPACE=ntuasr-production-google && \
@@ -189,7 +187,6 @@ kubectl logs $WORKER -f -n $NAMESPACE
 7. Verify that the preview service is created using `kubectl get svc`
 8. The rollout will be paused by default, to test the preview service, toggle between `$KUBE_NAME-master-preview` and `$KUBE_NAME-master"` in `google_initial_setup.sh`.
 9. Meanwhile, open 2 terminal to view the logs for the original master pod and the preview master pod.
-ss ?
 
 ## Promethues and Grafana in-depth
 1. Go to `Explore` in the Grafana UI.
@@ -201,6 +198,16 @@ ss ?
 ```
 # Compare requests received
 number_of_request_receive_by_master_total{pod="sgdecoding-online-scaled-master-7858cccfdb-5kjg4"}
+```
+4. For blue green rollouts, execute the following querries
+```
+# For successful requests
+number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-master-preview"}
+number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-master"}
+
+# For failed requests
+number_of_request_reject_total{service="sgdecoding-online-scaled-master"}
+number_of_request_reject_total{service="sgdecoding-online-scaled-master-preview"}
 ```
 
 ## ArgoCD image uploader
