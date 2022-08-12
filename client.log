@@ -5774,3 +5774,36 @@ Final Result:
     INFO 2022-08-12 23:36:08,824 being in malaysia and 
     INFO 2022-08-12 23:36:09,058 being in malaysia and myanmar 
     INFO 2022-08-12 23:36:09,304 being in malaysia and large 
+    INFO 2022-08-12 23:43:55,292 Socket opened! <__main__.MyClient object at 0x106612280> 
+    INFO 2022-08-12 23:43:55,293 Start transcribing.... 
+    INFO 2022-08-12 23:43:55,299 Received error from server (status 9) 
+    INFO 2022-08-12 23:43:55,299 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-12 23:43:55,305 
+ URL: ws://34.124.229.233/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-12 23:43:55,305 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-12 23:43:55,305  
+    INFO 2022-08-12 23:43:58,479 Socket opened! <__main__.MyClient object at 0x105c63fd0> 
+    INFO 2022-08-12 23:43:58,479 Start transcribing.... 
+    INFO 2022-08-12 23:43:58,486 Received error from server (status 9) 
+    INFO 2022-08-12 23:43:58,486 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-12 23:43:58,486 
+ URL: ws://34.124.229.233/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-12 23:43:58,486 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-12 23:43:58,486  
+    INFO 2022-08-12 23:44:03,704 Socket opened! <__main__.MyClient object at 0x105d4e280> 
+    INFO 2022-08-12 23:44:03,704 Start transcribing.... 
+    INFO 2022-08-12 23:44:04,781 尤其 
+    INFO 2022-08-12 23:44:04,931 有趣 的 
+    INFO 2022-08-12 23:44:05,197 游戏 的 
+    INFO 2022-08-12 23:44:05,447 you see the whole 
+    INFO 2022-08-12 23:44:05,712 you see the whole of 
+    INFO 2022-08-12 23:44:06,070 you see the whole of my 
+    INFO 2022-08-12 23:44:06,276 you see the whole of my kind of 
