@@ -8,3 +8,5 @@ Terraform_aws/.terraform.lock.hcl
 Terraform_aws/.terraform
 
 .DS_Store
+
+.log
