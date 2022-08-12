@@ -5841,3 +5841,26 @@ Final Result:
 Final Result: 
  
     INFO 2022-08-12 23:47:28,211  
+    INFO 2022-08-12 23:49:48,172 Socket opened! <__main__.MyClient object at 0x101d37280> 
+    INFO 2022-08-12 23:49:48,172 Start transcribing.... 
+    INFO 2022-08-12 23:49:49,223 尤其 
+    INFO 2022-08-12 23:49:49,377 有趣 的 
+    INFO 2022-08-12 23:49:49,640 游戏 的 
+    INFO 2022-08-12 23:49:49,893 you see the whole 
+    INFO 2022-08-12 23:49:50,144 you see the whole of 
+    INFO 2022-08-12 23:49:50,511 you see the whole of my 
+    INFO 2022-08-12 23:49:50,746 you see the whole of my kind of 
+    INFO 2022-08-12 23:49:50,940 you see the whole of my adult life 
+    INFO 2022-08-12 23:49:51,820 you see the whole of my adult life 
+    INFO 2022-08-12 23:49:57,367 嗯 
+    INFO 2022-08-12 23:49:58,441 being in 
+    INFO 2022-08-12 23:50:00,048 Socket opened! <__main__.MyClient object at 0x103b0ffd0> 
+    INFO 2022-08-12 23:50:00,049 Start transcribing.... 
+    INFO 2022-08-12 23:50:01,162 尤其 
+    INFO 2022-08-12 23:50:01,296 有趣 的 
+    INFO 2022-08-12 23:50:01,561 游戏 的 
+    INFO 2022-08-12 23:50:01,804 usually the whole 
+    INFO 2022-08-12 23:50:02,061 usually the whole of 
+    INFO 2022-08-12 23:50:02,428 usually the whole of my 
+    INFO 2022-08-12 23:50:02,641 usually the whole of my kind of 
+    INFO 2022-08-12 23:50:02,855 usually the whole of my adult life 
