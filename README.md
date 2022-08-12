@@ -169,6 +169,8 @@ NAMESPACE=ntuasr-production-google && \
 WORKER=$(kubectl get pods --sort-by=.metadata.creationTimestamp -o jsonpath="{.items[0].metadata.name}" -n $NAMESPACE) && \
 kubectl logs $WORKER -f -n $NAMESPACE
 
+# must delete error
+
 # Preview Master Pod
 NAMESPACE=ntuasr-production-google && \
 WORKER=$(kubectl get pods --sort-by=.metadata.creationTimestamp -o jsonpath="{.items[2].metadata.name}" -n $NAMESPACE) && \
@@ -182,4 +184,11 @@ kubectl logs $WORKER -f -n $NAMESPACE
 ## Promethues and Grafana in-depth
 1. Go to `Explore` in the Grafana UI.
 2. Input the following parameters as seen in the figure below
+
 ![Grafana UI Query](./images/grafana-ui-query.png)
+
+3. There are several querries that can be executed
+```
+# Compare requests received
+number_of_request_receive_by_master_total{pod="sgdecoding-online-scaled-master-7858cccfdb-5kjg4"}
+```

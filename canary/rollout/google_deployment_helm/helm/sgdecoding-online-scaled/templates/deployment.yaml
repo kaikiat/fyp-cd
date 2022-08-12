@@ -22,7 +22,7 @@ spec:
       - setWeight: 20
       - pause:
           duration: 200s # 1 hour
-      - setWeight: 50
+      - setWeight: 70
       - pause: 
           duration: 200s # 1 hour
   template:
@@ -97,7 +97,7 @@ spec:
       - setWeight: 20
       - pause:
           duration: 200s # 1 hour
-      - setWeight: 50
+      - setWeight: 70
       - pause: 
           duration: 200s # 1 hour
   template:
