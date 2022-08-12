@@ -149,6 +149,8 @@ kubectl port-forward deployment/prometheus-grafana 3000 -n prometheus
 4. Install service monitor for ntuasr application `kubectl apply -f prometheus_configuration/service-monitor-ntuasr.yaml -n ntuasr-production-google`
 5. Only after completing step 1-3, then you can install argo rollouts.
 
+__NOTE: Run `kubectl port-forward svc/sgdecoding-online-scaled-master 9090`, then go to localhost:8081__
+
 ## Argo Rollouts Installation
 1. Install argo rollouts with helm `helm install argo-rollouts argo_rollouts --namespace argo-rollouts`
 2. Install service monitor for argo rollouts `kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n argo-rollouts`, after installing helm.
