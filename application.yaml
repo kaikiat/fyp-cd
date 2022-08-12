@@ -16,8 +16,8 @@ spec:
   source:
     repoURL: git@github.com:kaikiat/fyp-cd.git  # Can point to either a Helm chart repo or a git repo.
     targetRevision: HEAD  # For Helm, this refers to the chart version.
-    path: blue_green/rollout/google_deployment_helm/helm/sgdecoding-online-scaled  # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.
-    # path: canary/rollout/google_deployment_helm/helm/sgdecoding-online-scaled  # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.
+    # path: blue_green/rollout/google_deployment_helm/helm/sgdecoding-online-scaled  # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.
+    path: canary/rollout/google_deployment_helm/helm/sgdecoding-online-scaled  # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.
     # path: canary2/rollout/google_deployment_helm/helm/sgdecoding-online-scaled  # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.
 
   # Destination cluster and namespace to deploy the application

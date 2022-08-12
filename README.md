@@ -186,6 +186,8 @@ kubectl logs $WORKER -f -n $NAMESPACE
 6. Change the image in the values.yaml and commit to the main branch
 7. Verify that the preview service is created using `kubectl get svc`
 8. The rollout will be paused by default, to test the preview service, toggle between `$KUBE_NAME-master-preview` and `$KUBE_NAME-master"` in `google_initial_setup.sh`.
+9. Meanwhile, open 2 terminal to view the logs for the original master pod and the preview master pod.
+ss ?
 
 ## Promethues and Grafana in-depth
 1. Go to `Explore` in the Grafana UI.

@@ -5045,3 +5045,300 @@ Final Result:
     INFO 2022-08-12 17:11:48,112 you see the whole of my kind of 
     INFO 2022-08-12 17:11:48,318 you see the whole of my adult life 
     INFO 2022-08-12 17:11:49,164 you see the whole of my adult life 
+    INFO 2022-08-12 17:16:38,099 Socket opened! <__main__.MyClient object at 0x103e67280> 
+    INFO 2022-08-12 17:16:38,099 Start transcribing.... 
+    INFO 2022-08-12 17:16:39,341 尤其 
+    INFO 2022-08-12 17:16:39,410 有趣 的 
+    INFO 2022-08-12 17:16:39,605 游戏 的 
+    INFO 2022-08-12 17:16:39,842 you see the whole 
+    INFO 2022-08-12 17:16:40,097 you see the whole of 
+    INFO 2022-08-12 17:16:40,464 you see the whole of my 
+    INFO 2022-08-12 17:16:40,692 you see the whole of my kind of 
+    INFO 2022-08-12 17:16:40,917 you see the whole of my adult life 
+    INFO 2022-08-12 17:16:41,748 you see the whole of my adult life 
+    INFO 2022-08-12 17:16:47,328 嗯 
+    INFO 2022-08-12 17:16:48,378 being in 
+    INFO 2022-08-12 17:16:51,695 Socket opened! <__main__.MyClient object at 0x1040b6280> 
+    INFO 2022-08-12 17:16:51,695 Start transcribing.... 
+    INFO 2022-08-12 17:16:52,781 尤其 
+    INFO 2022-08-12 17:16:52,929 有趣 的 
+    INFO 2022-08-12 17:16:53,186 游戏 的 
+    INFO 2022-08-12 17:17:07,363 Socket opened! <__main__.MyClient object at 0x1066b7280> 
+    INFO 2022-08-12 17:17:07,364 Start transcribing.... 
+    INFO 2022-08-12 17:17:08,443 尤其 
+    INFO 2022-08-12 17:17:08,596 有趣 的 
+    INFO 2022-08-12 17:17:08,868 游戏 的 
+    INFO 2022-08-12 17:17:09,120 you see the whole 
+    INFO 2022-08-12 17:17:09,371 you see the whole of 
+    INFO 2022-08-12 17:17:09,753 you see the whole of my 
+    INFO 2022-08-12 17:17:09,946 you see the whole of my kind of 
+    INFO 2022-08-12 17:18:44,567 Socket opened! <__main__.MyClient object at 0x103053280> 
+    INFO 2022-08-12 17:18:44,568 Start transcribing.... 
+    INFO 2022-08-12 17:18:45,638 尤其 
+    INFO 2022-08-12 17:18:45,798 有趣 的 
+    INFO 2022-08-12 17:18:46,118 游戏 的 
+    INFO 2022-08-12 17:18:51,420 Socket opened! <__main__.MyClient object at 0x106282280> 
+    INFO 2022-08-12 17:18:51,421 Start transcribing.... 
+    INFO 2022-08-12 17:18:52,507 尤其 
+    INFO 2022-08-12 17:18:52,661 有趣 的 
+    INFO 2022-08-12 17:18:52,931 游戏 的 
+    INFO 2022-08-12 17:18:53,168 you see the whole 
+    INFO 2022-08-12 17:18:53,427 you see the whole of 
+    INFO 2022-08-12 17:18:53,859 you see the whole of my 
+    INFO 2022-08-12 17:18:54,028 you see the whole of my kind of 
+    INFO 2022-08-12 17:18:55,403 Socket opened! <__main__.MyClient object at 0x10475e280> 
+    INFO 2022-08-12 17:18:55,403 Start transcribing.... 
+    INFO 2022-08-12 17:18:56,486 尤其 
+    INFO 2022-08-12 17:18:56,670 有趣 的 
+    INFO 2022-08-12 17:18:56,911 游戏 的 
+    INFO 2022-08-12 17:18:57,153 you see the whole 
+    INFO 2022-08-12 17:18:57,413 you see the whole of 
+    INFO 2022-08-12 17:18:57,769 you see the whole of my 
+    INFO 2022-08-12 17:19:03,321 Socket opened! <__main__.MyClient object at 0x1041a2280> 
+    INFO 2022-08-12 17:19:03,321 Start transcribing.... 
+    INFO 2022-08-12 17:19:04,415 尤其 
+    INFO 2022-08-12 17:19:04,573 有趣 的 
+    INFO 2022-08-12 17:19:04,826 游戏 的 
+    INFO 2022-08-12 17:19:05,078 usually the whole 
+    INFO 2022-08-12 17:19:05,334 usually the whole of 
+    INFO 2022-08-12 18:24:27,038 Socket opened! <__main__.MyClient object at 0x105efb280> 
+    INFO 2022-08-12 18:24:27,039 Start transcribing.... 
+    INFO 2022-08-12 18:24:28,117 尤其 
+    INFO 2022-08-12 18:24:28,267 有趣 的 
+    INFO 2022-08-12 18:24:28,528 游戏 的 
+    INFO 2022-08-12 18:24:28,773 you see the whole 
+    INFO 2022-08-12 18:24:29,036 you see the whole of 
+    INFO 2022-08-12 18:24:30,320 Socket opened! <__main__.MyClient object at 0x10206e280> 
+    INFO 2022-08-12 18:24:30,321 Start transcribing.... 
+    INFO 2022-08-12 18:24:31,401 尤其 
+    INFO 2022-08-12 18:24:31,558 有趣 的 
+    INFO 2022-08-12 18:24:31,819 游戏 的 
+    INFO 2022-08-12 18:24:32,071 you see the whole 
+    INFO 2022-08-12 18:24:32,324 you see the whole of 
+    INFO 2022-08-12 18:24:32,672 you see the whole of my 
+    INFO 2022-08-12 18:24:32,901 you see the whole of my kind of 
+    INFO 2022-08-12 18:24:33,105 you see the whole of my adult life 
+    INFO 2022-08-12 18:24:33,964 you see the whole of my adult life 
+    INFO 2022-08-12 18:24:39,556 嗯 
+    INFO 2022-08-12 18:24:40,585 being in 
+    INFO 2022-08-12 18:24:44,362 Socket opened! <__main__.MyClient object at 0x101eb1fd0> 
+    INFO 2022-08-12 18:24:44,362 Start transcribing.... 
+    INFO 2022-08-12 18:24:45,430 尤其 
+    INFO 2022-08-12 18:24:45,593 有趣 的 
+    INFO 2022-08-12 18:24:45,858 游戏 的 
+    INFO 2022-08-12 18:24:46,138 usually the whole 
+    INFO 2022-08-12 18:24:46,359 usually the whole of 
+    INFO 2022-08-12 18:24:46,719 usually the whole of my 
+    INFO 2022-08-12 18:24:46,932 usually the whole of my kind of 
+    INFO 2022-08-12 18:24:47,150 usually the whole of my adult life 
+    INFO 2022-08-12 18:24:48,003 usually the whole of my adult life 
+    INFO 2022-08-12 18:24:50,939 Socket opened! <__main__.MyClient object at 0x10422e280> 
+    INFO 2022-08-12 18:24:50,939 Start transcribing.... 
+    INFO 2022-08-12 18:24:52,006 尤其 
+    INFO 2022-08-12 18:24:52,154 有趣 的 
+    INFO 2022-08-12 18:24:52,415 游戏 的 
+    INFO 2022-08-12 18:24:52,694 usually the whole 
+    INFO 2022-08-12 18:24:52,917 usually the whole of 
+    INFO 2022-08-12 18:24:53,274 usually the whole of my 
+    INFO 2022-08-12 18:24:53,498 usually the whole of my kind of 
+    INFO 2022-08-12 18:24:53,725 usually the whole of my adult life 
+    INFO 2022-08-12 18:24:54,544 usually the whole of my adult life 
+    INFO 2022-08-12 18:25:00,138 嗯 
+    INFO 2022-08-12 18:25:01,193 being in 
+    INFO 2022-08-12 18:25:01,921 being in malaysia 
+    INFO 2022-08-12 18:25:06,033 Socket opened! <__main__.MyClient object at 0x101b46fd0> 
+    INFO 2022-08-12 18:25:06,033 Start transcribing.... 
+    INFO 2022-08-12 18:25:07,083 尤其 
+    INFO 2022-08-12 18:25:07,258 有趣 的 
+    INFO 2022-08-12 18:25:07,512 游戏 的 
+    INFO 2022-08-12 18:25:07,759 you see the whole 
+    INFO 2022-08-12 18:25:08,040 you see the whole of 
+    INFO 2022-08-12 18:25:08,366 you see the whole of my 
+    INFO 2022-08-12 18:25:08,572 you see the whole of my kind of 
+    INFO 2022-08-12 18:25:08,794 you see the whole of my adult life 
+    INFO 2022-08-12 18:25:09,638 you see the whole of my adult life 
+    INFO 2022-08-12 18:25:15,230 嗯 
+    INFO 2022-08-12 18:25:16,319 being in 
+    INFO 2022-08-12 18:25:17,017 being in malaysia 
+    INFO 2022-08-12 18:25:17,366 being in malaysia and 
+    INFO 2022-08-12 18:25:17,560 being in malaysia and myanmar 
+    INFO 2022-08-12 18:25:17,821 being in malaysia and large 
+    INFO 2022-08-12 18:25:18,072 being in malaysia and larger 
+    INFO 2022-08-12 18:25:18,828 being in malaysia and larger 
+    INFO 2022-08-12 18:25:19,749 就 在 
+    INFO 2022-08-12 18:25:19,882 you'll have to you have 
+    INFO 2022-08-12 18:25:20,176 you'll have to you have this 
+    INFO 2022-08-12 18:25:20,390 you'll have to you have these two 
+    INFO 2022-08-12 18:25:20,959 you'll have to you have these two characters 
+    INFO 2022-08-12 18:25:21,639 you'll have to you have these two characters 
+    INFO 2022-08-12 18:25:23,779 这 两位 
+    INFO 2022-08-12 18:25:24,509 这 两位 一部分 
+    INFO 2022-08-12 18:25:24,737 这 两位 一步步 
+    INFO 2022-08-12 18:25:26,025 这 两位 一步步 
+    INFO 2022-08-12 18:25:27,571 and 
+    INFO 2022-08-12 18:25:27,833 elected 
+    INFO 2022-08-12 18:25:28,146 elected by 
+    INFO 2022-08-12 18:25:28,847 elected by geography 
+    INFO 2022-08-12 18:25:29,629 elected by geography 
+    INFO 2022-08-12 18:25:32,178 economics 
+    INFO 2022-08-12 18:25:33,010 economics 
+    INFO 2022-08-12 18:25:35,277 and 
+    INFO 2022-08-12 18:25:35,553 他 
+    INFO 2022-08-12 18:25:35,845 他 爱 
+    INFO 2022-08-12 18:25:36,064 and time is of 
+    INFO 2022-08-12 19:13:36,341 Socket opened! <__main__.MyClient object at 0x10460f280> 
+    INFO 2022-08-12 19:13:36,342 Start transcribing.... 
+    INFO 2022-08-12 19:13:37,357 尤其 
+    INFO 2022-08-12 19:13:37,514 有趣 的 
+    INFO 2022-08-12 19:13:37,780 游戏 的 
+    INFO 2022-08-12 19:13:38,062 usually the whole 
+    INFO 2022-08-12 19:13:38,280 usually the whole of 
+    INFO 2022-08-12 19:13:38,633 usually the whole of my 
+    INFO 2022-08-12 19:13:38,843 usually the whole of my kind of 
+    INFO 2022-08-12 19:13:39,085 usually the whole of my adult life 
+    INFO 2022-08-12 19:13:40,767 Socket opened! <__main__.MyClient object at 0x104837280> 
+    INFO 2022-08-12 19:13:40,767 Start transcribing.... 
+    INFO 2022-08-12 19:13:41,838 尤其 
+    INFO 2022-08-12 19:13:41,998 有趣 的 
+    INFO 2022-08-12 19:13:42,261 游戏 的 
+    INFO 2022-08-12 19:13:42,505 you see the whole 
+    INFO 2022-08-12 19:13:42,764 you see the whole of 
+    INFO 2022-08-12 19:13:43,117 you see the whole of my 
+    INFO 2022-08-12 19:13:43,327 you see the whole of my kind of 
+    INFO 2022-08-12 19:13:43,543 you see the whole of my adult life 
+    INFO 2022-08-12 19:13:44,387 you see the whole of my adult life 
+    INFO 2022-08-12 19:13:49,965 嗯 
+    INFO 2022-08-12 19:13:51,038 being in 
+    INFO 2022-08-12 19:13:51,779 being in malaysia 
+    INFO 2022-08-12 19:13:52,085 being in malaysia and 
+    INFO 2022-08-12 19:13:52,280 being in malaysia and myanmar 
+    INFO 2022-08-12 19:13:52,540 being in malaysia and large 
+    INFO 2022-08-12 19:13:52,794 being in malaysia and larger 
+    INFO 2022-08-12 19:13:53,571 being in malaysia and larger 
+    INFO 2022-08-12 19:13:54,548 Socket opened! <__main__.MyClient object at 0x101b3b280> 
+    INFO 2022-08-12 19:13:54,548 Start transcribing.... 
+    INFO 2022-08-12 19:13:54,560 Received error from server (status 9) 
+    INFO 2022-08-12 19:13:54,560 Error message: No decoder available, try again 60 seconds later 
+    INFO 2022-08-12 19:13:54,566 
+ URL: ws://35.240.177.159/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-12 19:13:54,566 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-12 19:13:54,566  
+    INFO 2022-08-12 19:13:57,169 Socket opened! <__main__.MyClient object at 0x101a13280> 
+    INFO 2022-08-12 19:13:57,169 Start transcribing.... 
+    INFO 2022-08-12 19:13:58,229 尤其 
+    INFO 2022-08-12 19:13:58,398 有趣 的 
+    INFO 2022-08-12 19:13:58,660 游戏 的 
+    INFO 2022-08-12 19:13:58,913 you see the whole 
+    INFO 2022-08-12 19:13:59,163 you see the whole of 
+    INFO 2022-08-12 19:13:59,541 you see the whole of my 
+    INFO 2022-08-12 19:13:59,726 you see the whole of my kind of 
+    INFO 2022-08-12 19:13:59,945 you see the whole of my adult life 
+    INFO 2022-08-12 19:14:00,788 you see the whole of my adult life 
+    INFO 2022-08-12 19:14:06,377 嗯 
+    INFO 2022-08-12 19:14:07,448 being in 
+    INFO 2022-08-12 19:14:08,159 being in malaysia 
+    INFO 2022-08-12 19:14:08,504 being in malaysia and 
+    INFO 2022-08-12 19:14:08,696 being in malaysia and myanmar 
+    INFO 2022-08-12 19:14:08,960 being in malaysia and large 
+    INFO 2022-08-12 19:14:09,215 being in malaysia and larger 
+    INFO 2022-08-12 19:14:09,979 being in malaysia and larger 
+    INFO 2022-08-12 19:14:10,881 就 在 
+    INFO 2022-08-12 19:14:11,028 有些 计划 
+    INFO 2022-08-12 19:14:11,337 you'll have to you have this 
+    INFO 2022-08-12 19:14:11,544 you'll have to you have these two 
+    INFO 2022-08-12 19:14:12,112 you'll have to you have these two characters 
+    INFO 2022-08-12 19:14:12,791 you'll have to you have these two characters 
+    INFO 2022-08-12 19:14:14,944 这 两位 
+    INFO 2022-08-12 19:14:15,671 这 两位 一部分 
+    INFO 2022-08-12 19:14:15,896 这 两位 一步步 
+    INFO 2022-08-12 19:14:17,206 这 两位 一步步 
+    INFO 2022-08-12 19:14:18,725 and 
+    INFO 2022-08-12 19:14:18,996 elected 
+    INFO 2022-08-12 19:14:19,305 elected by 
+    INFO 2022-08-12 19:14:20,005 elected by geography 
+    INFO 2022-08-12 19:14:20,771 elected by geography 
+    INFO 2022-08-12 19:14:23,330 economics 
+    INFO 2022-08-12 19:14:24,176 economics 
+    INFO 2022-08-12 19:14:26,441 and 
+    INFO 2022-08-12 19:14:26,711 他 
+    INFO 2022-08-12 19:14:27,007 他 爱 
+    INFO 2022-08-12 19:14:27,229 and time is of 
+    INFO 2022-08-12 19:14:28,258 and time is up 
+    INFO 2022-08-12 19:14:29,193 选 
+    INFO 2022-08-12 19:14:30,414 选 
+    INFO 2022-08-12 19:14:35,003 我 也 
+    INFO 2022-08-12 19:14:35,198 what your mind 
+    INFO 2022-08-12 19:14:35,472 what your mind every 
+    INFO 2022-08-12 19:14:35,734 well you might have a 
+    INFO 2022-08-12 19:14:35,989 well you might have a stumper 
+    INFO 2022-08-12 19:14:36,233 well you might have a stuff for a while 
+    INFO 2022-08-12 19:14:36,592 well you might have a stumper 吗 
+    INFO 2022-08-12 19:14:37,041 well you might have a stuff for a while 
+    INFO 2022-08-12 19:14:38,033 and 
+    INFO 2022-08-12 19:14:38,283 and lee 
+    INFO 2022-08-12 19:14:38,543 and lee kuan 
+    INFO 2022-08-12 19:14:38,787 and lee kuan yew 
+    INFO 2022-08-12 19:14:39,142 and lee kuan yew wet 
+    INFO 2022-08-12 19:14:39,565 and lee kuan yew wept as 
+    INFO 2022-08-12 19:14:39,829 and lee kuan yew wept as he 
+    INFO 2022-08-12 19:14:40,401 and lee kuan yew wept as he announced 
+    INFO 2022-08-12 19:14:40,607 and lee kuan yew wept as he announced the 
+    INFO 2022-08-12 19:14:41,398 and lee kuan yew wept as he announced the separation 
+    INFO 2022-08-12 19:14:41,691 and lee kuan yew wept as he announced the separation of 
+    INFO 2022-08-12 19:14:42,154 and lee kuan yew wept as he announced the separation of singapore 
+    INFO 2022-08-12 19:14:42,408 and lee kuan yew wept as he announced the separation of singapore from 
+    INFO 2022-08-12 19:14:42,922 and lee kuan yew wept as he announced the separation of singapore from malaysia 
+    INFO 2022-08-12 19:14:43,448 and lee kuan yew wept as he announced the separation of singapore from malaysia 
+    INFO 2022-08-12 19:14:44,315 ninth 
+    INFO 2022-08-12 19:14:44,458 ninth august 
+    INFO 2022-08-12 19:14:45,563 ninth august nineteen 
+    INFO 2022-08-12 19:14:45,734 ninth august nineteen sixty 
+    INFO 2022-08-12 19:14:46,263 ninth august nineteen sixty five 
+    INFO 2022-08-12 19:14:47,027 ninth august nineteen sixty five 
+    INFO 2022-08-12 19:14:48,837 but 
+    INFO 2022-08-12 19:14:49,160 but why 
+    INFO 2022-08-12 19:14:49,868 but why 
+    INFO 2022-08-12 19:14:50,741 why would a 
+    INFO 2022-08-12 19:14:50,892 why would a man 
+    INFO 2022-08-12 19:14:52,007 why would a man who marked 
+    INFO 2022-08-12 19:14:52,190 why would a man who marked his 
+    INFO 2022-08-12 19:14:52,698 why would a man who marked his descent 
+    INFO 2022-08-12 19:14:53,494 why would a man who marked his descent not 
+    INFO 2022-08-12 19:14:53,720 why would a man who marked his descent not from 
+    INFO 2022-08-12 19:14:54,238 why would a man who marked his descent not from people in 
+    INFO 2022-08-12 19:14:54,547 why would a man who marked his descent not from people 
+    INFO 2022-08-12 19:14:54,747 why would a man who marked his descent not from people indigenous 
+    INFO 2022-08-12 19:14:55,001 why would a man who marked his descent not from people indigenous to 
+    INFO 2022-08-12 19:14:55,541 why would a man who marked his descent not from people indigenous to malaya 
+    INFO 2022-08-12 19:14:56,101 why would a man who marked his descent not from people indigenous to malaya 
+    INFO 2022-08-12 19:14:56,898 <unk> from 
+    INFO 2022-08-12 19:14:57,051 <unk> from people 
+    INFO 2022-08-12 19:14:57,313 <unk> from people in 
+    INFO 2022-08-12 19:14:57,833 <unk> from people in southern china 
+    INFO 2022-08-12 19:14:58,626 <unk> from people in southern china 
+    INFO 2022-08-12 19:14:59,297 come to 
+    INFO 2022-08-12 19:14:59,352 
+ URL: ws://35.240.177.159/client/ws/speech?content-type=?token=abc
+ 
+    INFO 2022-08-12 19:14:59,353 
+------------------------
+Final Result: 
+ 
+    INFO 2022-08-12 19:14:59,353 you see the whole of my adult life 嗯 being in malaysia and larger you'll have to you have these two characters 这 两位 一步步 elected by geography economics and time is up 选 well you might have a stuff for a while and lee kuan yew wept as he announced the separation of singapore from malaysia ninth august nineteen sixty five but why why would a man who marked his descent not from people indigenous to malaya <unk> from people in southern china come to 
+    INFO 2022-08-12 19:15:43,908 Socket opened! <__main__.MyClient object at 0x102d1dfd0> 
+    INFO 2022-08-12 19:15:43,909 Start transcribing.... 
+    INFO 2022-08-12 19:15:44,927 尤其 
+    INFO 2022-08-12 19:15:45,089 有趣 的 
+    INFO 2022-08-12 19:15:45,352 游戏 的 
+    INFO 2022-08-12 19:15:54,828 Socket opened! <__main__.MyClient object at 0x1022aa280> 
+    INFO 2022-08-12 19:15:54,828 Start transcribing.... 
+    INFO 2022-08-12 19:15:55,884 尤其 
+    INFO 2022-08-12 19:15:56,046 有趣 的 
+    INFO 2022-08-12 19:15:56,308 游戏 的 
+    INFO 2022-08-12 19:15:56,550 you see the whole 
+    INFO 2022-08-12 19:15:56,809 you see the whole of 
+    INFO 2022-08-12 19:15:57,170 you see the whole of my 
