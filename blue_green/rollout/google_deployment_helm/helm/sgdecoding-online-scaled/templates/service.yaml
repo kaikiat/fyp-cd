@@ -7,7 +7,6 @@ metadata:
     helm.sh/chart: {{ include "ntuspeechlab.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
-
   annotations:
     prometheus.io/scrape: 'true'
     prometheus.io/path: /metrics
