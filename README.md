@@ -182,8 +182,10 @@ kubectl logs $WORKER -f -n $NAMESPACE
 2. Delete existing app in argocd using `argocd app delete sgdecoding-online-scaled`
 3. In `application.yaml` under `spec.source.path` change the path to `path: blue_green/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
 4. In the secrets define `MASTER=sgdecoding-online-scaled-master`
-5. For the next git commit, change the value to `MASTER=sgdecoding-online-scaled-master-preview`
+5. For the next git commit, change the value to `MASTER=sgdecoding-online-scaled-master-preview` and change to a new image.
 6. Change the image in the values.yaml and commit to the main branch
+7. Verify that the preview service is created using `kubectl get svc`
+8. The rollout will be paused by default, to test the preview service, toggle between `$KUBE_NAME-master-preview` and `$KUBE_NAME-master"` in `google_initial_setup.sh`.
 
 ## Promethues and Grafana in-depth
 1. Go to `Explore` in the Grafana UI.
