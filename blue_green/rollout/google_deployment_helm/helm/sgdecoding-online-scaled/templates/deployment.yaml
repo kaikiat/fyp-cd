@@ -7,6 +7,7 @@ metadata:
     helm.sh/chart: {{ include "ntuspeechlab.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
+    release: prometheus
 spec:
   replicas: 1
   selector:
@@ -23,6 +24,7 @@ spec:
     metadata:
       annotations:
         prometheus.io/scrape: 'true'
+        prometheus.io/path: /metrics
         prometheus.io/port: '8081'
       labels:
         app.kubernetes.io/name: {{ include "ntuspeechlab.master.name" . }}
@@ -65,8 +67,6 @@ spec:
               {{- end}}
             periodSeconds: 60
 ---
-# apiVersion: apps/v1
-# kind: Deployment
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
@@ -76,6 +76,7 @@ metadata:
     helm.sh/chart: {{ include "ntuspeechlab.chart" $ }}
     app.kubernetes.io/instance: {{ $.Release.Name }}
     app.kubernetes.io/managed-by: {{ $.Release.Service }}
+    release: prometheus
 spec:
   replicas: 1
   selector:
@@ -92,6 +93,7 @@ spec:
     metadata:
       annotations:
         prometheus.io/scrape: 'true'
+        prometheus.io/path: /metrics
         prometheus.io/port: '8081'
       labels:
         app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}

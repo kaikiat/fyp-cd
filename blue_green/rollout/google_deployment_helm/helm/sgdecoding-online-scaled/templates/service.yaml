@@ -9,8 +9,9 @@ metadata:
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 
   annotations:
-    prometheus.io/scrape: "true"
-    prometheus.io/port: '8081'
+    prometheus.io/scrape: 'true'
+    prometheus.io/path: /metrics
+    prometheus.io/port: '9090'
 spec:
   loadBalancerIP: {{ .Values.service.loadBalancerIP }} 
   type: {{ .Values.service.type }}
@@ -23,6 +24,10 @@ spec:
       {{- end}}
       targetPort: {{ .Values.service.port }}    
       name: http
+    - name: metrics
+      protocol: TCP
+      port: 8081
+      targetPort: metrics
   selector:
     app.kubernetes.io/name: {{ include "ntuspeechlab.master.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}  
@@ -37,8 +42,11 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
   annotations:
-    prometheus.io/scrape: "true"
-    prometheus.io/port: '8081'
+    # prometheus.io/scrape: "true"
+    # prometheus.io/port: '8081'
+    prometheus.io/scrape: 'true'
+    prometheus.io/path: /metrics
+    prometheus.io/port: '9090'
 spec:
   loadBalancerIP: {{ .Values.service.loadBalancerIP }} 
   type: {{ .Values.service.type }}
@@ -51,6 +59,10 @@ spec:
       {{- end}}
       targetPort: {{ .Values.service.port }}    
       name: http
+    - name: metrics
+      protocol: TCP
+      port: 8081
+      targetPort: metrics
   selector:
     app.kubernetes.io/name: {{ include "ntuspeechlab.master.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}  
@@ -66,8 +78,11 @@ metadata:
     app.kubernetes.io/instance: {{ $.Release.Name }}
     app.kubernetes.io/managed-by: {{ $.Release.Service }}
   annotations:
-    prometheus.io/scrape: "true"
-    prometheus.io/port: '8081'
+    # prometheus.io/scrape: "true"
+    # prometheus.io/port: '8081'
+    prometheus.io/scrape: 'true'
+    prometheus.io/path: /metrics
+    prometheus.io/port: '9090'
 spec:
   type: {{ $.Values.service.type }}
   ports:
@@ -79,6 +94,10 @@ spec:
       {{- end}}
       targetPort: {{ $.Values.service.port }}    
       name: http
+    - name: metrics
+      protocol: TCP
+      port: 8081
+      targetPort: metrics
   selector:
     app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
     app.kubernetes.io/instance: {{ $.Release.Name }} 
@@ -93,8 +112,9 @@ metadata:
     app.kubernetes.io/instance: {{ $.Release.Name }}
     app.kubernetes.io/managed-by: {{ $.Release.Service }}
   annotations:
-    prometheus.io/scrape: "true"
-    prometheus.io/port: '8081'
+    prometheus.io/scrape: 'true'
+    prometheus.io/path: /metrics
+    prometheus.io/port: '9090'
 spec:
   type: {{ $.Values.service.type }}
   ports:
@@ -106,6 +126,10 @@ spec:
       {{- end}}
       targetPort: {{ $.Values.service.port }}    
       name: http
+    - name: metrics
+      protocol: TCP
+      port: 8081
+      targetPort: metrics
   selector:
     app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}
     app.kubernetes.io/instance: {{ $.Release.Name }}     
