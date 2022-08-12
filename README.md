@@ -152,7 +152,8 @@ kubectl port-forward deployment/prometheus-grafana 3000 -n prometheus
 ## Argo Rollouts Installation
 1. Install argo rollouts with helm `helm install argo-rollouts argo_rollouts --namespace argo-rollouts`
 2. Install service monitor for argo rollouts `kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n argo-rollouts`, after installing helm.
-3. Alternative verify the app using `python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav`
+3. Verify that rollout is working by running `kubectl argo rollouts dashboard` to open the rollout web ui.
+4. Alternative verify the app using `python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav`
 
 ## Grafana Dashboard Set Up
 1. Go to `http://localhost:3000/login` to view the Grafana Web UI. The username is `admin`, the password is `prom-operator`
@@ -179,3 +180,6 @@ kubectl logs $WORKER -f -n $NAMESPACE
 2. Change the image in the values.yaml and commit to the main branch
 
 ## Promethues and Grafana in-depth
+1. Go to `Explore` in the Grafana UI.
+2. Input the following parameters as seen in the figure below
+![Grafana UI Query](images/grafana-ui-query.png.png)
