@@ -4819,3 +4819,14 @@ Final Result:
     INFO 2022-08-12 14:50:45,900 you see the whole of my adult life 
     INFO 2022-08-12 14:50:47,336 Socket opened! <__main__.MyClient object at 0x106707280> 
     INFO 2022-08-12 14:50:47,336 Start transcribing.... 
+    INFO 2022-08-12 15:03:53,210 Socket opened! <__main__.MyClient object at 0x103c8f280> 
+    INFO 2022-08-12 15:03:53,210 Start transcribing.... 
+    INFO 2022-08-12 15:03:56,220 尤其 
+    INFO 2022-08-12 15:03:56,296 有趣 的 
+    INFO 2022-08-12 15:03:56,373 游戏 的 
+    INFO 2022-08-12 15:03:56,441 you see the whole 
+    INFO 2022-08-12 15:03:56,507 you see the whole of 
+    INFO 2022-08-12 15:03:56,671 you see the whole of my 
+    INFO 2022-08-12 15:03:56,798 you see the whole of my kind of 
+    INFO 2022-08-12 15:03:56,881 you see the whole of my adult life 
+    INFO 2022-08-12 15:03:57,180 you see the whole of my adult life 

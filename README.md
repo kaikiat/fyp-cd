@@ -179,7 +179,11 @@ kubectl logs $WORKER -f -n $NAMESPACE
 
 ## BlueGreen Rollouts
 1. Refer to manifest file in  `blue_green/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
-2. Change the image in the values.yaml and commit to the main branch
+2. Delete existing app in argocd using `argocd app delete sgdecoding-online-scaled`
+3. In `application.yaml` under `spec.source.path` change the path to `path: blue_green/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
+4. In the secrets define `MASTER=sgdecoding-online-scaled-master`
+5. For the next git commit, change the value to `MASTER=sgdecoding-online-scaled-master-preview`
+6. Change the image in the values.yaml and commit to the main branch
 
 ## Promethues and Grafana in-depth
 1. Go to `Explore` in the Grafana UI.
@@ -187,7 +191,7 @@ kubectl logs $WORKER -f -n $NAMESPACE
 
 ![Grafana UI Query](./images/grafana-ui-query.png)
 
-3. There are several querries that can be executed
+3. For canary rollouts, execute the following querries 
 ```
 # Compare requests received
 number_of_request_receive_by_master_total{pod="sgdecoding-online-scaled-master-7858cccfdb-5kjg4"}
