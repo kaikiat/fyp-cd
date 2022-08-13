@@ -7,10 +7,13 @@ metadata:
     app.kubernetes.io/name: argocd-cm
     app.kubernetes.io/part-of: argocd
 data:
-  # add an additional local user with apiKey and login capabilities
-  #   apiKey - allows generating API keys
-  #   login - allows to login using UI
-  # accounts.alice: apiKey, login
   accounts.image-updater: apiKey
-  # disables user. User is enabled by default
-  # accounts.alice.enabled: "false"    
+  registries.conf: |
+    registries:
+      - name: GitHub Container Registry
+        api_url: https://docker.pkg.github.com
+        ping: no
+        tagsortmode: latest_first
+        credentials: git:secret:argocd/git-creds
+
+
