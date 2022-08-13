@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: flask-k8s
-          image: ghcr.io/kaikiat/python-docker:latest
+          image: {{ .Values.image.repository }}
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000

@@ -9,9 +9,9 @@ export API_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIi
 
 kubectl apply -f image_uploader/argocd-rbac-cm.yaml
 
-kubectl create secret generic github-token \
--from-literal=username=kaikiat \
---from-literal=password=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 --dry-run -o yaml
+kubectl create secret generic git-creds \
+  --from-literal=username=kaikiat \
+  --from-literal=password=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
 
 kubectl -n argocd rollout restart deployment argocd-image-updater
 
