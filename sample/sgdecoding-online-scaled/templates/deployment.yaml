@@ -14,7 +14,7 @@ spec:
       containers:
         - name: flask-k8s
           image: {{ .Values.image.repository }}
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 5000
       imagePullSecrets:
