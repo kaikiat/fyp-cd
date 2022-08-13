@@ -8,5 +8,5 @@ spec:
     app: flask-k8s
   ports:
     - protocol: "TCP"
-      port: 6000
+      port: 5000
       targetPort: 5000

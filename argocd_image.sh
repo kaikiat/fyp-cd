@@ -3,8 +3,8 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argoc
 
 
 kubectl apply -f image_uploader/argocd-cm.yaml
-argocd account generate-token --account image-updater --id image-updater
 
+argocd account generate-token --account image-updater --id image-updater
 export API_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJpbWFnZS11cGRhdGVyOmFwaUtleSIsIm5iZiI6MTY2MDM2MTk1OCwiaWF0IjoxNjYwMzYxOTU4LCJqdGkiOiJpbWFnZS11cGRhdGVyIn0.HEzxYOYjexkp48kuyOZwpTP8u-gQoCOFzCK9CSRAgf
 
 kubectl apply -f image_uploader/argocd-rbac-cm.yaml
