@@ -12,9 +12,10 @@ data:
   registries.conf: |
     registries:
       - name: GitHub Container Registry
-        api_url: https://docker.pkg.github.com
+        api_url: https://ghcr.io
         ping: no
         tagsortmode: latest_first
-        credentials: git:secret:argocd/git-creds
+        # credentials: git:secret:argocd/git-creds
+        credentials: secret:argocd/git-creds
 
 

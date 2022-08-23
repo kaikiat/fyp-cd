@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-image-updater-config
+data:
+  accounts.image-updater: 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
+  registries.conf: |
+    registries:
+    - name: GitHub Container Registry
+      api_url: https://ghcr.io
+      prefix: ghcr.io
+      credentials: pullsecret:argocd/git-creds
