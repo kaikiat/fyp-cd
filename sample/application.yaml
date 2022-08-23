@@ -2,9 +2,8 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   annotations:
-    # argocd-image-updater.argoproj.io/image-list: ntuasr=ghcr.io/kaikiat/python-docker:latest
     argocd-image-updater.argoproj.io/image-list: ntuasr=ghcr.io/kaikiat/python-docker
-    argocd-image-updater.argoproj.io/ntuasr.update-strategy: newest-build
+    argocd-image-updater.argoproj.io/ntuasr.update-strategy: latest
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
     argocd-image-updater.argoproj.io/git-branch: main
   name: sgdecoding-online-scaled # refers to KUBENAME (must use sgdecoding-online-scaled )
