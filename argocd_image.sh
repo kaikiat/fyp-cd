@@ -1,10 +1,10 @@
 #!/bin/bash
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argocd-image-updater/stable/manifests/install.yaml
 
+# Not needed 
 # kubectl apply -f image_uploader/argocd-cm.yaml
 # kubectl apply -f image_uploader/argocd-rbac-cm.yaml
-
-kubectl patch configmap/argocd-cm --patch-file image_uploader/argocd-cm.yaml -n argocd
+# kubectl patch configmap/argocd-cm --patch-file image_uploader/argocd-cm.yaml -n argocd
 # kubectl apply -f image_uploader/argocd-rbac-cm.yaml -n argocd
 
 
@@ -20,13 +20,16 @@ kubectl patch configmap/argocd-image-updater-config \
   -n argocd \
   --type merge \
   -p '{"data":{"log.level":"debug"}}'
-  # -p '{"metadata":{"data":{"log.level":"debug"}}}'
+kubectl patch configmap/argocd-image-updater-config --patch-file image_uploader/argocd-image-updater-config.yaml -n argocd
+kubectl get configmap argocd-image-updater-config -n argocd -o yaml
+
 
 # GITHUB TOKEN
 kubectl create secret generic git-creds \
   --from-literal=username=kaikiat \
   --from-literal=password=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 \
   -n argocd
+
 
 kubectl -n argocd rollout restart deployment argocd-image-updater
 kubectl logs -n argocd -l app.kubernetes.io/name=argocd-image-updater -f
