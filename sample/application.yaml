@@ -3,9 +3,9 @@ kind: Application
 metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: ntuasr=ghcr.io/kaikiat/python-docker
-    # argocd-image-updater.argoproj.io/ntuasr.pull-secret: pullsecret:argocd/git-creds
     argocd-image-updater.argoproj.io/ntuasr.update-strategy: latest
-    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
+    # argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
+    argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/git-branch: main
   name: sgdecoding-online-scaled # refers to KUBENAME (must use sgdecoding-online-scaled )
   # You'll usually want to add your resources to the argocd namespace.

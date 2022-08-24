@@ -6,16 +6,16 @@ metadata:
   labels:
     app.kubernetes.io/name: argocd-cm
     app.kubernetes.io/part-of: argocd
-data:
-  # accounts.image-updater: apiKey
-  accounts.image-updater: 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
-  registries.conf: |
-    registries:
-      - name: GitHub Container Registry
-        api_url: https://ghcr.io
-        ping: no
-        tagsortmode: latest_first
-        # credentials: git:secret:argocd/git-creds
-        credentials: secret:argocd/git-creds
+# data:
+#   # accounts.image-updater: apiKey
+#   accounts.image-updater: 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
+#   registries.conf: |
+#     registries:
+#       - name: GitHub Container Registry
+#         api_url: https://ghcr.io
+#         ping: no
+#         tagsortmode: latest_first
+#         api_url: https://ghcr.io
+#         credentials: git:argocd/git-creds
 
 
