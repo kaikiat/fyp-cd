@@ -21,7 +21,7 @@ spec:
       analysis:
         templates:
         - templateName: analyse-request
-        startingStep: 2 
+        startingStep: 1 
       steps:
       - setWeight: 20
       - pause:
@@ -100,7 +100,7 @@ spec:
       analysis:
         templates:
         - templateName: analyse-request
-        startingStep: 2 
+        startingStep: 1
       steps:
       - setWeight: 20
       - pause:
