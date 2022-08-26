@@ -71,7 +71,6 @@ gcloud compute scp models/SingaporeCS_0519NNET3 gke-gke-ntu-asr-clus-ntu-asr-nod
  > Note: VM_ID looks something like this gke-gke-ntu-asr-clus-ntu-asr-node-poo-5a093a1f-fcd2
 
 
-
 ## Google Set Up - GKE Cluster
 1. Create a namespace 
 ```
@@ -123,7 +122,7 @@ kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotati
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-deployed.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-running.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
 ``` 
-5. By this time, you should also have received an notification from the SMTP server that the application has successfully sync.
+5. By this time, you should also have received an notification from the SMTP server that the application has failed syncing. This is because argorollouts is not configured yet.
 
 ## Argo Rollouts Setup
 1. Install rollouts plugin using 
@@ -155,8 +154,9 @@ __NOTE: To view metrics exported, run `kubectl port-forward svc/sgdecoding-onlin
 ## Argo Rollouts Installation
 1. Install argo rollouts with helm `helm install argo-rollouts argo_rollouts --namespace argo-rollouts`
 2. Install service monitor for argo rollouts `kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n argo-rollouts`, after installing helm.
-3. Verify that rollout is working by running `kubectl argo rollouts dashboard` to open the rollout web ui.
-4. Alternative verify the app using `python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav`
+3. Resync the app in argocd if needed since argo rollouts is installed. After that you should also receive an email notification
+4. Verify that rollout is working by running `kubectl argo rollouts dashboard` to open the rollout web ui.
+5. Alternative verify the app using `python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav`
 
 ## Grafana Dashboard Set Up
 1. Go to `http://localhost:3000/login` to view the Grafana Web UI. The username is `admin`, the password is `prom-operator`
@@ -193,7 +193,8 @@ kubectl logs $WORKER -f -n $NAMESPACE
 1. Go to `Explore` in the Grafana UI.
 2. Input the following parameters as seen in the figure below
 
-![Grafana UI Query](./images/grafana-ui-query.png)
+<!-- ![Grafana UI Query](./images/grafana-ui-query.png) -->
+[![grafana-ui-query.png](https://i.postimg.cc/Gtk3nWN1/grafana-ui-query.png)](https://postimg.cc/bSwfQBp6)
 
 3. For canary rollouts, execute the following querries 
 ```
