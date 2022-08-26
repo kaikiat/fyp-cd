@@ -20,9 +20,10 @@ terraform {
   }
 }
 ```
-4. Run `gcloud auth login` 
+4. Run `gcloud auth login` and `gcloud auth application-default login`
 5. Set project id using `export PROJECT_ID=your-project-id`
-6. Provision gcp resources using Terraform
+6. Remove .terraform folder
+7. Provision gcp resources using Terraform
 ```
 # Terraform will set up application resources
 cd Terraform_google || exit
@@ -31,13 +32,13 @@ terraform validate
 terraform plan
 terraform apply -auto-approve
 ```
-7. Set up iam roles
+8. Set up iam roles
 ```
 gcloud iam roles create Terraform_role \
   --file=Terraform_role.yaml \
   --project $PROJECT_ID
 ```
-8. Bind policies
+9. Bind policies
 ```
 gcloud projects add-iam-policy-binding $PROJECT_ID \
     --member="serviceAccount:terraform-sa@${PROJECT_ID}.iam.gserviceaccount.com" \
@@ -96,7 +97,7 @@ kubectl create secret docker-registry regcred2 --docker-server=registry.gitlab.c
 3. Apply manifests files `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml`
 4. Port-forward argocd-server using `kubectl port-forward svc/argocd-server -n argocd 8080:443` in another terminal tab.
 5. Login through the UI. Password can be obtained from `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo`, the username is `admin`.
-6. Login via cli using `argocd login localhost:8080 --username admin --password $(kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d)`
+6. Login via cli using `argocd login localhost:8080 --username admin --password $(kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d) -y`
 7. Add github ssh key. Refer to github docs if ssh key has not be generated, otherwise run `argocd repo add git@github.com:kaikiat/fyp-cd.git --ssh-private-key-path ~/.ssh/id_rsa`. This can be intepreted as `argocd repo add GITHUB_SSH_URL  --ssh-private-key-path /path/to/ssh/key`, this command with add a github repository to argocd.
 8. Verify using `argocd repo list`
 9. Apply the manifests file using `kubectl apply -f application.yaml`

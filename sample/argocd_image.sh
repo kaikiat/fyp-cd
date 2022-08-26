@@ -21,7 +21,7 @@ kubectl patch configmap/argocd-image-updater-config \
   --type merge \
   -p '{"data":{"log.level":"debug"}}'
 kubectl patch configmap/argocd-image-updater-config --patch-file image_uploader/argocd-image-updater-config.yaml -n argocd
-kubectl get configmap argocd-image-updater-config -n argocd -o yaml
+# kubectl get configmap argocd-image-updater-config -n argocd -o yaml
 
 
 # GITHUB TOKEN
