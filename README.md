@@ -193,7 +193,6 @@ kubectl logs $WORKER -f -n $NAMESPACE
 1. Go to `Explore` in the Grafana UI.
 2. Input the following parameters as seen in the figure below
 
-<!-- ![Grafana UI Query](./images/grafana-ui-query.png) -->
 [![grafana-ui-query.png](https://i.postimg.cc/Gtk3nWN1/grafana-ui-query.png)](https://postimg.cc/bSwfQBp6)
 
 3. For canary rollouts, execute the following querries 
@@ -211,6 +210,10 @@ number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-mast
 number_of_request_reject_total{service="sgdecoding-online-scaled-master"}
 number_of_request_reject_total{service="sgdecoding-online-scaled-master-preview"}
 ```
+## Analysis
+1. Make sure that you have port forwarded argocd, Grafana and Prometheus.
+2. 
 
-## ArgoCD image uploader
-1. 
+
+~~## ArgoCD image uploader~~
+

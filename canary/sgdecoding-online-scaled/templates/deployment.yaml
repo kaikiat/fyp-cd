@@ -22,6 +22,9 @@ spec:
       - setWeight: 20
       - pause:
           duration: 200s # 1 hour
+      - analysis:
+          templates:
+            - templateName: analyse-request
       - setWeight: 70
       - pause: 
           duration: 200s # 1 hour
@@ -97,6 +100,9 @@ spec:
       - setWeight: 20
       - pause:
           duration: 200s # 1 hour
+      - analysis:
+        templates:
+          - templateName: analyse-request
       - setWeight: 70
       - pause: 
           duration: 200s # 1 hour
