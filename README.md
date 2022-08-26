@@ -155,7 +155,7 @@ __NOTE: To view metrics exported, run `kubectl port-forward svc/sgdecoding-onlin
 1. Install argo rollouts with helm `helm install argo-rollouts argo_rollouts --namespace argo-rollouts`
 2. Install service monitor for argo rollouts `kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n argo-rollouts`, after installing helm.
 3. Resync the app in argocd if needed since argo rollouts is installed. After that you should also receive an email notification
-4. Verify that rollout is working by running `kubectl argo rollouts dashboard` to open the rollout web ui.
+4. Verify that rollout is working by running `kubectl argo rollouts dashboard` to open the rollout web ui. Argo rollout runs at `http://localhost:3100/rollouts`
 5. Alternative verify the app using `python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav`
 
 ## Grafana Dashboard Set Up
