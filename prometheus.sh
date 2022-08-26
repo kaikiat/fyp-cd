@@ -2,6 +2,7 @@ kubectl create namespace prometheus
 kubectl config set-context --current --namespace prometheus
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm install prometheus prometheus-community/kube-prometheus-stack --namespace prometheus
+
 helm uninstall prometheus --namespace prometheus
 # Check targets to see if argocd exists?
 kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090 -n prometheus

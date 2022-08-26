@@ -21,7 +21,10 @@ spec:
       analysis:
         templates:
         - templateName: analyse-request
-        startingStep: 1 
+        startingStep: 1
+        args:
+          - name: service-name
+            value: prometheus-kube-prometheus-prometheus.default.svc.cluster.local
       steps:
       - setWeight: 20
       - pause:
@@ -100,6 +103,9 @@ spec:
       analysis:
         templates:
         - templateName: analyse-request
+        args:
+          - name: service-name
+            value: prometheus-kube-prometheus-prometheus.default.svc.cluster.local
         startingStep: 1
       steps:
       - setWeight: 20
