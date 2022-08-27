@@ -217,3 +217,6 @@ number_of_request_reject_total{service="sgdecoding-online-scaled-master-preview"
 
 ~~## ArgoCD image uploader~~
 
+## Others  
+1. Uninstall prometheus charts [https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#uninstall-helm-chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#uninstall-helm-chart)
+

@@ -4,6 +4,13 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 helm install prometheus prometheus-community/kube-prometheus-stack --namespace prometheus
 
 helm uninstall prometheus --namespace prometheus
+# Install by folder
+cd kube-prometheus-stack && helm dependency update && cd ..
+helm install prometheus kube-prometheus-stack --namespace prometheus
+kubectl delete -f analysis/analysis_request.yaml
+
+
+helm uninstall prometheus --namespace prometheus
 # Check targets to see if argocd exists?
 kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090 -n prometheus
 kubectl port-forward deployment/prometheus-grafana 3000 -n prometheus
