@@ -1,3 +1,5 @@
+#!/bin/bash
+
 kubectl create namespace prometheus
 kubectl config set-context --current --namespace prometheus
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts

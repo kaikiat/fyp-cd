@@ -213,7 +213,7 @@ number_of_request_reject_total{service="sgdecoding-online-scaled-master-preview"
 ```
 ## Analysis
 1. Make sure that you have port forwarded argocd, Grafana and Prometheus.
-2. Run `kubectl apply -f analysis/analysis_request.yaml`, set the address as 
+2. Run `kubectl apply -f analysis/analysis_request.yaml`, set the address as `http://34.87.79.104:9090`
 
 
 ~~## ArgoCD image uploader~~

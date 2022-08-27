@@ -6,7 +6,8 @@ spec:
   metrics:
   - name: analyse-request
     interval: 30s
-    successCondition: result[0] >= 1
+    # successCondition: result[0] >= 1
+    successCondition: result[0] >= 1 || isNaN(result)
     failureLimit: 3
     provider:
       prometheus:
