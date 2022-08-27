@@ -152,7 +152,8 @@ kubectl port-forward deployment/prometheus-grafana 3000 -n prometheus
 __NOTE: To view metrics exported, run `kubectl port-forward svc/sgdecoding-online-scaled-master 9090`, then go to localhost:8081/metrics__
 
 ## Argo Rollouts Installation
-1. Install argo rollouts with helm `helm install argo-rollouts argo_rollouts --namespace argo-rollouts`
+~~1. Install argo rollouts with helm `helm install argo-rollouts argo_rollouts --namespace argo-rollouts`~~
+1. Install argo rollouts using `helm install prometheus kube-prometheus-stack --namespace prometheus`, can be interpreted as `helm install RELEASE_NAME FOLDER`.
 2. Install service monitor for argo rollouts `kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n argo-rollouts`, after installing helm.
 3. Resync the app in argocd if needed since argo rollouts is installed. After that you should also receive an email notification
 4. Verify that rollout is working by running `kubectl argo rollouts dashboard` to open the rollout web ui. Argo rollout runs at `http://localhost:3100/rollouts`
@@ -212,7 +213,7 @@ number_of_request_reject_total{service="sgdecoding-online-scaled-master-preview"
 ```
 ## Analysis
 1. Make sure that you have port forwarded argocd, Grafana and Prometheus.
-2. 
+2. Run `kubectl apply -f analysis/analysis_request.yaml`, set the address as 
 
 
 ~~## ArgoCD image uploader~~
@@ -220,3 +221,4 @@ number_of_request_reject_total{service="sgdecoding-online-scaled-master-preview"
 ## Others  
 1. Uninstall prometheus charts [https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#uninstall-helm-chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#uninstall-helm-chart)
 
+## Issues

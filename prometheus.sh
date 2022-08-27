@@ -10,6 +10,7 @@ helm install prometheus kube-prometheus-stack --namespace prometheus
 kubectl delete -f analysis/analysis_request.yaml
 
 
+
 helm uninstall prometheus --namespace prometheus
 # Check targets to see if argocd exists?
 kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090 -n prometheus
