@@ -5,7 +5,7 @@ image:
   # getting credentials: exec: exec: "aws": executable file not found in $PATH
   # repository: ghcr.io/kaikiat/fyp-ci:0.3.0  # import ws4 error in client.py
   # repository: ghcr.io/kaikiat/fyp:latest
-  repository: ghcr.io/kaikiat/fyp-ci:0.3.27
+  repository: ghcr.io/kaikiat/fyp-ci:0.3.28
   # repository: ghcr.io/kaikiat/ntuasr-arm64-bluegreen:latest
   # repository: ghcr.io/kaikiat/kaikiat/kaikiat/fyp-1:latest
   # repository: ghcr.io/kaikiat/ntu-asr-image:latest
