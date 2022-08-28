@@ -15,8 +15,10 @@ def main():
     output, error = process.communicate()
     ip_address = output.decode('utf-8')
     logger.info(f'Ip Address : {ip_address}')
-
-    duration = 60 * 2
+    
+    min = 60
+    duration = min * 15
+    time.sleep(min * 3)
     end = int(time.time()) + duration
     
     cmd = f"python3 client/client_3_ssl.py -u ws://{ip_address}/client/ws/speech -r 32000 -t abc --model='SingaporeCS_0519NNET3' client/audio/34.WAV"
@@ -24,8 +26,6 @@ def main():
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell = True)
         output, error = process.communicate()
         logger.info(output)
-
-
 
 if __name__ == "__main__":
     main()

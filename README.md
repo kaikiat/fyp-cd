@@ -215,11 +215,13 @@ number_of_request_reject_total{service="sgdecoding-online-scaled-master-preview"
 1. Make sure that you have port forwarded argocd, Grafana and Prometheus.
 2. Run `kubectl apply -f analysis/analysis_request.yaml`, set the address as `http://34.87.79.104:9090` pointing it to the external IP address `prometheus-kube-prometheus-prometheus`.
 3. Perform a commit and update the version number of the image.
-4. Run `kubectl get analysisrun <templatename> -o yaml` or can view from argocd ui. Analysis run results should look something like
-[![argocd-analysisrun.png](https://i.postimg.cc/BZPvQR1H/argocd-analysisrun.png)](https://postimg.cc/6TwKMjcp)
+4. Run `python3 suite/load_test.py`
+5. Run `kubectl get analysisrun <templatename> -o yaml` or can view from argocd ui. Analysis run results should look something like
+[![argocd-analysisrun.png](https://i.postimg.cc/wvN7WZVL/argocd-analysisrun.png)](https://postimg.cc/9RWm0xsQ)
 
+<!-- ## Ambassador -->
 
-~~## ArgoCD image uploader~~
+<!-- ## ArgoCD image uploader -->
 
 ## Others  
 1. Uninstall prometheus charts [https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#uninstall-helm-chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#uninstall-helm-chart)
