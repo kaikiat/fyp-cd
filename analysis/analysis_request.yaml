@@ -6,8 +6,6 @@ spec:
   metrics:
   - name: analyse-request
     interval: 30s
-    # successCondition: result[0] >= 1
-    # successCondition: result[0] >= 1 || isNaN(result)
     successCondition: result[0] >= 1 || isNaN(result[0])
     failureLimit: 3
     provider:
