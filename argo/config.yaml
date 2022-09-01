@@ -4,10 +4,10 @@ metadata:
   name: argocd-notifications-cm
 data:
   service.slack: |
-    token: xoxp-3561397123300-3582800937808-3562070315268-86e289357676ac83a0578ba6740fae96
+    token: 
   service.email.gmail: |
     username: kaikiat@nonscriberabbit.com
-    password: zrlfubbvwhppaxsd
+    password: 
     host: smtp.gmail.com
     port: 465
     from: kaikiat@nonscriberabbit.com

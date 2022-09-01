@@ -1,0 +1,8 @@
+apiVersion: getambassador.io/v3alpha1
+kind: Mapping
+metadata:
+ name: sample-demo-be
+spec:
+ hostname: "*"
+ prefix: /flask/
+ service: flask-k8s-service

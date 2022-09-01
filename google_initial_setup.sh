@@ -3,13 +3,7 @@
 # Delete .terraform + create gcs bucket
 # gcloud auth login
 # gcloud auth application-default login
-export PROJECT_ID=cube-15
-export GITHUB_USERNAME=kaikiat
-export CR_PAT=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 
-export CR_PAT2=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
-export GITLAB_USERNAME=benjaminc8121
-export GITLAB_PASSWORD=glpat-pa7YfxjHZxpTztcd8WHH
-export GITLAB_EMAIL=benjaminc8121@gmail.com
+
 
 
 # gcloud config set project $PROJECT_ID

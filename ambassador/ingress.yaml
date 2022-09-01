@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: basic-ingress
+  annotations:
+    networking.gke.io/managed-certificates: ntuasr.com
+spec:
+  defaultBackend:
+    service:
+      name: flask-k8s-service
+      port:
+        number: 5000

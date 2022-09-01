@@ -10,7 +10,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argoc
 
 # API_KEY (seems useless ?)
 # argocd account generate-token --account image-updater --id image-updater
-# export API_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJpbWFnZS11cGRhdGVyOmFwaUtleSIsIm5iZiI6MTY2MDM2MTk1OCwiaWF0IjoxNjYwMzYxOTU4LCJqdGkiOiJpbWFnZS11cGRhdGVyIn0.HEzxYOYjexkp48kuyOZwpTP8u-gQoCOFzCK9CSRAgf
+# export API_KEY=
 # kubectl create secret generic argocd-image-updater-secret \
 #   --from-literal argocd.token=$API_KEY --dry-run -o yaml |
 #   kubectl -n argocd apply -f -
