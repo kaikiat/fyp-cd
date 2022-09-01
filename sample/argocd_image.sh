@@ -9,11 +9,7 @@ kubectl patch configmap/argocd-image-updater-config \
 kubectl patch configmap/argocd-image-updater-config --patch-file image_uploader/argocd-image-updater-config.yaml -n argocd
 
 # GITHUB TOKEN
-# kubectl create secret generic git-creds \
-#   --from-literal=username=kaikiat \
-#   --from-literal=password=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 \
-#   -n argocd
-
+kubectl apply -f image_uploader/secrets.yaml
 kubectl -n argocd rollout restart deployment argocd-image-updater
 kubectl logs -n argocd -l app.kubernetes.io/name=argocd-image-updater -f
 
