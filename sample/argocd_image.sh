@@ -27,7 +27,7 @@ kubectl patch configmap/argocd-image-updater-config --patch-file image_uploader/
 # GITHUB TOKEN
 kubectl create secret generic git-creds \
   --from-literal=username=kaikiat \
-  --from-literal=password=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 \
+  --from-literal=password=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 \
   -n argocd
 
 
