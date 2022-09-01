@@ -2,6 +2,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: sgdecoding-online-scaled 
+  argocd-image-updater.argoproj.io/image-list: ntuasr=ghcr.io/kaikiat/fyp-ci:latest
+  argocd-image-updater.argoproj.io/ntuasr.update-strategy: latest
+  argocd-image-updater.argoproj.io/write-back-method: git
+  argocd-image-updater.argoproj.io/git-branch: main
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -12,7 +16,6 @@ spec:
     targetRevision: main  
     # path: blue_green/sgdecoding-online-scaled  
     path: canary/sgdecoding-online-scaled 
-    # path: canary/rollout/google_deployment_helm/helm/sgdecoding-online-scaled 
   destination:
     server: https://kubernetes.default.svc
     namespace: ntuasr-production-google
