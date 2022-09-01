@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: flask-k8s
-          image: {{ .Values.image.repository }}
+          image: {{ .Values.image.repository }}:{{ .Values.images.tag }}
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
