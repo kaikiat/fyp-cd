@@ -4,4 +4,4 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, Docker! Version 0.0.1'
+    return 'Hello, Docker! Version 0.0.3'

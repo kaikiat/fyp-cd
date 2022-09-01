@@ -219,9 +219,52 @@ number_of_request_reject_total{service="sgdecoding-online-scaled-master-preview"
 5. Run `kubectl get analysisrun <templatename> -o yaml` or can view from argocd ui. Analysis run results should look something like
 [![argocd-analysisrun.png](https://i.postimg.cc/wvN7WZVL/argocd-analysisrun.png)](https://postimg.cc/9RWm0xsQ)
 
+## ArgoCD image uploader
+1. Run `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argocd-image-updater/stable/manifests/install.yaml`
+2. Set debug level 
+```
+kubectl patch configmap/argocd-image-updater-config \
+  -n argocd \
+  --type merge \
+  -p '{"data":{"log.level":"debug"}}'
+```
+3. Add config files
+```
+kubectl patch configmap/argocd-image-updater-config --patch-file image_uploader/argocd-image-updater-config.yaml -n argocd
+kubectl apply -f image_uploader/secrets.yaml
+```
+4. Make sure that application.yaml follows this format
+```
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: ntuasr=ghcr.io/kaikiat/python-docker:latest
+    argocd-image-updater.argoproj.io/ntuasr.update-strategy: latest
+    argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/git-branch: main
+```
+5. Helm chart need to follow the format below
+```
+image:
+  repository: ghcr.io/kaikiat/python-docker
+  tag: 0.0.1
+  pullPolicy: Always
+```
+6. Whenever you make a change to argo image updater, restart the deployment using `kubectl -n argocd rollout restart deployment argocd-image-updater`
+7. Follow the logs using `kubectl logs -n argocd -l app.kubernetes.io/name=argocd-image-updater -f`
+8. When a new image is pushed to ghcr, the logs should show information similar to this
+```
+time="2022-09-01T13:46:12Z" level=info msg="git checkout --force main" dir=/tmp/git-sgdecoding-online-scaled2528829494 execID=e24d1
+time="2022-09-01T13:46:13Z" level=info msg=Trace args="[git checkout --force main]" dir=/tmp/git-sgdecoding-online-scaled2528829494 operation_name="exec git" time_ms=811.638547
+time="2022-09-01T13:46:13Z" level=info msg="git clean -fdx" dir=/tmp/git-sgdecoding-online-scaled2528829494 execID=f9339
+time="2022-09-01T13:46:13Z" level=info msg=Trace args="[git clean -fdx]" dir=/tmp/git-sgdecoding-online-scaled2528829494 operation_name="exec git" time_ms=14.616689000000001
+time="2022-09-01T13:46:13Z" level=debug msg="target parameter file and marshaled data are the same, skipping commit." application=sgdecoding-online-scaled
+time="2022-09-01T13:46:13Z" level=info msg="Successfully updated the live application spec" application=sgdecoding-online-scaled
+time="2022-09-01T13:46:13Z" level=info msg="Processing results: applications=1 images_considered=1 images_skipped=0 images_updated=1 errors=0"
+time="2022-09-01T13:48:13Z" level=info msg="Starting image update cycle, considering 1 annotated application(s) for update"
+```
 <!-- ## Ambassador -->
-
-<!-- ## ArgoCD image uploader -->
 
 ## Others  
 1. Uninstall prometheus charts [https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#uninstall-helm-chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#uninstall-helm-chart)
