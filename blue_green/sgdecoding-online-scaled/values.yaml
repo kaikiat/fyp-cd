@@ -9,7 +9,7 @@ image:
   # repository: ghcr.io/kaikiat/ntuasr-arm64-bluegreen:latest
   # repository: ghcr.io/kaikiat/kaikiat/kaikiat/fyp-1:latest
   # repository: ghcr.io/kaikiat/ntu-asr-image:latest
-  tag: 0.3.30
+  tag: 0.3.33
   pullPolicy: Always
   pullSecrets: regcred
 
