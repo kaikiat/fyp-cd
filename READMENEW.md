@@ -270,8 +270,11 @@ time="2022-09-01T13:48:13Z" level=info msg="Starting image update cycle, conside
 
 ## Shortcuts
 1. kubectl config set-context --help 
-2. for p in $(kubectl get pods | grep Terminating | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
-3. for p in $(kubectl get pods | grep Error | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
-4. for p in $(kubectl get pods | grep Completed | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
+2. Run
+```
+for p in $(kubectl get pods | grep Terminating | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
+for p in $(kubectl get pods | grep Error | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
+for p in $(kubectl get pods | grep Completed | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
+```
 
 ## Issues
