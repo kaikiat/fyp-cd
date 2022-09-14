@@ -4,7 +4,8 @@ metadata:
   name: argocd-notifications-cm
 data:
   service.slack: |
-    token: xoxp-3561397123300-3582800937808-3562070315268-86e289357676ac83a0578ba6740fae96
+    # token: xoxp-3561397123300-3582800937808-3562070315268-86e289357676ac83a0578ba6740fae96
+    token: xoxp-3561397123300-3582800937808-4083390400324-6c5de3699d0dacd35deff01f273a1499
   service.email.gmail: |
     username: kaikiat@nonscriberabbit.com
     password: zrlfubbvwhppaxsd
