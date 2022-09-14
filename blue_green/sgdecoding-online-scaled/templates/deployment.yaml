@@ -34,7 +34,7 @@ spec:
         - name: {{ .Values.image.pullSecrets }}
       containers:
         - name: {{ include "ntuspeechlab.master.name" . }}
-          image: {{ .Values.image.repository }}
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command: [{{ include "ntuspeechlab.master.command" . }}]
           envFrom:
@@ -104,7 +104,7 @@ spec:
         - name: {{ $.Values.image.pullSecrets }}
       containers:
         - name: {{ include "ntuspeechlab.worker.name" $ }}
-          image: {{ $.Values.image.repository }}
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           imagePullPolicy: {{ $.Values.image.pullPolicy }}
           command: [{{ include "ntuspeechlab.worker.command" $ }}]
           envFrom:
