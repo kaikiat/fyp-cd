@@ -180,7 +180,7 @@ kubectl logs $WORKER -f -n $NAMESPACE
 
 ## BlueGreen Rollouts
 1. Refer to manifest file in  `blue_green/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
-2. Delete existing app in argocd using `argocd app delete sgdecoding-online-scaled`
+2. Delete existing app in argocd using `argocd app delete sgdecoding-online-scaled` (Is this needed ?)
 3. In `application.yaml` under `spec.source.path` change the path to `path: blue_green/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
 4. In the secrets define `MASTER=sgdecoding-online-scaled-master`
 5. For the next git commit, change the value to `MASTER=sgdecoding-online-scaled-master-preview` for both secrets in the `secrets.yaml`. Also, change to a new image.

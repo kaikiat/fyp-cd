@@ -3,9 +3,9 @@ printf $"Please select an option \n1) Test canary \n2) Test preview service (blu
 read input
 echo $input
 if [ $input == "1" ]; then
-    echo "canary testing"
+    python3 suite/canary.py
 elif [ $input == "2" ]; then
-    echo "preview testing"
+    echo "WIP"
 else
-    echo "original"
+    echo "WIP"
 fi
