@@ -145,22 +145,22 @@ helm install prometheus prometheus-community/kube-prometheus-stack --namespace p
 kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090 -n prometheus
 kubectl port-forward deployment/prometheus-grafana 3000 -n prometheus
 ```
-3. Install service monitor for argo cd `kubectl apply -f monitoring/prometheus_configuration/service-monitor.yaml -n argocd`
-4. Install service monitor for ntuasr application `kubectl apply -f monitoring/prometheus_configuration/service-monitor-ntuasr.yaml -n ntuasr-production-google`
+3. Install service monitor for argo cd `kubectl apply -f monitoring/configuration/service-monitor.yaml -n argocd`
+4. Install service monitor for ntuasr application `kubectl apply -f monitoring/configuration/service-monitor-ntuasr.yaml -n ntuasr-production-google`
 5. Only after completing step 1-3, then you can install argo rollouts.
 
 __NOTE: To view metrics exported, run `kubectl port-forward svc/sgdecoding-online-scaled-master 9090`, then go to localhost:8081/metrics__
 
 ## Argo Rollouts Installation
 1. Install argo rollouts using `helm install prometheus monitoring/kube-prometheus-stack --namespace prometheus`, can be interpreted as `helm install RELEASE_NAME FOLDER`.
-2. Install service monitor for argo rollouts `kubectl apply -f monitoring/prometheus_configuration/service-monitor-argorollouts.yaml -n argo-rollouts`, after installing helm.
+2. Install service monitor for argo rollouts `kubectl apply -f monitoring/configuration/service-monitor-argorollouts.yaml -n argo-rollouts`, after installing helm.
 3. Resync the app in argocd if needed since argo rollouts is installed. After that you should also receive an email notification
 4. Verify that rollout is working by running `kubectl argo rollouts dashboard` to open the rollout web ui. Argo rollout runs at `http://localhost:3100/rollouts`
 5. Alternative verify the app using `python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav`
 
 ## Grafana Dashboard Set Up
 1. Go to `http://localhost:3000/login` to view the Grafana Web UI. The username is `admin`, the password is `prom-operator`
-2. Go to `Dashboard` > `Import` > `Upload JSON file`. Add 2 files `monitoring/prometheus_configuration/argocd-dashboard.json` and `monitoring/prometheus_configuration/argorollout-dashboard.json`.
+2. Go to `Dashboard` > `Import` > `Upload JSON file`. Add 2 files `monitoring/configuration/argocd-dashboard.json` and `monitoring/configuration/argorollout-dashboard.json`.
 
 ## Canary Rollouts
 1. Refer to manifest file in  `canary/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
@@ -214,7 +214,7 @@ number_of_request_reject_total{service="sgdecoding-online-scaled-master-preview"
 1. Make sure that you have port forwarded argocd, Grafana and Prometheus.
 2. Run `kubectl apply -f analysis/analysis_request.yaml`, set the address as `http://34.87.79.104:9090` pointing it to the external IP address `prometheus-kube-prometheus-prometheus`.
 3. Perform a commit and update the version number of the image.
-4. Run `python3 suite/load_test.py`
+4. Run `python3 suite/canary.py`
 5. Run `kubectl get analysisrun <templatename> -o yaml` or can view from argocd ui. Analysis run results should look something like
 [![argocd-analysisrun.png](https://i.postimg.cc/wvN7WZVL/argocd-analysisrun.png)](https://postimg.cc/9RWm0xsQ)
 
@@ -267,5 +267,11 @@ time="2022-09-01T13:48:13Z" level=info msg="Starting image update cycle, conside
 
 ## Others  
 1. Uninstall prometheus charts [https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#uninstall-helm-chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#uninstall-helm-chart)
+
+## Shortcuts
+1. kubectl config set-context --help 
+2. for p in $(kubectl get pods | grep Terminating | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
+3. for p in $(kubectl get pods | grep Error | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
+4. for p in $(kubectl get pods | grep Completed | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
 
 ## Issues
