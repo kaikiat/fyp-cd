@@ -82,8 +82,8 @@ kubectl config set-context --current --namespace $NAMESPACE
 ```
 2. Apply the secrets.yaml and the pv claims. Note: Remember to change the IP address of the file store. Now run 
 ```
-kubectl apply -f google_production/secret/run_kubernetes_secret.yaml
-kubectl apply -f google_production/google_pv/  # need to change the ip address of the pvc, need to delete pv when rerunning
+kubectl apply -f secret/run_kubernetes_secret.yaml
+kubectl apply -f google_pv/  # need to change the ip address of the pvc, need to delete pv when rerunning
 ```
 3. Create docker secrets
 ```
@@ -104,7 +104,7 @@ kubectl create secret docker-registry regcred2 --docker-server=registry.gitlab.c
 ## Argo Notifications Set Up
 1. Install argo cd notifications `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argocd-notifications/release-1.0/manifests/install.yaml`
 2. Setup SMTP server + Slack app beforehand.
-3. Add config.yaml which contains the credentials for SMTP server as well as Slack app. `kubectl apply -n argocd -f config.yaml`
+3. Add config.yaml which contains the credentials for SMTP server as well as Slack app. `kubectl apply -n argocd -f argo/manifests/config.yaml`
 4. Patch the app using
 ```
 # Slack Email
@@ -114,13 +114,13 @@ kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotati
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-health-degraded.slack":"#argocd"}}}' --type merge
 
 # SMTP Email
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"recipients.argocd-notifications.argoproj.io":"kaikiatpoh14@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-succeeded.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-failed.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-status-unknown.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-health-degraded.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-deployed.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-running.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"recipients.argocd-notifications.argoproj.io":"kaikiatpoh18@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-succeeded.gmail":"kaikiatpoh18@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-failed.gmail":"kaikiatpoh18@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-status-unknown.gmail":"kaikiatpoh18@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-health-degraded.gmail":"kaikiatpoh18@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-deployed.gmail":"kaikiatpoh18@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-running.gmail":"kaikiatpoh18@gmail.com"}}}' --type merge
 ``` 
 5. By this time, you should also have received an notification from the SMTP server that the application has failed syncing. This is because argorollouts is not configured yet.
 
@@ -138,29 +138,29 @@ sudo mv ./kubectl-argo-rollouts-darwin-amd64 /usr/local/bin/kubectl-argo-rollout
 ```
 kubectl create namespace prometheus
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-helm install prometheus prometheus-community/kube-prometheus-stack --namespace prometheus
+helm install prometheus monitoring/kube-prometheus-stack --namespace prometheus
 ```
 2. Port forward Prometheus and Grafana
 ```
 kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090 -n prometheus
 kubectl port-forward deployment/prometheus-grafana 3000 -n prometheus
 ```
-3. Install service monitor for argo cd `kubectl apply -f prometheus_configuration/service-monitor.yaml -n argocd`
-4. Install service monitor for ntuasr application `kubectl apply -f prometheus_configuration/service-monitor-ntuasr.yaml -n ntuasr-production-google`
+3. Install service monitor for argo cd `kubectl apply -f monitoring/manifests/service-monitor.yaml -n argocd`
+4. Install service monitor for ntuasr application `kubectl apply -f monitoring/manifests/service-monitor-ntuasr.yaml -n ntuasr-production-google`
 5. Only after completing step 1-3, then you can install argo rollouts.
 
 __NOTE: To view metrics exported, run `kubectl port-forward svc/sgdecoding-online-scaled-master 9090`, then go to localhost:8081/metrics__
 
 ## Argo Rollouts Installation
-1. Install argo rollouts using `helm install prometheus kube-prometheus-stack --namespace prometheus`, can be interpreted as `helm install RELEASE_NAME FOLDER`.
-2. Install service monitor for argo rollouts `kubectl apply -f prometheus_configuration/service-monitor-argorollouts.yaml -n argo-rollouts`, after installing helm.
+1. Install argo rollouts using `helm install argo-rollouts argo/argo_rollouts --namespace argo-rollouts`, can be interpreted as `helm install RELEASE_NAME FOLDER`.
+2. Install service monitor for argo rollouts `kubectl apply -f monitoring/manifests/service-monitor-argorollouts.yaml -n argo-rollouts`, after installing helm.
 3. Resync the app in argocd if needed since argo rollouts is installed. After that you should also receive an email notification
 4. Verify that rollout is working by running `kubectl argo rollouts dashboard` to open the rollout web ui. Argo rollout runs at `http://localhost:3100/rollouts`
 5. Alternative verify the app using `python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav`
 
 ## Grafana Dashboard Set Up
 1. Go to `http://localhost:3000/login` to view the Grafana Web UI. The username is `admin`, the password is `prom-operator`
-2. Go to `Dashboard` > `Import` > `Upload JSON file`. Add 2 files `prometheus_configuration/argocd-dashboard.json` and `prometheus_configuration/argorollout-dashboard.json`.
+2. Go to `Dashboard` > `Import` > `Upload JSON file`. Add 2 files `monitoring/configuration/argocd-dashboard.json` and `monitoring/configuration/argorollout-dashboard.json`.
 
 ## Canary Rollouts
 1. Refer to manifest file in  `canary/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
@@ -180,7 +180,7 @@ kubectl logs $WORKER -f -n $NAMESPACE
 
 ## BlueGreen Rollouts
 1. Refer to manifest file in  `blue_green/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
-2. Delete existing app in argocd using `argocd app delete sgdecoding-online-scaled`
+2. Delete existing app in argocd using `argocd app delete sgdecoding-online-scaled` (Is this needed ?)
 3. In `application.yaml` under `spec.source.path` change the path to `path: blue_green/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
 4. In the secrets define `MASTER=sgdecoding-online-scaled-master`
 5. For the next git commit, change the value to `MASTER=sgdecoding-online-scaled-master-preview` for both secrets in the `secrets.yaml`. Also, change to a new image.
@@ -214,7 +214,7 @@ number_of_request_reject_total{service="sgdecoding-online-scaled-master-preview"
 1. Make sure that you have port forwarded argocd, Grafana and Prometheus.
 2. Run `kubectl apply -f analysis/analysis_request.yaml`, set the address as `http://34.87.79.104:9090` pointing it to the external IP address `prometheus-kube-prometheus-prometheus`.
 3. Perform a commit and update the version number of the image.
-4. Run `python3 suite/load_test.py`
+4. Run `python3 suite/canary.py`
 5. Run `kubectl get analysisrun <templatename> -o yaml` or can view from argocd ui. Analysis run results should look something like
 [![argocd-analysisrun.png](https://i.postimg.cc/wvN7WZVL/argocd-analysisrun.png)](https://postimg.cc/9RWm0xsQ)
 
@@ -268,4 +268,14 @@ time="2022-09-01T13:48:13Z" level=info msg="Starting image update cycle, conside
 ## Others  
 1. Uninstall prometheus charts [https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#uninstall-helm-chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#uninstall-helm-chart)
 
+## Shortcuts
+1. kubectl config set-context --help 
+2. Run
+```
+for p in $(kubectl get pods | grep Terminating | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
+for p in $(kubectl get pods | grep Error | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
+for p in $(kubectl get pods | grep Completed | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
+```
+
 ## Issues
+1. Add terraform code here please

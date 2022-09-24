@@ -12,4 +12,5 @@ spec:
     # server: 10.140.72.210 # change to filestore ip
     # server: 10.82.20.226 # change to filestore ip
     # server: 10.82.20.226 # change to filestore ip
-    server: 10.111.35.242 # change to filestore ip
+    # server: 10.111.35.242 # change to filestore ip
+    server: 10.227.169.58 # change to filestore ip

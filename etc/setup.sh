@@ -3,20 +3,24 @@
 # Delete .terraform + create gcs bucket
 # gcloud auth login
 # gcloud auth application-default login
-export PROJECT_ID=cube-18
-export GITHUB_USERNAME=kaikiat
-export CR_PAT=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 
-export GITLAB_USERNAME=benjaminc812
-export GITLAB_PASSWORD=glpat-pa7YfxjHZxpTztcd8WHH
-export GITLAB_EMAIL=benjaminc8121@gmail.co
+# gcloud auth application-default login --project $PROJECT
+# export PROJECT_ID=cube-16
+# export PROJECT_ID=ntu-16
+# export GITHUB_USERNAME=kaikiat
+# export CR_PAT=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 
+# export GITLAB_USERNAME=benjaminc812
+# export GITLAB_PASSWORD=glpat-pa7YfxjHZxpTztcd8WHH
+# export GITLAB_EMAIL=benjaminc8121@gmail.co
 # gcloud config set project $PROJECT_ID
 # gcloud services enable container.googleapis.com
 # gcloud services enable file.googleapis.com
 # gcloud services enable compute.googleapis.com
 
-# # #Terraform will set up application resources
-# cd Terraform_google || exit
-# terraform init
+# # # #Terraform will set up application resources
+# # cd Terraform_google || exit
+# cd $PROJECT_ID || exit
+# terraform init 
+# terraform init -reconfigure
 # terraform validate
 # terraform plan
 # terraform apply -auto-approve
@@ -37,13 +41,13 @@ export GITLAB_EMAIL=benjaminc8121@gmail.co
 
 # mkdir mnt
 # sudo mount <filstore ip>:/<filestore path> <mount directory>
-# example: sudo mount 10.111.35.242:/modelshare mnt
+# example: sudo mount 10.227.169.58:/modelshare mnt
 # sudo chmod go+rw mnt (sudo chmod -R 777 mnt if on linux after loading)
 # pwd # must use the full path of the mount directory for scp command
 
 # Upload model to Google File Store before SCP 
 # cd ..
-# export VM_ID=gke-gke-ntu-asr-clus-ntu-asr-node-poo-a136df88-wsgm
+# export VM_ID=gke-gke-ntu-asr-clus-ntu-asr-node-poo-af867a18-klks
 # export PWD=/home/kaikiat/mnt
 # export REMOTE_DIR=/home/kaikiat/mnt
 # gcloud compute scp models/SingaporeCS_0519NNET3 $VM_ID:$PWD --project=$PROJECT_ID --zone=asia-southeast1-a --recurse
