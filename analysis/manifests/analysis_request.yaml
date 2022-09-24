@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: analyse-request
+spec:
+  metrics:
+  - name: analyse-request
+    interval: 30s
+    successCondition: result[0] >= 1 || isNaN(result[0])
+    failureLimit: 3
+    provider:
+      prometheus:
+        address: http://34.87.79.104:9090
+        query: |
+          sum(number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-master"})/sum(number_of_request_reject_total{service="sgdecoding-online-scaled-master"})

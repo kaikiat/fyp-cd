@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: fileserver-production  # change name for production
+spec:
+  capacity:
+    storage: 1T
+  accessModes:
+  - ReadWriteMany
+  nfs:
+    path: /modelshare
+    # server: 10.140.72.210 # change to filestore ip
+    # server: 10.82.20.226 # change to filestore ip
+    # server: 10.82.20.226 # change to filestore ip
+    server: 10.111.35.242 # change to filestore ip

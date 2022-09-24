@@ -114,13 +114,13 @@ kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotati
 kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-health-degraded.slack":"#argocd"}}}' --type merge
 
 # SMTP Email
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"recipients.argocd-notifications.argoproj.io":"kaikiatpoh14@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-succeeded.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-failed.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-status-unknown.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-health-degraded.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-deployed.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
-kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-running.gmail":"kaikiatpoh14@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"recipients.argocd-notifications.argoproj.io":"kaikiatpoh17@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-succeeded.gmail":"kaikiatpoh17@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-failed.gmail":"kaikiatpoh17@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-status-unknown.gmail":"kaikiatpoh17@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-health-degraded.gmail":"kaikiatpoh17@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-deployed.gmail":"kaikiatpoh17@gmail.com"}}}' --type merge
+kubectl patch app sgdecoding-online-scaled -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.on-sync-running.gmail":"kaikiatpoh17@gmail.com"}}}' --type merge
 ``` 
 5. By this time, you should also have received an notification from the SMTP server that the application has failed syncing. This is because argorollouts is not configured yet.
 
@@ -138,24 +138,22 @@ sudo mv ./kubectl-argo-rollouts-darwin-amd64 /usr/local/bin/kubectl-argo-rollout
 ```
 kubectl create namespace prometheus
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-helm install prometheus prometheus-community/kube-prometheus-stack --namespace prometheus
-helm install prometheus monitoring/kube-prometheus-stack --namespace prometheus ??
+helm install prometheus monitoring/kube-prometheus-stack --namespace prometheus
 ```
 2. Port forward Prometheus and Grafana
 ```
 kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090 -n prometheus
 kubectl port-forward deployment/prometheus-grafana 3000 -n prometheus
 ```
-3. Install service monitor for argo cd `kubectl apply -f monitoring/configuration/service-monitor.yaml -n argocd`
-4. Install service monitor for ntuasr application `kubectl apply -f monitoring/configuration/service-monitor-ntuasr.yaml -n ntuasr-production-google`
+3. Install service monitor for argo cd `kubectl apply -f monitoring/manifests/service-monitor.yaml -n argocd`
+4. Install service monitor for ntuasr application `kubectl apply -f monitoring/manifests/service-monitor-ntuasr.yaml -n ntuasr-production-google`
 5. Only after completing step 1-3, then you can install argo rollouts.
 
 __NOTE: To view metrics exported, run `kubectl port-forward svc/sgdecoding-online-scaled-master 9090`, then go to localhost:8081/metrics__
 
 ## Argo Rollouts Installation
-~~1. Install argo rollouts with helm `helm install argo-rollouts argo_rollouts --namespace argo-rollouts (I think this is needed)`~~
-1. Install argo rollouts using `helm install argo-rollouts argo_rollouts --namespace argo-rollouts`, can be interpreted as `helm install RELEASE_NAME FOLDER`.
-2. Install service monitor for argo rollouts `kubectl apply -f monitoring/configuration/service-monitor-argorollouts.yaml -n argo-rollouts`, after installing helm.
+1. Install argo rollouts using `helm install argo-rollouts argo/argo_rollouts --namespace argo-rollouts`, can be interpreted as `helm install RELEASE_NAME FOLDER`.
+2. Install service monitor for argo rollouts `kubectl apply -f monitoring/manifests/service-monitor-argorollouts.yaml -n argo-rollouts`, after installing helm.
 3. Resync the app in argocd if needed since argo rollouts is installed. After that you should also receive an email notification
 4. Verify that rollout is working by running `kubectl argo rollouts dashboard` to open the rollout web ui. Argo rollout runs at `http://localhost:3100/rollouts`
 5. Alternative verify the app using `python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav`
