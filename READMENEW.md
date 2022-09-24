@@ -82,8 +82,8 @@ kubectl config set-context --current --namespace $NAMESPACE
 ```
 2. Apply the secrets.yaml and the pv claims. Note: Remember to change the IP address of the file store. Now run 
 ```
-kubectl apply -f google_production/secret/run_kubernetes_secret.yaml
-kubectl apply -f google_production/google_pv/  # need to change the ip address of the pvc, need to delete pv when rerunning
+kubectl apply -f secret/run_kubernetes_secret.yaml
+kubectl apply -f google_pv/  # need to change the ip address of the pvc, need to delete pv when rerunning
 ```
 3. Create docker secrets
 ```
@@ -139,6 +139,7 @@ sudo mv ./kubectl-argo-rollouts-darwin-amd64 /usr/local/bin/kubectl-argo-rollout
 kubectl create namespace prometheus
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm install prometheus prometheus-community/kube-prometheus-stack --namespace prometheus
+helm install prometheus monitoring/kube-prometheus-stack --namespace prometheus ??
 ```
 2. Port forward Prometheus and Grafana
 ```
@@ -152,7 +153,8 @@ kubectl port-forward deployment/prometheus-grafana 3000 -n prometheus
 __NOTE: To view metrics exported, run `kubectl port-forward svc/sgdecoding-online-scaled-master 9090`, then go to localhost:8081/metrics__
 
 ## Argo Rollouts Installation
-1. Install argo rollouts using `helm install prometheus monitoring/kube-prometheus-stack --namespace prometheus`, can be interpreted as `helm install RELEASE_NAME FOLDER`.
+~~1. Install argo rollouts with helm `helm install argo-rollouts argo_rollouts --namespace argo-rollouts (I think this is needed)`~~
+1. Install argo rollouts using `helm install argo-rollouts argo_rollouts --namespace argo-rollouts`, can be interpreted as `helm install RELEASE_NAME FOLDER`.
 2. Install service monitor for argo rollouts `kubectl apply -f monitoring/configuration/service-monitor-argorollouts.yaml -n argo-rollouts`, after installing helm.
 3. Resync the app in argocd if needed since argo rollouts is installed. After that you should also receive an email notification
 4. Verify that rollout is working by running `kubectl argo rollouts dashboard` to open the rollout web ui. Argo rollout runs at `http://localhost:3100/rollouts`
@@ -278,3 +280,4 @@ for p in $(kubectl get pods | grep Completed | awk '{print $1}'); do kubectl del
 ```
 
 ## Issues
+1. Add terraform code here please
