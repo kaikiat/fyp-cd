@@ -4,7 +4,7 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: ntuasr=ghcr.io/kaikiat/fyp-ci
     argocd-image-updater.argoproj.io/write-back-method: git
-    argocd-image-updater.argoproj.io/git-branch: main
+    argocd-image-updater.argoproj.io/git-branch: main:image-updater{{range .Images}}-{{.Name}}-{{.NewTag}}{{end}}
   name: sgdecoding-online-scaled 
   namespace: argocd
   finalizers:
