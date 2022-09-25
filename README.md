@@ -273,13 +273,14 @@ number_of_request_reject_total{service="sgdecoding-online-scaled-master-preview"
 1. Uninstall prometheus charts [https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#uninstall-helm-chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#uninstall-helm-chart)
 
 ## Shortcuts
-1. kubectl config set-context --help 
+1. kubectl config set-context --help, set context using `kubectl config use-context CONTEXT_NAME`
 2. Run
 ```
 for p in $(kubectl get pods | grep Terminating | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
 for p in $(kubectl get pods | grep Error | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
 for p in $(kubectl get pods | grep Completed | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
 ```
+3. List context `kubectl config get-contexts`
 
 ## Issues
 1. Add terraform code here please

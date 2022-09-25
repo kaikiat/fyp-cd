@@ -9,7 +9,6 @@ logger = logging.getLogger(__file__)
 logger.setLevel(logging.INFO)
 
 def main():
-    logger.info('Hello Wolrd')
     cmd = r"kubectl get svc sgdecoding-online-scaled-master -n ntuasr-production-google --output jsonpath='{.status.loadBalancer.ingress[0].ip}'"
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell = True)
     output, error = process.communicate()
