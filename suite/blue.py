@@ -19,7 +19,7 @@ def main():
     logger.info(f'Ip Address : {ip_address}')
     
     min = 60
-    duration = min * 2 # must be 2 minutes due to configuration
+    duration = min * 4
     time.sleep(min * 3)
     end = int(time.time()) + duration
     
