@@ -3,9 +3,9 @@ export CR_PAT=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
 
 
 export VERSION=0.0.5
-docker build --tag python-docker:0.0.5 --platform=linux/amd64 .
-docker tag python-docker:0.0.5 ghcr.io/kaikiat/python-docker:0.0.5
-docker push ghcr.io/kaikiat/python-docker:0.0.5
+docker build --tag python-docker:0.0.8 --platform=linux/amd64 .
+docker tag python-docker:0.0.8 ghcr.io/kaikiat/python-docker:0.0.8
+docker push ghcr.io/kaikiat/python-docker:0.0.8
 
 
 echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin

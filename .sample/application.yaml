@@ -4,7 +4,7 @@ metadata:
   annotations:
     # argocd-image-updater.argoproj.io/image-list: ntuasr=ghcr.io/kaikiat/python-docker:latest
     # argocd-image-updater.argoproj.io/ntuasr.update-strategy: latest (Not used production code)
-    argocd-image-updater.argoproj.io/image-list: ntuasr=ghcr.io/kaikiat/python-docker:latest
+    argocd-image-updater.argoproj.io/image-list: ntuasr=ghcr.io/kaikiat/python-docker
     # argocd-image-updater.argoproj.io/ntuasr.update-strategy: semver
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/git-branch: main
