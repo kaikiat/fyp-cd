@@ -12,3 +12,5 @@ echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
 docker run --publish 8000:5000 python-docker
 
 
+kubectl -n argocd rollout restart deployment argocd-image-updater
+kubectl logs -n argocd -l app.kubernetes.io/name=argocd-image-updater -f

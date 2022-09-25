@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   annotations:
-    argocd-image-updater.argoproj.io/image-list: ntuasr=ghcr.io/kaikiat/fyp-ci:latest
+    argocd-image-updater.argoproj.io/image-list: ntuasr=ghcr.io/kaikiat/fyp-ci
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/git-branch: main
   name: sgdecoding-online-scaled 
@@ -14,8 +14,8 @@ spec:
   source:
     repoURL: git@github.com:kaikiat/fyp-cd.git  
     targetRevision: main  
-    # path: blue_green/sgdecoding-online-scaled  
-    path: canary/sgdecoding-online-scaled 
+    path: blue_green/sgdecoding-online-scaled  
+    # path: canary/sgdecoding-online-scaled 
   destination:
     server: https://kubernetes.default.svc
     namespace: ntuasr-production-google

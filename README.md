@@ -209,7 +209,17 @@ kind: Application
 metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: ntuasr=ghcr.io/kaikiat/python-docker:latest
-    argocd-image-updater.argoproj.io/ntuasr.update-strategy: latest
+    argocd-image-updater.argoproj.io/ntuasr.update-strategy: latest # Needed ?
+    argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/git-branch: main
+```
+4. Point 4 is working. Use this instead 
+```
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: ntuasr=ghcr.io/kaikiat/python-docker
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/git-branch: main
 ```
