@@ -221,7 +221,7 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: ntuasr=ghcr.io/kaikiat/python-docker
     argocd-image-updater.argoproj.io/write-back-method: git
-    argocd-image-updater.argoproj.io/git-branch: main
+    argocd-image-updater.argoproj.io/git-branch: main:image-updater{{range .Images}}-{{.Name}}-{{.NewTag}}{{end}}
 ```
 5. Helm chart need to follow the format below
 ```
@@ -291,6 +291,7 @@ for p in $(kubectl get pods | grep Error | awk '{print $1}'); do kubectl delete 
 for p in $(kubectl get pods | grep Completed | awk '{print $1}'); do kubectl delete pod $p --grace-period=0 --force;done
 ```
 3. List context `kubectl config get-contexts`
+4. Get argocd app yaml `k get app sgdecoding-online-scaled -n argocd -o yaml`
 
 ## Issues
 1. Add terraform code here please
