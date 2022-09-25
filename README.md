@@ -131,14 +131,15 @@ curl -LO https://github.com/argoproj/argo-rollouts/releases/latest/download/kube
 chmod +x ./kubectl-argo-rollouts-darwin-amd64
 sudo mv ./kubectl-argo-rollouts-darwin-amd64 /usr/local/bin/kubectl-argo-rollouts
 ```
-2. Create namespace `kubectl create namespace argo-rollouts`
 
 ## Prometheus Installation
 1. Run the following commands
 ```
 kubectl create namespace prometheus
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-helm install prometheus monitoring/kube-prometheus-stack --namespace prometheus
+helm install prometheus monitoring/manifests/kube-prometheus-stack --namespace prometheus
+# Upgrade
+helm upgrade --install prometheus monitoring/manifests/kube-prometheus-stack --namespace prometheus 
 ```
 2. Port forward Prometheus and Grafana
 ```
@@ -152,15 +153,24 @@ kubectl port-forward deployment/prometheus-grafana 3000 -n prometheus
 __NOTE: To view metrics exported, run `kubectl port-forward svc/sgdecoding-online-scaled-master 9090`, then go to localhost:8081/metrics__
 
 ## Argo Rollouts Installation
-1. Install argo rollouts using `helm install argo-rollouts argo/argo_rollouts --namespace argo-rollouts`, can be interpreted as `helm install RELEASE_NAME FOLDER`.
-2. Install service monitor for argo rollouts `kubectl apply -f monitoring/manifests/service-monitor-argorollouts.yaml -n argo-rollouts`, after installing helm.
-3. Resync the app in argocd if needed since argo rollouts is installed. After that you should also receive an email notification
-4. Verify that rollout is working by running `kubectl argo rollouts dashboard` to open the rollout web ui. Argo rollout runs at `http://localhost:3100/rollouts`
-5. Alternative verify the app using `python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav`
+1. Create namespace `kubectl create namespace argo-rollouts`
+2. Install argo rollouts using `helm install argo-rollouts argo/manifests/argo_rollouts --namespace argo-rollouts`, can be interpreted as `helm install RELEASE_NAME FOLDER`.
+3. Install service monitor for argo rollouts `kubectl apply -f monitoring/manifests/service-monitor-argorollouts.yaml -n argo-rollouts`, after installing helm.
+4. Resync the app in argocd if needed since argo rollouts is installed. After that you should also receive an email notification
+5. Verify that rollout is working by running `kubectl argo rollouts dashboard` to open the rollout web ui. Argo rollout runs at `http://localhost:3100/rollouts`
+6. Alternative verify the app using `python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav`
 
 ## Grafana Dashboard Set Up
 1. Go to `http://localhost:3000/login` to view the Grafana Web UI. The username is `admin`, the password is `prom-operator`
 2. Go to `Dashboard` > `Import` > `Upload JSON file`. Add 2 files `monitoring/configuration/argocd-dashboard.json` and `monitoring/configuration/argorollout-dashboard.json`.
+
+## Analysis
+1. Make sure that you have port forwarded argocd, Grafana and Prometheus.
+2. Run `kubectl apply -f analysis/manifests/analysis_request.yaml`, set the address as `http://34.87.79.104:9090` pointing it to the external IP address `prometheus-kube-prometheus-prometheus`.
+3. Perform a commit and update the version number of the image.
+4. Run `python3 suite/canary.py`
+5. Run `kubectl get analysisrun <templatename> -o yaml` or can view from argocd ui. Analysis run results should look something like
+[![argocd-analysisrun.png](https://i.postimg.cc/wvN7WZVL/argocd-analysisrun.png)](https://postimg.cc/9RWm0xsQ)
 
 ## Canary Rollouts
 1. Refer to manifest file in  `canary/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
@@ -177,46 +187,6 @@ NAMESPACE=ntuasr-production-google && \
 WORKER=$(kubectl get pods --sort-by=.metadata.creationTimestamp -o jsonpath="{.items[2].metadata.name}" -n $NAMESPACE) && \
 kubectl logs $WORKER -f -n $NAMESPACE
 ```
-
-## BlueGreen Rollouts
-1. Refer to manifest file in  `blue_green/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
-2. Delete existing app in argocd using `argocd app delete sgdecoding-online-scaled` (Is this needed ?)
-3. In `application.yaml` under `spec.source.path` change the path to `path: blue_green/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
-4. In the secrets define `MASTER=sgdecoding-online-scaled-master`
-5. For the next git commit, change the value to `MASTER=sgdecoding-online-scaled-master-preview` for both secrets in the `secrets.yaml`. Also, change to a new image.
-6. Change the image in the values.yaml and commit to the main branch
-7. Verify that the preview service is created using `kubectl get svc`
-8. The rollout will be paused by default, to test the preview service, toggle between `$KUBE_NAME-master-preview` and `$KUBE_NAME-master"` in `google_initial_setup.sh`.
-9. Meanwhile, open 2 terminal to view the logs for the original master pod and the preview master pod.
-
-## Promethues and Grafana in-depth
-1. Go to `Explore` in the Grafana UI.
-2. Input the following parameters as seen in the figure below
-
-[![grafana-ui-query.png](https://i.postimg.cc/Gtk3nWN1/grafana-ui-query.png)](https://postimg.cc/bSwfQBp6)
-
-3. For canary rollouts, execute the following querries 
-```
-# Compare requests received
-number_of_request_receive_by_master_total{pod="sgdecoding-online-scaled-master-7858cccfdb-5kjg4"}
-```
-4. For blue green rollouts, execute the following querries
-```
-# For successful requests
-number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-master-preview"}
-number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-master"}
-
-# For failed requests
-number_of_request_reject_total{service="sgdecoding-online-scaled-master"}
-number_of_request_reject_total{service="sgdecoding-online-scaled-master-preview"}
-```
-## Analysis
-1. Make sure that you have port forwarded argocd, Grafana and Prometheus.
-2. Run `kubectl apply -f analysis/analysis_request.yaml`, set the address as `http://34.87.79.104:9090` pointing it to the external IP address `prometheus-kube-prometheus-prometheus`.
-3. Perform a commit and update the version number of the image.
-4. Run `python3 suite/canary.py`
-5. Run `kubectl get analysisrun <templatename> -o yaml` or can view from argocd ui. Analysis run results should look something like
-[![argocd-analysisrun.png](https://i.postimg.cc/wvN7WZVL/argocd-analysisrun.png)](https://postimg.cc/9RWm0xsQ)
 
 ## ArgoCD image uploader
 1. Run `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argocd-image-updater/stable/manifests/install.yaml`
@@ -263,7 +233,41 @@ time="2022-09-01T13:46:13Z" level=info msg="Successfully updated the live applic
 time="2022-09-01T13:46:13Z" level=info msg="Processing results: applications=1 images_considered=1 images_skipped=0 images_updated=1 errors=0"
 time="2022-09-01T13:48:13Z" level=info msg="Starting image update cycle, considering 1 annotated application(s) for update"
 ```
-<!-- ## Ambassador -->
+
+
+## BlueGreen Rollouts
+1. Refer to manifest file in  `blue_green/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
+2. Delete existing app in argocd using `argocd app delete sgdecoding-online-scaled` (Is this needed ?)
+3. In `application.yaml` under `spec.source.path` change the path to `path: blue_green/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
+4. In the secrets define `MASTER=sgdecoding-online-scaled-master`
+5. For the next git commit, change the value to `MASTER=sgdecoding-online-scaled-master-preview` for both secrets in the `secrets.yaml`. Also, change to a new image.
+6. Change the image in the values.yaml and commit to the main branch
+7. Verify that the preview service is created using `kubectl get svc`
+8. The rollout will be paused by default, to test the preview service, toggle between `$KUBE_NAME-master-preview` and `$KUBE_NAME-master"` in `google_initial_setup.sh`.
+9. Meanwhile, open 2 terminal to view the logs for the original master pod and the preview master pod.
+
+## Promethues and Grafana in-depth
+1. Go to `Explore` in the Grafana UI.
+2. Input the following parameters as seen in the figure below
+
+[![grafana-ui-query.png](https://i.postimg.cc/Gtk3nWN1/grafana-ui-query.png)](https://postimg.cc/bSwfQBp6)
+
+3. For canary rollouts, execute the following querries 
+```
+# Compare requests received
+number_of_request_receive_by_master_total{pod="sgdecoding-online-scaled-master-7858cccfdb-5kjg4"}
+```
+4. For blue green rollouts, execute the following querries
+```
+# For successful requests
+number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-master-preview"}
+number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-master"}
+
+# For failed requests
+number_of_request_reject_total{service="sgdecoding-online-scaled-master"}
+number_of_request_reject_total{service="sgdecoding-online-scaled-master-preview"}
+```
+
 
 ## Others  
 1. Uninstall prometheus charts [https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#uninstall-helm-chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#uninstall-helm-chart)

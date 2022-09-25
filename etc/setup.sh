@@ -4,13 +4,13 @@
 # gcloud auth login
 # gcloud auth application-default login
 # gcloud auth application-default login --project $PROJECT
-# export PROJECT_ID=cube-16
-# export PROJECT_ID=ntu-16
-# export GITHUB_USERNAME=kaikiat
-# export CR_PAT=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 
-# export GITLAB_USERNAME=benjaminc812
-# export GITLAB_PASSWORD=glpat-pa7YfxjHZxpTztcd8WHH
-# export GITLAB_EMAIL=benjaminc8121@gmail.co
+export PROJECT_ID=cube-16
+export PROJECT_ID=ntu-16
+export GITHUB_USERNAME=kaikiat
+export CR_PAT=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 
+export GITLAB_USERNAME=benjaminc812
+export GITLAB_PASSWORD=glpat-pa7YfxjHZxpTztcd8WHH
+export GITLAB_EMAIL=benjaminc8121@gmail.co
 # gcloud config set project $PROJECT_ID
 # gcloud services enable container.googleapis.com
 # gcloud services enable file.googleapis.com
@@ -53,13 +53,13 @@
 # gcloud compute scp models/SingaporeCS_0519NNET3 $VM_ID:$PWD --project=$PROJECT_ID --zone=asia-southeast1-a --recurse
 
 ##### Initial Infrastructure setup #####
-export KUBE_NAME=sgdecoding-online-scaled
+# export KUBE_NAME=sgdecoding-online-scaled
 export NAMESPACE=ntuasr-production-google
-gcloud container clusters get-credentials gke-ntu-asr-cluster --zone asia-southeast1-a --project $PROJECT_ID
-kubectl create namespace $NAMESPACE
-kubectl config set-context --current --namespace $NAMESPACE
-kubectl apply -f secret/run_kubernetes_secret.yaml
-kubectl apply -f google_pv/  # need to change the ip address of the pvc, need to delete pv when rerunning
+# gcloud container clusters get-credentials gke-ntu-asr-cluster --zone asia-southeast1-a --project $PROJECT_ID
+# kubectl create namespace $NAMESPACE
+# kubectl config set-context --current --namespace $NAMESPACE
+# kubectl apply -f secret/run_kubernetes_secret.yaml
+# kubectl apply -f google_pv/  # need to change the ip address of the pvc, need to delete pv when rerunning
 kubectl create secret docker-registry regcred --docker-server=ghcr.io --docker-username=$GITHUB_USERNAME --docker-password=$CR_PAT --docker-email=$GITHUB_EMAIL --namespace $NAMESPACE
 kubectl create secret docker-registry regcred2 --docker-server=registry.gitlab.com --docker-username=$GITLAB_USERNAME --docker-password=$GITLAB_PASSWORD --docker-email=$GITLAB_EMAIL --namespace $NAMESPACE
 

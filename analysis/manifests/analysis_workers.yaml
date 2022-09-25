@@ -10,7 +10,8 @@ spec:
     failureLimit: 3
     provider:
       prometheus:
-        address: localhost:9090
+        # address: localhost:9090
+        address: http://34.143.143.67:9090
         query: |
           sum(number_of_worker_available{service="sgdecoding-online-scaled-master"})
 
