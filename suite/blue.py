@@ -1,4 +1,6 @@
-import os
+'''
+    Blue represents the older version
+'''
 import logging
 import subprocess
 import time
@@ -11,19 +13,19 @@ logger.setLevel(logging.INFO)
 def main():
     cmd = r"kubectl get svc sgdecoding-online-scaled-master -n ntuasr-production-google --output jsonpath='{.status.loadBalancer.ingress[0].ip}'"
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell = True)
-    output, error = process.communicate()
+    output = process.communicate()
     ip_address = output.decode('utf-8')
     logger.info(f'Ip Address : {ip_address}')
 
 
-    cmd_preview = r"kubectl get svc sgdecoding-online-scaled-master-preview -n ntuasr-production-google --output jsonpath='{.status.loadBalancer.ingress[0].ip}'"
+    cmd_preview = r"kubectl get svc sgdecoding-online-scaled-master -n ntuasr-production-google --output jsonpath='{.status.loadBalancer.ingress[0].ip}'"
     process = subprocess.Popen(cmd_preview, stdout=subprocess.PIPE, shell = True)
     output, error = process.communicate()
     ip_address = output.decode('utf-8')
     logger.info(f'Ip Address : {ip_address}')
     
     min = 60
-    duration = min * 1
+    duration = min * 5
     time.sleep(min * 3)
     end = int(time.time()) + duration
     
