@@ -95,7 +95,7 @@ class MyClient(WebSocketClient):
                     e = sys.exc_info()[0]
                     logger.info("Failed to send adaptation state: %s" % e)
 
-            logger.info("Start transcribing....")
+            logger.info("Start transcribing...")
             if self.mode == 'stream':
                 stream = self.audio.open(format=FORMAT, channels=CHANNELS,
                     rate=RATE, input=True,
@@ -168,6 +168,7 @@ def main():
     parser.add_argument('--save-adaptation-state', help="Save adaptation state to file")
     parser.add_argument('--send-adaptation-state', help="Send adaptation state from file")
     parser.add_argument('--content-type', default='', help="Use the specified content type (empty by default, for raw files the default is  audio/x-raw, layout=(string)interleaved, rate=(int)<rate>, format=(string)S16LE, channels=(int)1")
+    parser.add_argument('--preview', action='store_true', default=False)
     parser.add_argument('audiofile', nargs='?', help="Audio file to be sent to the server", type=argparse.FileType('rb'), default=sys.stdin)
     args = parser.parse_args()
 
@@ -176,7 +177,8 @@ def main():
         if content_type == '' and args.audiofile.name.endswith(".raw") or args.mode == 'stream':
             content_type = "audio/x-raw, layout=(string)interleaved, rate=(int)%d, format=(string)S16LE, channels=(int)1" %(args.rate/2)
 
-        ws = MyClient(args.mode, args.audiofile, args.uri + '?%s' % (urllib.parse.urlencode([("content-type", content_type)])) + '&%s' % (urllib.parse.urlencode([("token", args.token)])) + '&%s' % (urllib.parse.urlencode([("token", args.token)])) + '&%s' % (urllib.parse.urlencode([("model", args.model)])), byterate=args.rate,
+        # ws = MyClient(args.mode, args.audiofile, args.uri + '?%s' % (urllib.parse.urlencode([("content-type", content_type)])) + '&%s' % (urllib.parse.urlencode([("token", args.token)])) + '&%s' % (urllib.parse.urlencode([("token", args.token)])) + '&%s' % (urllib.parse.urlencode([("model", args.model)])), byterate=args.rate,
+        ws = MyClient(args.mode, args.audiofile, args.uri + '?%s' % (urllib.parse.urlencode([("content-type", content_type)])) + '&%s' % (urllib.parse.urlencode([("token", args.token)])) + '&%s' % (urllib.parse.urlencode([("token", args.token)])) + '&%s' % (urllib.parse.urlencode([("model", args.model)])) + '&%s' % (urllib.parse.urlencode([("preview", args.preview)])), byterate=args.rate,
                     save_adaptation_state_filename=args.save_adaptation_state, send_adaptation_state_filename=args.send_adaptation_state)
 
 
