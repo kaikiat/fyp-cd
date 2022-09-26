@@ -11,6 +11,7 @@ spec:
     provider:
       prometheus:
         # address: http://34.87.79.104:9090
-        address: http://34.143.143.67:9090
+        # address: http://34.143.143.67:9090 # (ntu-16)
+        address: http://34.124.209.46:9090 # (nonscriberabbit)
         query: |
           sum(number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-master"})/sum(number_of_request_reject_total{service="sgdecoding-online-scaled-master"})

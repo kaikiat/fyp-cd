@@ -3,21 +3,21 @@
 # Delete .terraform + create gcs bucket
 # gcloud auth login
 # gcloud auth application-default login
-# gcloud auth application-default login --project $PROJECT
-export PROJECT_ID=cube-16
-export PROJECT_ID=ntu-16
+# gcloud auth application-default login --project $PROJECT_ID
+# export PROJECT_ID=cube-16
+export PROJECT_ID=ntu-fyp-project
 export GITHUB_USERNAME=kaikiat
 export CR_PAT=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 
 export GITLAB_USERNAME=benjaminc812
 export GITLAB_PASSWORD=glpat-pa7YfxjHZxpTztcd8WHH
-export GITLAB_EMAIL=benjaminc8121@gmail.co
+export GITLAB_EMAIL=benjaminc8121@gmail.com
 # gcloud config set project $PROJECT_ID
 # gcloud services enable container.googleapis.com
 # gcloud services enable file.googleapis.com
 # gcloud services enable compute.googleapis.com
 
-# # # #Terraform will set up application resources
-# # cd Terraform_google || exit
+# # # # #Terraform will set up application resources
+# # # cd Terraform_google || exit
 # cd $PROJECT_ID || exit
 # terraform init 
 # terraform init -reconfigure
@@ -25,12 +25,12 @@ export GITLAB_EMAIL=benjaminc8121@gmail.co
 # terraform plan
 # terraform apply -auto-approve
 
-# # # Create role (done in Terraform directory)
+# # # # Create role (done in Terraform directory)
 # gcloud iam roles create Terraform_role \
 #   --file=Terraform_role.yaml \
 #   --project $PROJECT_ID
 
-# # # Bind role Select none (change project id)
+# # # # Bind role Select none (change project id)
 # gcloud projects add-iam-policy-binding $PROJECT_ID \
 #     --member="serviceAccount:terraform-sa@${PROJECT_ID}.iam.gserviceaccount.com" \
 #     --role="projects/${PROJECT_ID}/roles/Terraform_role"
@@ -41,27 +41,27 @@ export GITLAB_EMAIL=benjaminc8121@gmail.co
 
 # mkdir mnt
 # sudo mount <filstore ip>:/<filestore path> <mount directory>
-# example: sudo mount 10.227.169.58:/modelshare mnt
+# example: sudo mount 10.75.82.66:/modelshare mnt
 # sudo chmod go+rw mnt (sudo chmod -R 777 mnt if on linux after loading)
 # pwd # must use the full path of the mount directory for scp command
 
 # Upload model to Google File Store before SCP 
 # cd ..
-# export VM_ID=gke-gke-ntu-asr-clus-ntu-asr-node-poo-af867a18-klks
+# export VM_ID=gke-gke-ntu-asr-clus-ntu-asr-node-poo-0837bdc3-hg0s
 # export PWD=/home/kaikiat/mnt
 # export REMOTE_DIR=/home/kaikiat/mnt
 # gcloud compute scp models/SingaporeCS_0519NNET3 $VM_ID:$PWD --project=$PROJECT_ID --zone=asia-southeast1-a --recurse
 
 ##### Initial Infrastructure setup #####
 # export KUBE_NAME=sgdecoding-online-scaled
-export NAMESPACE=ntuasr-production-google
+# export NAMESPACE=ntuasr-production-google
 # gcloud container clusters get-credentials gke-ntu-asr-cluster --zone asia-southeast1-a --project $PROJECT_ID
 # kubectl create namespace $NAMESPACE
 # kubectl config set-context --current --namespace $NAMESPACE
 # kubectl apply -f secret/run_kubernetes_secret.yaml
 # kubectl apply -f google_pv/  # need to change the ip address of the pvc, need to delete pv when rerunning
-kubectl create secret docker-registry regcred --docker-server=ghcr.io --docker-username=$GITHUB_USERNAME --docker-password=$CR_PAT --docker-email=$GITHUB_EMAIL --namespace $NAMESPACE
-kubectl create secret docker-registry regcred2 --docker-server=registry.gitlab.com --docker-username=$GITLAB_USERNAME --docker-password=$GITLAB_PASSWORD --docker-email=$GITLAB_EMAIL --namespace $NAMESPACE
+# kubectl create secret docker-registry regcred --docker-server=ghcr.io --docker-username=$GITHUB_USERNAME --docker-password=$CR_PAT --docker-email=$GITHUB_EMAIL --namespace $NAMESPACE
+# kubectl create secret docker-registry regcred2 --docker-server=registry.gitlab.com --docker-username=$GITLAB_USERNAME --docker-password=$GITLAB_PASSWORD --docker-email=$GITLAB_EMAIL --namespace $NAMESPACE
 
 
 ##### Testing #####

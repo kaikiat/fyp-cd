@@ -138,7 +138,7 @@ sudo mv ./kubectl-argo-rollouts-darwin-amd64 /usr/local/bin/kubectl-argo-rollout
 kubectl create namespace prometheus
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm install prometheus monitoring/manifests/kube-prometheus-stack --namespace prometheus
-# Upgrade
+# Upgrade (If required)
 helm upgrade --install prometheus monitoring/manifests/kube-prometheus-stack --namespace prometheus 
 ```
 2. Port forward Prometheus and Grafana
@@ -159,7 +159,6 @@ __NOTE: To view metrics exported, run `kubectl port-forward svc/sgdecoding-onlin
 3. Install service monitor for argo rollouts `kubectl apply -f monitoring/manifests/service-monitor-argorollouts.yaml -n argo-rollouts`, after installing helm.
 4. Resync the app in argocd if needed since argo rollouts is installed. After that you should also receive an email notification
 5. Verify that rollout is working by running `kubectl argo rollouts dashboard` to open the rollout web ui. Argo rollout runs at `http://localhost:3100/rollouts`
-6. Alternative verify the app using `python3 client/client_3_ssl.py -u ws://$MASTER_SERVICE_IP/client/ws/speech -r 32000 -t abc --model="SingaporeCS_0519NNET3" client/audio/episode-1-introduction-and-origins.wav`
 
 ## Grafana Dashboard Set Up
 1. Go to `http://localhost:3000/login` to view the Grafana Web UI. The username is `admin`, the password is `prom-operator`
@@ -172,22 +171,6 @@ __NOTE: To view metrics exported, run `kubectl port-forward svc/sgdecoding-onlin
 4. Run `python3 suite/canary.py`
 5. Run `kubectl get analysisrun <templatename> -o yaml` or can view from argocd ui. Analysis run results should look something like
 [![argocd-analysisrun.png](https://i.postimg.cc/wvN7WZVL/argocd-analysisrun.png)](https://postimg.cc/9RWm0xsQ)
-
-## Canary Rollouts
-1. Refer to manifest file in  `canary/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
-2. Change the image in the values.yaml and commit to the main branch
-3. Run the folllowing commands to view the logs
-```
-# Original Master Pod (Ensure that there are no erroneous pods)
-NAMESPACE=ntuasr-production-google && \
-WORKER=$(kubectl get pods --sort-by=.metadata.creationTimestamp -o jsonpath="{.items[0].metadata.name}" -n $NAMESPACE) && \
-kubectl logs $WORKER -f -n $NAMESPACE
-
-# Preview Master Pod
-NAMESPACE=ntuasr-production-google && \
-WORKER=$(kubectl get pods --sort-by=.metadata.creationTimestamp -o jsonpath="{.items[2].metadata.name}" -n $NAMESPACE) && \
-kubectl logs $WORKER -f -n $NAMESPACE
-```
 
 ## ArgoCD image uploader
 1. Run `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argocd-image-updater/stable/manifests/install.yaml`
@@ -244,7 +227,21 @@ time="2022-09-01T13:46:13Z" level=info msg="Successfully updated the live applic
 time="2022-09-01T13:46:13Z" level=info msg="Processing results: applications=1 images_considered=1 images_skipped=0 images_updated=1 errors=0"
 time="2022-09-01T13:48:13Z" level=info msg="Starting image update cycle, considering 1 annotated application(s) for update"
 ```
+## Canary Rollouts
+1. Refer to manifest file in  `canary/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`
+2. Change the image in the values.yaml and commit to the main branch
+3. Run the folllowing commands to view the logs
+```
+# Original Master Pod (Ensure that there are no erroneous pods)
+NAMESPACE=ntuasr-production-google && \
+WORKER=$(kubectl get pods --sort-by=.metadata.creationTimestamp -o jsonpath="{.items[0].metadata.name}" -n $NAMESPACE) && \
+kubectl logs $WORKER -f -n $NAMESPACE
 
+# Preview Master Pod
+NAMESPACE=ntuasr-production-google && \
+WORKER=$(kubectl get pods --sort-by=.metadata.creationTimestamp -o jsonpath="{.items[2].metadata.name}" -n $NAMESPACE) && \
+kubectl logs $WORKER -f -n $NAMESPACE
+```
 
 ## BlueGreen Rollouts
 1. Refer to manifest file in  `blue_green/rollout/google_deployment_helm/helm/sgdecoding-online-scaled`

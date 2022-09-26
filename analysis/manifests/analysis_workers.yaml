@@ -11,7 +11,8 @@ spec:
     provider:
       prometheus:
         # address: localhost:9090
-        address: http://34.143.143.67:9090
+        # address: http://34.143.143.67:9090 # (ntu-16)
+        address: http://34.124.209.46:9090 # (nonscriberabbit)
         query: |
           sum(number_of_worker_available{service="sgdecoding-online-scaled-master"})
 

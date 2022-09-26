@@ -14,8 +14,8 @@ spec:
   source:
     repoURL: git@github.com:kaikiat/fyp-cd.git  
     targetRevision: main  
-    path: blue_green/sgdecoding-online-scaled  
-    # path: canary/sgdecoding-online-scaled 
+    # path: blue_green/sgdecoding-online-scaled  
+    path: canary/sgdecoding-online-scaled 
   destination:
     server: https://kubernetes.default.svc
     namespace: ntuasr-production-google
