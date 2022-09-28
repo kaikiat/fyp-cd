@@ -41,8 +41,6 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
   annotations:
-    # prometheus.io/scrape: "true"
-    # prometheus.io/port: '8081'
     prometheus.io/scrape: 'true'
     prometheus.io/path: /metrics
     prometheus.io/port: '9090'
