@@ -16,7 +16,8 @@ def main():
     logger.info(f'Ip Address : {ip_address}')
     
     min = 60
-    duration = min * 10
+    # duration = min * 8
+    duration = min * 4
     sleep_duration = min * 3
     logger.info('Sleeping for '+ str(sleep_duration) + ' seconds')
     time.sleep(sleep_duration)
@@ -27,6 +28,7 @@ def main():
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell = True)
         output, error = process.communicate()
         logger.info(output)
+        time.sleep(5)
 
 if __name__ == "__main__":
     main()
