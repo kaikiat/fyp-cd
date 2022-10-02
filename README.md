@@ -259,7 +259,8 @@ kubectl logs $WORKER -f -n $NAMESPACE
 2. Input the following parameters as seen in the figure below
 
 <!-- [![grafana-ui-query.png](https://i.postimg.cc/Gtk3nWN1/grafana-ui-query.png)](https://postimg.cc/bSwfQBp6) -->
-[![grafana-ui-querry-with-legend.png](https://i.postimg.cc/Bn9YkBch/grafana-ui-querry-with-legend.png)](https://postimg.cc/hfs17xYx)
+<!-- [![grafana-ui-querry-with-legend.png](https://i.postimg.cc/Bn9YkBch/grafana-ui-querry-with-legend.png)](https://postimg.cc/hfs17xYx) -->
+[![grafana-ui-querry-with-legend.png](https://i.postimg.cc/Bnn79y5Z/grafana-ui-querry-with-legend.png)](https://postimg.cc/Vd2WXKH2)
 
 
 3. For canary rollouts, execute the following querries 
