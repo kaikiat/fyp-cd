@@ -16,7 +16,6 @@ spec:
       app.kubernetes.io/instance: {{ .Release.Name }}
   strategy:
     canary: #Indicates that the rollout should use the Canary strategy
-      maxSurge: "25%" # The maximum number of replicas the rollout can create 
       maxUnavailable: 0 # The maximum number of pods that can be unavailable during the update.
       analysis:
         templates:
@@ -91,14 +90,14 @@ metadata:
     app.kubernetes.io/instance: {{ $.Release.Name }}
     app.kubernetes.io/managed-by: {{ $.Release.Service }}
 spec:
-  replicas: {{ $replicas }}
+  # replicas: {{ $replicas }}
+  replicas: 2
   selector:
     matchLabels:
       app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name  | lower | replace "_" "-"}}
       app.kubernetes.io/instance: {{ $.Release.Name }}
   strategy:
     canary: #Indicates that the rollout should use the Canary strategy
-      maxSurge: "25%" # The maximum number of replicas the rollout can create 
       maxUnavailable: 0 # The maximum number of pods that can be unavailable during the update.
       analysis:
         templates:
