@@ -27,7 +27,7 @@ spec:
             value: prometheus-kube-prometheus-prometheus.default.svc.cluster.local
       steps:
       - pause:
-        duration: 100s 
+          duration: 100s 
       - setWeight: 50
       - pause:
           duration: 100s 
@@ -111,7 +111,7 @@ spec:
         startingStep: 2
       steps:
       - pause:
-        duration: 100s 
+          duration: 100s 
       - setWeight: 50
       - pause:
           duration: 100s
