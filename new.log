@@ -1,0 +1,518 @@
+ERROR:root:[Errno 2] No such file or directory: 'aws': 'aws'
+INFO:tornado.access:200 GET / (10.20.1.1) 1.01ms
+INFO:tornado.access:101 GET /client/ws/speech?content-type=&token=abc&token=abc&model=SingaporeCS_0519NNET3&preview=False (10.20.1.1) 0.61ms
+    INFO 2022-10-02 21:41:59,918 fef72f32-eca7-4d8b-8a46-d8c105e31ea7: OPEN 
+INFO:master_server:fef72f32-eca7-4d8b-8a46-d8c105e31ea7: OPEN
+    INFO 2022-10-02 21:41:59,918 fef72f32-eca7-4d8b-8a46-d8c105e31ea7: Request arguments: content-type="" token="abc" model="SingaporeCS_0519NNET3" preview="False" 
+INFO:master_server:fef72f32-eca7-4d8b-8a46-d8c105e31ea7: Request arguments: content-type="" token="abc" model="SingaporeCS_0519NNET3" preview="False"
+    INFO 2022-10-02 21:41:59,919 client with ws requested model: SingaporeCS_0519NNET3 
+INFO:master_server:client with ws requested model: SingaporeCS_0519NNET3
+    INFO 2022-10-02 21:41:59,919 self.application.available_workers: {} 
+INFO:master_server:self.application.available_workers: {}
+    INFO 2022-10-02 21:41:59,919 Start spawning a new worker 
+INFO:master_server:Start spawning a new worker
+    INFO 2022-10-02 21:41:59,919 Begin to spawn another worker of model: SingaporeCS_0519NNET3 
+ WARNING 2022-10-02 21:41:59,920 fef72f32-eca7-4d8b-8a46-d8c105e31ea7: No worker available for client request 
+INFO:master_server:Begin to spawn another worker of model: SingaporeCS_0519NNET3
+WARNING:master_server:fef72f32-eca7-4d8b-8a46-d8c105e31ea7: No worker available for client request
+    INFO 2022-10-02 21:41:59,922 Number of requests processed: 0 
+INFO:root:trying to create job
+INFO:master_server:Number of requests processed: 0
+    INFO 2022-10-02 21:41:59,926 fef72f32-eca7-4d8b-8a46-d8c105e31ea7: Sending event {'status': 9, 'message': 'No decoder available, try again 60 seconds later', 'id': 'fef72f32-eca7... to client 
+INFO:master_server:fef72f32-eca7-4d8b-8a46-d8c105e31ea7: Sending event {'status': 9, 'message': 'No decoder available, try again 60 seconds later', 'id': 'fef72f32-eca7... to client
+ERROR:tornado.application:Uncaught exception in /client/ws/speech
+Traceback (most recent call last):
+  File "/home/appuser/.local/lib/python3.7/site-packages/tornado/websocket.py", line 494, in _run_callback
+    result = callback(*args, **kwargs)
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server.py", line 451, in on_message
+    assert self.worker is not None
+AssertionError
+    INFO 2022-10-02 21:41:59,931 fef72f32-eca7-4d8b-8a46-d8c105e31ea7: Handling on_connection_close() 
+INFO:master_server:fef72f32-eca7-4d8b-8a46-d8c105e31ea7: Handling on_connection_close()
+WARNING:urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee9bfcf8>: Failed to establish a new connection: [Errno -2] Name or service not known')': /apis/batch/v1/namespaces/default/jobs
+WARNING:urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ef2309e8>: Failed to establish a new connection: [Errno -2] Name or service not known')': /apis/batch/v1/namespaces/default/jobs
+WARNING:urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee9a4400>: Failed to establish a new connection: [Errno -2] Name or service not known')': /apis/batch/v1/namespaces/default/jobs
+Exception in thread Thread-2:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fd4ee9a4198>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server.py", line 158, in run
+    master_server_addon.spawn_worker(self.model, self.preview)
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server_addon.py", line 39, in spawn_worker
+    create_job(model, preview)
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server_addon.py", line 118, in create_job
+    api_response = api.create_namespaced_job(NAMESPACE, body)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api/batch_v1_api.py", line 210, in create_namespaced_job
+    return self.create_namespaced_job_with_http_info(namespace, body, **kwargs)  # noqa: E501
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api/batch_v1_api.py", line 323, in create_namespaced_job_with_http_info
+    collection_formats=collection_formats)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api_client.py", line 353, in call_api
+    _preload_content, _request_timeout, _host)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api_client.py", line 184, in __call_api
+    _request_timeout=_request_timeout)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api_client.py", line 397, in request
+    body=body)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/rest.py", line 281, in POST
+    body=body)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/rest.py", line 173, in request
+    headers=headers)
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/request.py", line 79, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 828, in urlopen
+    **response_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 828, in urlopen
+    **response_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 828, in urlopen
+    **response_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 788, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='b6352ad3d5928038cad984bbe29ce4ce.gr7.ap-southeast-1.eks.amazonaws.com', port=443): Max retries exceeded with url: /apis/batch/v1/namespaces/default/jobs (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee9a4198>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+
+INFO:tornado.access:101 GET /client/ws/speech?content-type=&token=abc&token=abc&model=SingaporeCS_0519NNET3&preview=False (10.20.1.1) 0.50ms
+    INFO 2022-10-02 21:42:03,113 bff85472-e47b-4560-888e-8e63ad952e7d: OPEN 
+INFO:master_server:bff85472-e47b-4560-888e-8e63ad952e7d: OPEN
+    INFO 2022-10-02 21:42:03,113 bff85472-e47b-4560-888e-8e63ad952e7d: Request arguments: content-type="" token="abc" model="SingaporeCS_0519NNET3" preview="False" 
+INFO:master_server:bff85472-e47b-4560-888e-8e63ad952e7d: Request arguments: content-type="" token="abc" model="SingaporeCS_0519NNET3" preview="False"
+    INFO 2022-10-02 21:42:03,113 client with ws requested model: SingaporeCS_0519NNET3 
+INFO:master_server:client with ws requested model: SingaporeCS_0519NNET3
+    INFO 2022-10-02 21:42:03,113 self.application.available_workers: {} 
+INFO:master_server:self.application.available_workers: {}
+    INFO 2022-10-02 21:42:03,114 Start spawning a new worker 
+INFO:master_server:Start spawning a new worker
+    INFO 2022-10-02 21:42:03,114 Begin to spawn another worker of model: SingaporeCS_0519NNET3 
+INFO:master_server:Begin to spawn another worker of model: SingaporeCS_0519NNET3
+INFO:root:trying to create job
+ WARNING 2022-10-02 21:42:03,117 bff85472-e47b-4560-888e-8e63ad952e7d: No worker available for client request 
+WARNING:master_server:bff85472-e47b-4560-888e-8e63ad952e7d: No worker available for client request
+    INFO 2022-10-02 21:42:03,119 Number of requests processed: 1 
+INFO:master_server:Number of requests processed: 1
+    INFO 2022-10-02 21:42:03,119 bff85472-e47b-4560-888e-8e63ad952e7d: Sending event {'status': 9, 'message': 'No decoder available, try again 60 seconds later', 'id': 'bff85472-e47b... to client 
+INFO:master_server:bff85472-e47b-4560-888e-8e63ad952e7d: Sending event {'status': 9, 'message': 'No decoder available, try again 60 seconds later', 'id': 'bff85472-e47b... to client
+ERROR:tornado.application:Uncaught exception in /client/ws/speech
+Traceback (most recent call last):
+  File "/home/appuser/.local/lib/python3.7/site-packages/tornado/websocket.py", line 494, in _run_callback
+    result = callback(*args, **kwargs)
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server.py", line 451, in on_message
+    assert self.worker is not None
+AssertionError
+    INFO 2022-10-02 21:42:03,124 bff85472-e47b-4560-888e-8e63ad952e7d: Handling on_connection_close() 
+INFO:master_server:bff85472-e47b-4560-888e-8e63ad952e7d: Handling on_connection_close()
+WARNING:urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee9bf630>: Failed to establish a new connection: [Errno -2] Name or service not known')': /apis/batch/v1/namespaces/default/jobs
+WARNING:urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee193f60>: Failed to establish a new connection: [Errno -2] Name or service not known')': /apis/batch/v1/namespaces/default/jobs
+WARNING:urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee193898>: Failed to establish a new connection: [Errno -2] Name or service not known')': /apis/batch/v1/namespaces/default/jobs
+Exception in thread Thread-3:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fd4ee9bf400>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server.py", line 158, in run
+    master_server_addon.spawn_worker(self.model, self.preview)
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server_addon.py", line 39, in spawn_worker
+    create_job(model, preview)
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server_addon.py", line 118, in create_job
+    api_response = api.create_namespaced_job(NAMESPACE, body)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api/batch_v1_api.py", line 210, in create_namespaced_job
+    return self.create_namespaced_job_with_http_info(namespace, body, **kwargs)  # noqa: E501
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api/batch_v1_api.py", line 323, in create_namespaced_job_with_http_info
+    collection_formats=collection_formats)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api_client.py", line 353, in call_api
+    _preload_content, _request_timeout, _host)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api_client.py", line 184, in __call_api
+    _request_timeout=_request_timeout)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api_client.py", line 397, in request
+    body=body)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/rest.py", line 281, in POST
+    body=body)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/rest.py", line 173, in request
+    headers=headers)
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/request.py", line 79, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 828, in urlopen
+    **response_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 828, in urlopen
+    **response_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 828, in urlopen
+    **response_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 788, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='b6352ad3d5928038cad984bbe29ce4ce.gr7.ap-southeast-1.eks.amazonaws.com', port=443): Max retries exceeded with url: /apis/batch/v1/namespaces/default/jobs (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee9bf400>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+
+INFO:tornado.access:101 GET /worker/ws/speech?model=SingaporeCS_0519NNET3 (10.20.1.120) 0.63ms
+    INFO 2022-10-02 21:42:04,354 New SingaporeCS_0519NNET3 worker is available: <__main__.WorkerSocketHandler object at 0x7fd4ee9bf470> 
+INFO:master_server:New SingaporeCS_0519NNET3 worker is available: <__main__.WorkerSocketHandler object at 0x7fd4ee9bf470>
+    INFO 2022-10-02 21:42:04,354 Available workers: {'SingaporeCS_0519NNET3': {<__main__.WorkerSocketHandler object at 0x7fd4ee9bf470>}} 
+INFO:master_server:Available workers: {'SingaporeCS_0519NNET3': {<__main__.WorkerSocketHandler object at 0x7fd4ee9bf470>}}
+    INFO 2022-10-02 21:42:04,355 Number of worker available (worker) 1 
+INFO:master_server:Number of worker available (worker) 1
+INFO:tornado.access:101 GET /client/ws/speech?content-type=&token=abc&token=abc&model=SingaporeCS_0519NNET3&preview=False (10.20.1.1) 0.47ms
+    INFO 2022-10-02 21:42:06,263 9e37ca2b-39db-4996-9409-231b91ace5a3: OPEN 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: OPEN
+    INFO 2022-10-02 21:42:06,264 9e37ca2b-39db-4996-9409-231b91ace5a3: Request arguments: content-type="" token="abc" model="SingaporeCS_0519NNET3" preview="False" 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Request arguments: content-type="" token="abc" model="SingaporeCS_0519NNET3" preview="False"
+    INFO 2022-10-02 21:42:06,264 client with ws requested model: SingaporeCS_0519NNET3 
+INFO:master_server:client with ws requested model: SingaporeCS_0519NNET3
+    INFO 2022-10-02 21:42:06,264 self.application.available_workers: {'SingaporeCS_0519NNET3': {<__main__.WorkerSocketHandler object at 0x7fd4ee9bf470>}} 
+INFO:master_server:self.application.available_workers: {'SingaporeCS_0519NNET3': {<__main__.WorkerSocketHandler object at 0x7fd4ee9bf470>}}
+    INFO 2022-10-02 21:42:06,264 9e37ca2b-39db-4996-9409-231b91ace5a3: Using worker <__main__.DecoderSocketHandler object at 0x7fd4ee9bf3c8> 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Using worker <__main__.DecoderSocketHandler object at 0x7fd4ee9bf3c8>
+    INFO 2022-10-02 21:42:06,275 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:06,532 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:06,786 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:07,044 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:07,299 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:07,561 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:07,627 9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'segment': 0, 'result': {'hypotheses': [{'transcript': 'you can'}], 'final': False}... to client 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'segment': 0, 'result': {'hypotheses': [{'transcript': 'you can'}], 'final': False}... to client
+    INFO 2022-10-02 21:42:07,819 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:07,892 9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'segment': 0, 'result': {'hypotheses': [{'transcript': 'you can bake'}], 'final': F... to client 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'segment': 0, 'result': {'hypotheses': [{'transcript': 'you can bake'}], 'final': F... to client
+    INFO 2022-10-02 21:42:08,076 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:08,176 9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'segment': 0, 'result': {'hypotheses': [{'transcript': 'you can bake shortbread'}],... to client 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'segment': 0, 'result': {'hypotheses': [{'transcript': 'you can bake shortbread'}],... to client
+    INFO 2022-10-02 21:42:08,330 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:08,584 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:08,840 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:08,907 9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'segment': 0, 'result': {'hypotheses': [{'transcript': 'you can bake shortbread coo... to client 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'segment': 0, 'result': {'hypotheses': [{'transcript': 'you can bake shortbread coo... to client
+    INFO 2022-10-02 21:42:09,098 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:09,179 9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'segment': 0, 'result': {'hypotheses': [{'transcript': 'you can bake shortbread coo... to client 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'segment': 0, 'result': {'hypotheses': [{'transcript': 'you can bake shortbread coo... to client
+    INFO 2022-10-02 21:42:09,354 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:09,614 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:09,744 9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'segment': 0, 'result': {'hypotheses': [{'transcript': 'you can bake shortbread coo... to client 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'segment': 0, 'result': {'hypotheses': [{'transcript': 'you can bake shortbread coo... to client
+    INFO 2022-10-02 21:42:09,870 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:09,956 9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'segment': 0, 'result': {'hypotheses': [{'transcript': 'you can bake shortbread coo... to client 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'segment': 0, 'result': {'hypotheses': [{'transcript': 'you can bake shortbread coo... to client
+    INFO 2022-10-02 21:42:10,126 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:10,385 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:10,637 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 8000 to worker
+    INFO 2022-10-02 21:42:10,716 9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'segment': 0, 'result': {'hypotheses': [{'transcript': 'you can bake shortbread coo... to client 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'segment': 0, 'result': {'hypotheses': [{'transcript': 'you can bake shortbread coo... to client
+    INFO 2022-10-02 21:42:10,889 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 2318 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 2318 to worker
+    INFO 2022-10-02 21:42:11,144 9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 0 to worker 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Forwarding client message (<class 'bytes'>) of length 0 to worker
+    INFO 2022-10-02 21:42:11,159 9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'result': {'final': True, 'hypotheses': [{'likelihood': 381.109, 'transcript': 'you... to client 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'result': {'final': True, 'hypotheses': [{'likelihood': 381.109, 'transcript': 'you... to client
+    INFO 2022-10-02 21:42:11,175 9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'adaptation_state': {'id': '9e37ca2b-39db-4996-9409-231b91ace5a3', 'value': 'eJxlvc... to client 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Sending event {'status': 0, 'adaptation_state': {'id': '9e37ca2b-39db-4996-9409-231b91ace5a3', 'value': 'eJxlvc... to client
+    INFO 2022-10-02 21:42:11,177 Worker <__main__.WorkerSocketHandler object at 0x7fd4ee9bf470> leaving 
+INFO:master_server:Worker <__main__.WorkerSocketHandler object at 0x7fd4ee9bf470> leaving
+    INFO 2022-10-02 21:42:11,241 9e37ca2b-39db-4996-9409-231b91ace5a3: Handling on_connection_close() 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Handling on_connection_close()
+    INFO 2022-10-02 21:42:11,241 9e37ca2b-39db-4996-9409-231b91ace5a3: Closing worker connection 
+INFO:master_server:9e37ca2b-39db-4996-9409-231b91ace5a3: Closing worker connection
+INFO:tornado.access:101 GET /client/ws/speech?content-type=&token=abc&token=abc&model=SingaporeCS_0519NNET3&preview=False (10.20.1.1) 0.47ms
+    INFO 2022-10-02 21:42:14,370 4cc799f0-0c7e-41ae-972c-abcda1b76727: OPEN 
+INFO:master_server:4cc799f0-0c7e-41ae-972c-abcda1b76727: OPEN
+    INFO 2022-10-02 21:42:14,370 4cc799f0-0c7e-41ae-972c-abcda1b76727: Request arguments: content-type="" token="abc" model="SingaporeCS_0519NNET3" preview="False" 
+INFO:master_server:4cc799f0-0c7e-41ae-972c-abcda1b76727: Request arguments: content-type="" token="abc" model="SingaporeCS_0519NNET3" preview="False"
+    INFO 2022-10-02 21:42:14,371 client with ws requested model: SingaporeCS_0519NNET3 
+INFO:master_server:client with ws requested model: SingaporeCS_0519NNET3
+    INFO 2022-10-02 21:42:14,371 self.application.available_workers: {'SingaporeCS_0519NNET3': set()} 
+INFO:master_server:self.application.available_workers: {'SingaporeCS_0519NNET3': set()}
+    INFO 2022-10-02 21:42:14,371 Start spawning a new worker 
+INFO:master_server:Start spawning a new worker
+    INFO 2022-10-02 21:42:14,372 Begin to spawn another worker of model: SingaporeCS_0519NNET3 
+INFO:master_server:Begin to spawn another worker of model: SingaporeCS_0519NNET3
+INFO:root:trying to create job
+ WARNING 2022-10-02 21:42:14,376 4cc799f0-0c7e-41ae-972c-abcda1b76727: No worker available for client request 
+WARNING:master_server:4cc799f0-0c7e-41ae-972c-abcda1b76727: No worker available for client request
+    INFO 2022-10-02 21:42:14,376 Number of requests processed: 3 
+INFO:master_server:Number of requests processed: 3
+    INFO 2022-10-02 21:42:14,376 4cc799f0-0c7e-41ae-972c-abcda1b76727: Sending event {'status': 9, 'message': 'No decoder available, try again 60 seconds later', 'id': '4cc799f0-0c7e... to client 
+INFO:master_server:4cc799f0-0c7e-41ae-972c-abcda1b76727: Sending event {'status': 9, 'message': 'No decoder available, try again 60 seconds later', 'id': '4cc799f0-0c7e... to client
+ERROR:tornado.application:Uncaught exception in /client/ws/speech
+Traceback (most recent call last):
+  File "/home/appuser/.local/lib/python3.7/site-packages/tornado/websocket.py", line 494, in _run_callback
+    result = callback(*args, **kwargs)
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server.py", line 451, in on_message
+    assert self.worker is not None
+AssertionError
+    INFO 2022-10-02 21:42:14,381 4cc799f0-0c7e-41ae-972c-abcda1b76727: Handling on_connection_close() 
+INFO:master_server:4cc799f0-0c7e-41ae-972c-abcda1b76727: Handling on_connection_close()
+WARNING:urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee0598d0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /apis/batch/v1/namespaces/default/jobs
+WARNING:urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee0601d0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /apis/batch/v1/namespaces/default/jobs
+WARNING:urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee0596d8>: Failed to establish a new connection: [Errno -2] Name or service not known')': /apis/batch/v1/namespaces/default/jobs
+Exception in thread Thread-5:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fd4ee0599e8>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server.py", line 158, in run
+    master_server_addon.spawn_worker(self.model, self.preview)
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server_addon.py", line 39, in spawn_worker
+    create_job(model, preview)
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server_addon.py", line 118, in create_job
+    api_response = api.create_namespaced_job(NAMESPACE, body)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api/batch_v1_api.py", line 210, in create_namespaced_job
+    return self.create_namespaced_job_with_http_info(namespace, body, **kwargs)  # noqa: E501
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api/batch_v1_api.py", line 323, in create_namespaced_job_with_http_info
+    collection_formats=collection_formats)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api_client.py", line 353, in call_api
+    _preload_content, _request_timeout, _host)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api_client.py", line 184, in __call_api
+    _request_timeout=_request_timeout)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api_client.py", line 397, in request
+    body=body)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/rest.py", line 281, in POST
+    body=body)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/rest.py", line 173, in request
+    headers=headers)
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/request.py", line 79, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 828, in urlopen
+    **response_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 828, in urlopen
+    **response_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 828, in urlopen
+    **response_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 788, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='b6352ad3d5928038cad984bbe29ce4ce.gr7.ap-southeast-1.eks.amazonaws.com', port=443): Max retries exceeded with url: /apis/batch/v1/namespaces/default/jobs (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee0599e8>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+
+INFO:tornado.access:101 GET /client/ws/speech?content-type=&token=abc&token=abc&model=SingaporeCS_0519NNET3&preview=False (10.20.1.1) 0.48ms
+    INFO 2022-10-02 21:42:33,724 f93ddec3-d9ec-479b-bfb3-71ff1360e33c: OPEN 
+INFO:master_server:f93ddec3-d9ec-479b-bfb3-71ff1360e33c: OPEN
+    INFO 2022-10-02 21:42:33,724 f93ddec3-d9ec-479b-bfb3-71ff1360e33c: Request arguments: content-type="" token="abc" model="SingaporeCS_0519NNET3" preview="False" 
+INFO:master_server:f93ddec3-d9ec-479b-bfb3-71ff1360e33c: Request arguments: content-type="" token="abc" model="SingaporeCS_0519NNET3" preview="False"
+    INFO 2022-10-02 21:42:33,724 client with ws requested model: SingaporeCS_0519NNET3 
+INFO:master_server:client with ws requested model: SingaporeCS_0519NNET3
+    INFO 2022-10-02 21:42:33,725 self.application.available_workers: {'SingaporeCS_0519NNET3': set()} 
+INFO:master_server:self.application.available_workers: {'SingaporeCS_0519NNET3': set()}
+    INFO 2022-10-02 21:42:33,725 Start spawning a new worker 
+INFO:master_server:Start spawning a new worker
+    INFO 2022-10-02 21:42:33,725 Begin to spawn another worker of model: SingaporeCS_0519NNET3 
+ WARNING 2022-10-02 21:42:33,725 f93ddec3-d9ec-479b-bfb3-71ff1360e33c: No worker available for client request 
+INFO:master_server:Begin to spawn another worker of model: SingaporeCS_0519NNET3
+WARNING:master_server:f93ddec3-d9ec-479b-bfb3-71ff1360e33c: No worker available for client request
+    INFO 2022-10-02 21:42:33,727 Number of requests processed: 4 
+INFO:root:trying to create job
+INFO:master_server:Number of requests processed: 4
+    INFO 2022-10-02 21:42:33,730 f93ddec3-d9ec-479b-bfb3-71ff1360e33c: Sending event {'status': 9, 'message': 'No decoder available, try again 60 seconds later', 'id': 'f93ddec3-d9ec... to client 
+INFO:master_server:f93ddec3-d9ec-479b-bfb3-71ff1360e33c: Sending event {'status': 9, 'message': 'No decoder available, try again 60 seconds later', 'id': 'f93ddec3-d9ec... to client
+ERROR:tornado.application:Uncaught exception in /client/ws/speech
+Traceback (most recent call last):
+  File "/home/appuser/.local/lib/python3.7/site-packages/tornado/websocket.py", line 494, in _run_callback
+    result = callback(*args, **kwargs)
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server.py", line 451, in on_message
+    assert self.worker is not None
+AssertionError
+    INFO 2022-10-02 21:42:33,735 f93ddec3-d9ec-479b-bfb3-71ff1360e33c: Handling on_connection_close() 
+INFO:master_server:f93ddec3-d9ec-479b-bfb3-71ff1360e33c: Handling on_connection_close()
+WARNING:urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee076710>: Failed to establish a new connection: [Errno -2] Name or service not known')': /apis/batch/v1/namespaces/default/jobs
+WARNING:urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee0597b8>: Failed to establish a new connection: [Errno -2] Name or service not known')': /apis/batch/v1/namespaces/default/jobs
+WARNING:urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee059a90>: Failed to establish a new connection: [Errno -2] Name or service not known')': /apis/batch/v1/namespaces/default/jobs
+Exception in thread Thread-6:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fd4ee9a4a20>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server.py", line 158, in run
+    master_server_addon.spawn_worker(self.model, self.preview)
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server_addon.py", line 39, in spawn_worker
+    create_job(model, preview)
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server_addon.py", line 118, in create_job
+    api_response = api.create_namespaced_job(NAMESPACE, body)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api/batch_v1_api.py", line 210, in create_namespaced_job
+    return self.create_namespaced_job_with_http_info(namespace, body, **kwargs)  # noqa: E501
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api/batch_v1_api.py", line 323, in create_namespaced_job_with_http_info
+    collection_formats=collection_formats)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api_client.py", line 353, in call_api
+    _preload_content, _request_timeout, _host)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api_client.py", line 184, in __call_api
+    _request_timeout=_request_timeout)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/api_client.py", line 397, in request
+    body=body)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/rest.py", line 281, in POST
+    body=body)
+  File "/usr/local/lib/python3.7/dist-packages/kubernetes/client/rest.py", line 173, in request
+    headers=headers)
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/request.py", line 79, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 828, in urlopen
+    **response_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 828, in urlopen
+    **response_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 828, in urlopen
+    **response_kw
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py", line 788, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/local/lib/python3.7/dist-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='b6352ad3d5928038cad984bbe29ce4ce.gr7.ap-southeast-1.eks.amazonaws.com', port=443): Max retries exceeded with url: /apis/batch/v1/namespaces/default/jobs (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee9a4a20>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+
+INFO:tornado.access:101 GET /client/ws/speech?content-type=&token=abc&token=abc&model=SingaporeCS_0519NNET3&preview=False (10.20.1.1) 0.53ms
+    INFO 2022-10-02 21:42:36,884 59763557-ca5a-4b99-81b9-f784fc5cd7e6: OPEN 
+INFO:master_server:59763557-ca5a-4b99-81b9-f784fc5cd7e6: OPEN
+    INFO 2022-10-02 21:42:36,888 59763557-ca5a-4b99-81b9-f784fc5cd7e6: Request arguments: content-type="" token="abc" model="SingaporeCS_0519NNET3" preview="False" 
+INFO:master_server:59763557-ca5a-4b99-81b9-f784fc5cd7e6: Request arguments: content-type="" token="abc" model="SingaporeCS_0519NNET3" preview="False"
+    INFO 2022-10-02 21:42:36,888 client with ws requested model: SingaporeCS_0519NNET3 
+INFO:master_server:client with ws requested model: SingaporeCS_0519NNET3
+    INFO 2022-10-02 21:42:36,888 self.application.available_workers: {'SingaporeCS_0519NNET3': set()} 
+INFO:master_server:self.application.available_workers: {'SingaporeCS_0519NNET3': set()}
+    INFO 2022-10-02 21:42:36,889 Start spawning a new worker 
+INFO:master_server:Start spawning a new worker
+    INFO 2022-10-02 21:42:36,889 Begin to spawn another worker of model: SingaporeCS_0519NNET3 
+ WARNING 2022-10-02 21:42:36,889 59763557-ca5a-4b99-81b9-f784fc5cd7e6: No worker available for client request 
+INFO:master_server:Begin to spawn another worker of model: SingaporeCS_0519NNET3
+INFO:root:trying to create job
+WARNING:master_server:59763557-ca5a-4b99-81b9-f784fc5cd7e6: No worker available for client request
+    INFO 2022-10-02 21:42:36,893 Number of requests processed: 5 
+INFO:master_server:Number of requests processed: 5
+    INFO 2022-10-02 21:42:36,893 59763557-ca5a-4b99-81b9-f784fc5cd7e6: Sending event {'status': 9, 'message': 'No decoder available, try again 60 seconds later', 'id': '59763557-ca5a... to client 
+INFO:master_server:59763557-ca5a-4b99-81b9-f784fc5cd7e6: Sending event {'status': 9, 'message': 'No decoder available, try again 60 seconds later', 'id': '59763557-ca5a... to client
+ERROR:tornado.application:Uncaught exception in /client/ws/speech
+Traceback (most recent call last):
+  File "/home/appuser/.local/lib/python3.7/site-packages/tornado/websocket.py", line 494, in _run_callback
+    result = callback(*args, **kwargs)
+  File "/home/appuser/opt/kaldi-gstreamer-server/kaldigstserver/master_server.py", line 451, in on_message
+    assert self.worker is not None
+AssertionError
+    INFO 2022-10-02 21:42:36,895 59763557-ca5a-4b99-81b9-f784fc5cd7e6: Handling on_connection_close() 
+INFO:master_server:59763557-ca5a-4b99-81b9-f784fc5cd7e6: Handling on_connection_close()
+WARNING:urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee9a49e8>: Failed to establish a new connection: [Errno -2] Name or service not known')': /apis/batch/v1/namespaces/default/jobs
+WARNING:urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee9a4dd8>: Failed to establish a new connection: [Errno -2] Name or service not known')': /apis/batch/v1/namespaces/default/jobs
+WARNING:urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd4ee9a4240>: Failed to establish a new connection: [Errno -2] Name or service not known')': /apis/batch/v1/namespaces/default/jobs
