@@ -27,7 +27,7 @@ def main():
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell = True)
         output, error = process.communicate()
         logger.info(output)
-        time.sleep(5)
+        time.sleep(3)
 
 if __name__ == "__main__":
     main()
