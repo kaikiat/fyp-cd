@@ -15,4 +15,4 @@ spec:
         address: http://34.124.209.46:9090 # (nonscriberabbit)
         query: |
           # sum(number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-master"})/sum(number_of_request_reject_total{service="sgdecoding-online-scaled-master"})
-          sum(number_of_request_reject_total{service="sgdecoding-online-scaled-master"})/sum(number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-master"}) % 0.1
+          sum(number_of_request_reject_total{service="sgdecoding-online-scaled-master"})/sum(number_of_request_receive_by_master_total{service="sgdecoding-online-scaled-master"})
