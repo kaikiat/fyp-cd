@@ -149,7 +149,7 @@ kubectl port-forward deployment/prometheus-grafana 3000 -n prometheus
 3. Install service monitor for argo cd `kubectl apply -f monitoring/manifests/service-monitor.yaml -n argocd`
 4. (Canary) Install service monitor for ntuasr application `kubectl apply -f monitoring/manifests/service-monitor-ntuasr.yaml -n ntuasr-production-google`
 5. (BlueGreen) Not sure if this step should take please before configuring blue green rollout ? Run `kubectl apply -f monitoring/manifests/service-monitor-ntuasr-preview.yaml -n ntuasr-production-google`
-<!-- 5. (Canary) Run `kubectl apply -f monitoring/manifests/pod-monitor-ntuasr.yaml -n ntuasr-production-google` ? -->
+<!-- 5. (Canary) Run `kubectl apply -f monitoring/manifests/pod-monitor-ntuasr.yaml -n ntuasr-production-google` (Cannot reference to pod name) --> 
 6. Only after completing step 1-3, then you can install argo rollouts.
 
 __NOTE: To view metrics exported, run `kubectl port-forward svc/sgdecoding-online-scaled-master 8081`, then go to localhost:8081/metrics__
