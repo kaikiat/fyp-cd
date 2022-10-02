@@ -7,7 +7,7 @@ spec:
   - name: analyse-request
     interval: 20s
     # successCondition: result[0] >= 1 || isNaN(result[0])
-    successCondition: result[0] < 0.3 || isNaN(result[0])
+    successCondition: result[0] < 0.35 || isNaN(result[0])
     failureLimit: 4
     provider:
       prometheus:
