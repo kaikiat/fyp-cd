@@ -26,8 +26,6 @@ spec:
           - name: service-name
             value: prometheus-kube-prometheus-prometheus.default.svc.cluster.local
       steps:
-      # - pause:
-      #     duration: 100s 
       - setWeight: 50
       - pause:
           duration: 100s 
@@ -110,8 +108,6 @@ spec:
             value: prometheus-kube-prometheus-prometheus.default.svc.cluster.local
         startingStep: 1
       steps:
-      # - pause:
-      #     duration: 100s 
       - setWeight: 50
       - pause:
           duration: 100s
