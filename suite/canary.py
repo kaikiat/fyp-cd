@@ -17,7 +17,7 @@ def main():
     
     min = 60
     duration = min * 7
-    sleep_duration = min * 3
+    sleep_duration = min * 4
     logger.info('Sleeping for '+ str(sleep_duration) + ' seconds')
     time.sleep(sleep_duration)
     end = int(time.time()) + duration

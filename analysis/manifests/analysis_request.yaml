@@ -8,7 +8,7 @@ spec:
     interval: 30s
     # successCondition: result[0] >= 1 || isNaN(result[0])
     successCondition: result[0] < 0.1 || isNaN(result[0])
-    failureLimit: 3
+    failureLimit: 4
     provider:
       prometheus:
         # address: http://34.143.143.67:9090 # (ntu-16)

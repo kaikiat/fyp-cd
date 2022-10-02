@@ -258,11 +258,14 @@ kubectl logs $WORKER -f -n $NAMESPACE
 1. Go to `Explore` in the Grafana UI.
 2. Input the following parameters as seen in the figure below
 
-[![grafana-ui-query.png](https://i.postimg.cc/Gtk3nWN1/grafana-ui-query.png)](https://postimg.cc/bSwfQBp6)
+<!-- [![grafana-ui-query.png](https://i.postimg.cc/Gtk3nWN1/grafana-ui-query.png)](https://postimg.cc/bSwfQBp6) -->
+[![grafana-ui-querry-with-legend.png](https://i.postimg.cc/Bn9YkBch/grafana-ui-querry-with-legend.png)](https://postimg.cc/hfs17xYx)
+
 
 3. For canary rollouts, execute the following querries 
 ```
 # Compare requests received
+number_of_request_receive_by_master_total{pod="sgdecoding-online-scaled-master-7858cccfdb-5kjg4"}
 number_of_request_receive_by_master_total{pod="sgdecoding-online-scaled-master-7858cccfdb-5kjg4"}
 ```
 4. For blue green rollouts, execute the following querries
