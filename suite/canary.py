@@ -16,7 +16,7 @@ def main():
     logger.info(f'Ip Address : {ip_address}')
     
     min = 60
-    duration = min * 7
+    duration = min * 8
     sleep_duration = min * 2.5
     logger.info('Sleeping for '+ str(sleep_duration) + ' seconds')
     time.sleep(sleep_duration)
