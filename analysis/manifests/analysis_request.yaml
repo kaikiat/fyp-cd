@@ -7,11 +7,10 @@ spec:
   - name: analyse-request
     interval: 30s
     # successCondition: result[0] >= 1 || isNaN(result[0])
-    successCondition: result[0] > 0.1 || isNaN(result[0])
+    successCondition: result[0] < 0.1 || isNaN(result[0])
     failureLimit: 3
     provider:
       prometheus:
-        # address: http://34.87.79.104:9090
         # address: http://34.143.143.67:9090 # (ntu-16)
         address: http://34.124.209.46:9090 # (nonscriberabbit)
         query: |
