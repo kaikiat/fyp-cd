@@ -16,10 +16,11 @@ def main():
     logger.info(f'Ip Address : {ip_address}')
     
     min = 60
-    duration = min * 8
+    # duration = min * 8
+    duration = min * 5
     sleep_duration = min * 3
-    logger.info('Sleeping for '+ str(sleep_duration) + ' seconds')
-    time.sleep(sleep_duration)
+    # logger.info('Sleeping for '+ str(sleep_duration) + ' seconds')
+    # time.sleep(sleep_duration)
     end = int(time.time()) + duration
     
     cmd = f"python3 client/client_3_ssl.py -u ws://{ip_address}/client/ws/speech -r 32000 -t abc --model='SingaporeCS_0519NNET3' client/audio/34.WAV"

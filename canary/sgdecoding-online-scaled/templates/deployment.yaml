@@ -16,7 +16,7 @@ spec:
       app.kubernetes.io/instance: {{ .Release.Name }}
   strategy:
     canary: #Indicates that the rollout should use the Canary strategy
-      maxSurge: "25%" # The maximum number of replicas the rollout can create 
+      maxSurge: "100%" # The maximum number of replicas the rollout can create 
       maxUnavailable: 0 # The maximum number of pods that can be unavailable during the update.
       analysis:
         templates:
@@ -26,7 +26,7 @@ spec:
           - name: service-name
             value: prometheus-kube-prometheus-prometheus.default.svc.cluster.local
       steps:
-      - setWeight: 95
+      - setWeight: 70
       - pause:
           duration: 180s 
       - setWeight: 95
@@ -98,7 +98,7 @@ spec:
       app.kubernetes.io/instance: {{ $.Release.Name }}
   strategy:
     canary: #Indicates that the rollout should use the Canary strategy
-      maxSurge: "25%" # The maximum number of replicas the rollout can create 
+      maxSurge: "100%" # The maximum number of replicas the rollout can create 
       maxUnavailable: 0 # The maximum number of pods that can be unavailable during the update.
       analysis:
         templates:
@@ -108,7 +108,7 @@ spec:
             value: prometheus-kube-prometheus-prometheus.default.svc.cluster.local
         startingStep: 1
       steps:
-      - setWeight: 95
+      - setWeight: 70
       - pause:
           duration: 180s
       - setWeight: 95
