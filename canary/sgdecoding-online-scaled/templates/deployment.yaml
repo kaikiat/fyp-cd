@@ -25,12 +25,9 @@ spec:
           - name: service-name
             value: prometheus-kube-prometheus-prometheus.default.svc.cluster.local
       steps:
-      - setWeight: 10
-      - pause:
-          duration: 180s 
       - setWeight: 50
-      - pause: 
-          duration: 180s 
+      - pause:
+          duration: 240s 
   template:
     metadata:
       annotations:
@@ -90,8 +87,8 @@ metadata:
     app.kubernetes.io/instance: {{ $.Release.Name }}
     app.kubernetes.io/managed-by: {{ $.Release.Service }}
 spec:
-  # replicas: {{ $replicas }}
-  replicas: 2
+  replicas: {{ $replicas }}
+  # replicas: 2
   selector:
     matchLabels:
       app.kubernetes.io/name: {{ include "ntuspeechlab.worker.name" $ }}{{ printf "-%s" $model_name  | lower | replace "_" "-"}}
@@ -107,12 +104,9 @@ spec:
             value: prometheus-kube-prometheus-prometheus.default.svc.cluster.local
         startingStep: 1
       steps:
-      - setWeight: 10
-      - pause:
-          duration: 180s
       - setWeight: 50
-      - pause: 
-          duration: 180s
+      - pause:
+          duration: 240s
   template:
     metadata:
       annotations:
