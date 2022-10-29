@@ -4,8 +4,8 @@ helm:
     value: ghcr.io/kaikiat/fyp-ci
     forcestring: true
   - name: image.tag
-    value: 0.3.36
+    # value: 0.3.36
     # value: 0.3.33
     # value: 0.3.35
-    # value: 0.3.38
+    value: 0.3.38
     forcestring: true
