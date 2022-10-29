@@ -160,6 +160,8 @@ __NOTE: To view metrics exported, run `kubectl port-forward svc/sgdecoding-onlin
 3. Install service monitor for argo rollouts `kubectl apply -f monitoring/manifests/service-monitor-argorollouts.yaml -n argo-rollouts`, after installing helm.
 4. Resync the app in argocd if needed since argo rollouts is installed. After that you should also receive an email notification
 5. Verify that rollout is working by running `kubectl argo rollouts dashboard` to open the rollout web ui. Argo rollout runs at `http://localhost:3100/rollouts`
+6. To watch a rollout `kubectl argo rollouts get rollout sgdecoding-online-scaled-master --watch`
+6. To watch a rollout `kubectl argo rollouts get rollout sgdecoding-online-scaled-worker --watch`
 
 ## Grafana Dashboard Set Up
 1. Go to `http://localhost:3000/login` to view the Grafana Web UI. The username is `admin`, the password is `prom-operator`
