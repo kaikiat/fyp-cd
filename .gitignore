@@ -6,6 +6,10 @@ Terraform_google/.terraform
 Terraform_google/.terraform.lock.hcl
 Terraform_aws/.terraform.lock.hcl
 Terraform_aws/.terraform
+etc/argon-depot-363510/.terraform
+etc/argon-depot-363510/.terraform.lock.hcl
+etc/argon-depot-363510/.terraform/providers/registry.terraform.io/hashicorp/google/4.43.0/darwin_arm64/terraform-provider-google_v4.43.0_x5
+etc/cube-18/.terraform.lock.hcl
 
 client.log
 .DS_Store

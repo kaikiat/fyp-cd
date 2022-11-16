@@ -14,4 +14,5 @@ spec:
     # server: 10.82.20.226 # change to filestore ip
     # server: 10.111.35.242 # change to filestore ip
     # server: 10.227.169.58 # change to filestore ip(NTU-16)
-    server: 10.75.82.66 # change to filestore ip(nonscriberabbit)
+    # server: 10.75.82.66 # change to filestore ip(nonscriberabbit)
+    server: 10.122.197.130 # change to filestore ip(argon-depot-363510)
