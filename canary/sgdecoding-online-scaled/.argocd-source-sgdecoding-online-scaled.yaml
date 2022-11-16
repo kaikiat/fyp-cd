@@ -5,8 +5,8 @@ helm:
     forcestring: true
   - name: image.tag
     # value: 0.3.27
-    value: 0.3.33
-    # value: 0.3.36
+    # value: 0.3.33
+    value: 0.3.36
     # value: 0.3.28
     # value: 0.3.29
     # value: 0.3.36
